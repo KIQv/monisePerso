@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace monisePerso
 {
-    internal class Variaveis
+    public static class Variaveis
     {
         //Geral
         public static string funcao;
         public static int linhaSelecionada, linhaFoneSelecionada;
 
         //Login
-        public static string usuario, senha;
+        public static string usuario, senha, nivel;
 
         //Empresa 
         public static int codEmpresa;
