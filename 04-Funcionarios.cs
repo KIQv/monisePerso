@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace monisePerso
 {
-    public partial class frmEncomendas : Form
+    public partial class frmFuncionarios : Form
     {
-        public frmEncomendas()
+        public frmFuncionarios()
         {
             InitializeComponent();
         }
