@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,130 @@ namespace monisePerso
             InitializeComponent();
         }
 
+        private void CarregarCliente()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `clientecompleto`";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvClientes.DataSource = dt;
+
+                dgvClientes.ClearSelection();
+
+                banco.Conectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar o Cliente. \n\n" + erro.Message);
+            }
+        }
+
+        private void CarregarClienteAtivo()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `clienteativo`";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvClientes.DataSource = dt;
+
+                dgvClientes.ClearSelection();
+
+                banco.Conectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar o Cliente. \n\n" + erro.Message);
+            }
+        }
+
+        private void CarregarClienteInativo()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `clienteinativo`";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvClientes.DataSource = dt;
+
+                dgvClientes.ClearSelection();
+
+                banco.Conectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar o Cliente. \n\n" + erro.Message);
+            }
+        }
+
+        private void CarregarClienteNome()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `clientecompleto` WHERE `NOME CLIENTE` LIKE '%" + Variaveis.nomeCliente + "%'";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvClientes.DataSource = dt;
+
+                dgvClientes.ClearSelection();
+
+                banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar o Cliente. \n\n" + erro.Message);
+            }
+        }
+
+        private void ExcluirCliente()
+        {
+            try
+            {
+                banco.Conectar();
+                string excluir = "DELETE FROM `cliente` WHERE `idCliente`=@codigo";
+                MySqlCommand cmd = new MySqlCommand(excluir, banco.conexao);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codCliente);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvClientes.DataSource = dt;
+
+                dgvClientes.ClearSelection();
+
+                banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao excluir o Cliente. \n\n" + erro.Message);
+            }
+        }
+
         private void frmClientes_Load(object sender, EventArgs e)
         {
             pnlClientes.Location = new Point(this.Width / 2 -  pnlClientes.Width / 2, this.Height / 2 - pnlClientes.Height / 2);
 
             lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
+
+            Variaveis.linhaSelecionada = -1;
+            CarregarCliente();
         }
 
         private void pctFechar_Click(object sender, EventArgs e)
@@ -109,5 +229,52 @@ namespace monisePerso
             }
         }
 
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+            {
+                chkAtivo.Enabled = true;
+                CarregarCliente();
+            }
+            else
+            {
+                chkAtivo.Checked = false;
+                chkAtivo.Enabled = false;
+                chkInativo.Checked = false;
+                chkInativo.Enabled = false;
+                Variaveis.nomeCliente = txtNome.Text;
+                CarregarClienteNome();
+            }
+        }
+
+        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkAtivo.Checked == true)
+            {
+                CarregarClienteAtivo();
+                chkInativo.Checked = false;
+                chkInativo.Enabled = false;
+            }
+            else
+            {
+                CarregarCliente();
+                chkInativo.Enabled = true;
+            }
+        }
+
+        private void chkInativo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkInativo.Checked == true)
+            {
+                CarregarClienteInativo();
+                chkAtivo.Checked = false;
+                chkAtivo.Enabled = false;
+            }
+            else
+            {
+                CarregarCliente();
+                chkAtivo.Enabled = true;
+            }
+        }
     }
 }

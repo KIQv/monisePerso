@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,130 @@ namespace monisePerso
             InitializeComponent();
         }
 
+        private void CarregarFuncionario()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `funcionariocompleto`";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvFuncionarios.DataSource = dt;
+
+                dgvFuncionarios.ClearSelection();
+
+                banco.Conectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar o funcionario. \n\n" + erro.Message);
+            }
+        }
+
+        private void CarregarFuncionarioAtivo()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `funcionarioativo`";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvFuncionarios.DataSource = dt;
+
+                dgvFuncionarios.ClearSelection();
+
+                banco.Conectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar o funcionario. \n\n" + erro.Message);
+            }
+        }
+
+        private void CarregarFuncionarioInativo()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `funcionarioinativo`";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvFuncionarios.DataSource = dt;
+
+                dgvFuncionarios.ClearSelection();
+
+                banco.Conectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar o funcionario. \n\n" + erro.Message);
+            }
+        }
+
+        private void CarregarFuncionarioNome()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `funcionariocompleto` WHERE `NOME DO FUNCIONÁRIO` LIKE '%" + Variaveis.nomeFuncionario + "%'";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvFuncionarios.DataSource = dt;
+
+                dgvFuncionarios.ClearSelection();
+
+                banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar o funcionario. \n\n" + erro.Message);
+            }
+        }
+
+        private void ExcluirFuncionario()
+        {
+            try
+            {
+                banco.Conectar();
+                string excluir = "DELETE FROM `funcionario` WHERE `idFuncionario`=@codigo";
+                MySqlCommand cmd = new MySqlCommand(excluir, banco.conexao);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codFuncionario);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvFuncionarios.DataSource = dt;
+
+                dgvFuncionarios.ClearSelection();
+
+                banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao excluir o funcionario. \n\n" + erro.Message);
+            }
+        }
+
         private void frmFuncionarios_Load(object sender, EventArgs e)
         {
             pnlFuncionarios.Location = new Point(this.Width / 2 - pnlFuncionarios.Width / 2, this.Height / 2 - pnlFuncionarios.Height / 2);
 
             lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
+
+            Variaveis.linhaSelecionada = -1;
+            CarregarFuncionario();
         }
 
         private void pctFechar_Click(object sender, EventArgs e)
@@ -113,6 +233,54 @@ namespace monisePerso
         {
             //new frmEmail().Show();
             //Hide();
+        }
+
+        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkAtivo.Checked == true)
+            {
+                CarregarFuncionarioAtivo();
+                chkInativo.Checked = false;
+                chkInativo.Enabled = false;
+            }
+            else
+            {
+                CarregarFuncionario();
+                chkInativo.Enabled = true;
+            }
+        }
+
+        private void chkInativo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkInativo.Checked == true)
+            {
+                CarregarFuncionarioInativo();
+                chkAtivo.Checked = false;
+                chkAtivo.Enabled = false;
+            }
+            else
+            {
+                CarregarFuncionario();
+                chkAtivo.Enabled = true;
+            }
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+            {
+                chkAtivo.Enabled = true;
+                CarregarFuncionario();
+            }
+            else
+            {
+                chkAtivo.Checked = false;
+                chkAtivo.Enabled = false;
+                chkInativo.Checked = false;
+                chkInativo.Enabled = false;
+                Variaveis.nomeFuncionario = txtNome.Text;
+                CarregarFuncionarioNome();
+            }
         }
     }
 }
