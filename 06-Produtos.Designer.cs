@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.pnlProdutos = new System.Windows.Forms.Panel();
+            this.pnlFiltros = new System.Windows.Forms.Panel();
+            this.chkInativo = new System.Windows.Forms.CheckBox();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.lblFiltros = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
@@ -61,14 +68,9 @@
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.pnlFiltros = new System.Windows.Forms.Panel();
-            this.chkInativo = new System.Windows.Forms.CheckBox();
-            this.chkAtivo = new System.Windows.Forms.CheckBox();
-            this.lblFiltros = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.pnlProdutos.SuspendLayout();
+            this.pnlFiltros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             this.pnlSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -82,8 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            this.pnlFiltros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblData
@@ -123,6 +123,113 @@
             this.pnlProdutos.Name = "pnlProdutos";
             this.pnlProdutos.Size = new System.Drawing.Size(935, 515);
             this.pnlProdutos.TabIndex = 30;
+            // 
+            // pnlFiltros
+            // 
+            this.pnlFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.pnlFiltros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlFiltros.Controls.Add(this.chkInativo);
+            this.pnlFiltros.Controls.Add(this.chkAtivo);
+            this.pnlFiltros.Controls.Add(this.lblFiltros);
+            this.pnlFiltros.Location = new System.Drawing.Point(715, 0);
+            this.pnlFiltros.Name = "pnlFiltros";
+            this.pnlFiltros.Size = new System.Drawing.Size(220, 165);
+            this.pnlFiltros.TabIndex = 31;
+            // 
+            // chkInativo
+            // 
+            this.chkInativo.AutoSize = true;
+            this.chkInativo.Font = new System.Drawing.Font("Poppins", 12F);
+            this.chkInativo.Location = new System.Drawing.Point(17, 119);
+            this.chkInativo.Name = "chkInativo";
+            this.chkInativo.Size = new System.Drawing.Size(85, 32);
+            this.chkInativo.TabIndex = 4;
+            this.chkInativo.Text = "Inativo";
+            this.chkInativo.UseVisualStyleBackColor = true;
+            this.chkInativo.CheckedChanged += new System.EventHandler(this.chkInativo_CheckedChanged);
+            // 
+            // chkAtivo
+            // 
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Font = new System.Drawing.Font("Poppins", 12F);
+            this.chkAtivo.Location = new System.Drawing.Point(17, 72);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(71, 32);
+            this.chkAtivo.TabIndex = 3;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
+            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged);
+            // 
+            // lblFiltros
+            // 
+            this.lblFiltros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFiltros.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltros.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblFiltros.Location = new System.Drawing.Point(0, 0);
+            this.lblFiltros.Name = "lblFiltros";
+            this.lblFiltros.Size = new System.Drawing.Size(218, 50);
+            this.lblFiltros.TabIndex = 0;
+            this.lblFiltros.Text = "Filtros";
+            this.lblFiltros.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNome
+            // 
+            this.txtNome.BackColor = System.Drawing.Color.White;
+            this.txtNome.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.ForeColor = System.Drawing.Color.Gray;
+            this.txtNome.Location = new System.Drawing.Point(71, 19);
+            this.txtNome.Multiline = true;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(618, 24);
+            this.txtNome.TabIndex = 30;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(3, 17);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(62, 28);
+            this.lblNome.TabIndex = 29;
+            this.lblNome.Text = "Nome:";
+            // 
+            // dgvProdutos
+            // 
+            this.dgvProdutos.AllowUserToAddRows = false;
+            this.dgvProdutos.AllowUserToDeleteRows = false;
+            this.dgvProdutos.AllowUserToResizeColumns = false;
+            this.dgvProdutos.AllowUserToResizeRows = false;
+            this.dgvProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvProdutos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProdutos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutos.DefaultCellStyle = dataGridViewCellStyle22;
+            this.dgvProdutos.EnableHeadersVisualStyles = false;
+            this.dgvProdutos.Location = new System.Drawing.Point(0, 73);
+            this.dgvProdutos.MultiSelect = false;
+            this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.ReadOnly = true;
+            this.dgvProdutos.RowHeadersVisible = false;
+            this.dgvProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProdutos.Size = new System.Drawing.Size(689, 442);
+            this.dgvProdutos.TabIndex = 28;
             // 
             // btnExcluir
             // 
@@ -177,6 +284,7 @@
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctFechar.TabIndex = 28;
             this.pctFechar.TabStop = false;
+            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
             // lblTitulo
             // 
@@ -245,6 +353,7 @@
             this.lblEmail.Size = new System.Drawing.Size(53, 26);
             this.lblEmail.TabIndex = 22;
             this.lblEmail.Text = "Email";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // pictureBox9
             // 
@@ -256,6 +365,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox8
             // 
@@ -348,6 +458,7 @@
             this.lblSair.Size = new System.Drawing.Size(41, 26);
             this.lblSair.TabIndex = 8;
             this.lblSair.Text = "Sair";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // lblAplicativo
             // 
@@ -359,6 +470,7 @@
             this.lblAplicativo.Size = new System.Drawing.Size(86, 26);
             this.lblAplicativo.TabIndex = 7;
             this.lblAplicativo.Text = "Aplicativo";
+            this.lblAplicativo.Click += new System.EventHandler(this.lblAplicativo_Click);
             // 
             // lblSobre
             // 
@@ -370,6 +482,7 @@
             this.lblSobre.Size = new System.Drawing.Size(56, 26);
             this.lblSobre.TabIndex = 6;
             this.lblSobre.Text = "Sobre";
+            this.lblSobre.Click += new System.EventHandler(this.lblSobre_Click);
             // 
             // lblProdutos
             // 
@@ -393,6 +506,7 @@
             this.lblEmpresa.Size = new System.Drawing.Size(78, 26);
             this.lblEmpresa.TabIndex = 4;
             this.lblEmpresa.Text = "Empresa";
+            this.lblEmpresa.Click += new System.EventHandler(this.lblEmpresa_Click);
             // 
             // lblFuncionarios
             // 
@@ -404,6 +518,7 @@
             this.lblFuncionarios.Size = new System.Drawing.Size(111, 26);
             this.lblFuncionarios.TabIndex = 3;
             this.lblFuncionarios.Text = "Funcionarios";
+            this.lblFuncionarios.Click += new System.EventHandler(this.lblFuncionarios_Click);
             // 
             // lblClientes
             // 
@@ -415,6 +530,7 @@
             this.lblClientes.Size = new System.Drawing.Size(73, 26);
             this.lblClientes.TabIndex = 2;
             this.lblClientes.Text = "Clientes";
+            this.lblClientes.Click += new System.EventHandler(this.lblClientes_Click);
             // 
             // lblEncomendas
             // 
@@ -426,6 +542,7 @@
             this.lblEncomendas.Size = new System.Drawing.Size(111, 26);
             this.lblEncomendas.TabIndex = 1;
             this.lblEncomendas.Text = "Encomendas";
+            this.lblEncomendas.Click += new System.EventHandler(this.lblEncomendas_Click);
             // 
             // lblMenu
             // 
@@ -438,6 +555,7 @@
             this.lblMenu.Size = new System.Drawing.Size(54, 26);
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Menu";
+            this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
             // 
             // lblUsuario
             // 
@@ -464,113 +582,6 @@
             this.pctLogo.TabIndex = 3;
             this.pctLogo.TabStop = false;
             // 
-            // pnlFiltros
-            // 
-            this.pnlFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.pnlFiltros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlFiltros.Controls.Add(this.chkInativo);
-            this.pnlFiltros.Controls.Add(this.chkAtivo);
-            this.pnlFiltros.Controls.Add(this.lblFiltros);
-            this.pnlFiltros.Location = new System.Drawing.Point(715, 0);
-            this.pnlFiltros.Name = "pnlFiltros";
-            this.pnlFiltros.Size = new System.Drawing.Size(220, 165);
-            this.pnlFiltros.TabIndex = 31;
-            // 
-            // chkInativo
-            // 
-            this.chkInativo.AutoSize = true;
-            this.chkInativo.Font = new System.Drawing.Font("Poppins", 12F);
-            this.chkInativo.Location = new System.Drawing.Point(17, 119);
-            this.chkInativo.Name = "chkInativo";
-            this.chkInativo.Size = new System.Drawing.Size(85, 32);
-            this.chkInativo.TabIndex = 4;
-            this.chkInativo.Text = "Inativo";
-            this.chkInativo.UseVisualStyleBackColor = true;
-            this.chkInativo.CheckedChanged += new System.EventHandler(this.chkInativo_CheckedChanged);
-            // 
-            // chkAtivo
-            // 
-            this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Font = new System.Drawing.Font("Poppins", 12F);
-            this.chkAtivo.Location = new System.Drawing.Point(17, 72);
-            this.chkAtivo.Name = "chkAtivo";
-            this.chkAtivo.Size = new System.Drawing.Size(71, 32);
-            this.chkAtivo.TabIndex = 3;
-            this.chkAtivo.Text = "Ativo";
-            this.chkAtivo.UseVisualStyleBackColor = true;
-            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged);
-            // 
-            // lblFiltros
-            // 
-            this.lblFiltros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblFiltros.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltros.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblFiltros.Location = new System.Drawing.Point(0, 0);
-            this.lblFiltros.Name = "lblFiltros";
-            this.lblFiltros.Size = new System.Drawing.Size(218, 50);
-            this.lblFiltros.TabIndex = 0;
-            this.lblFiltros.Text = "Filtros";
-            this.lblFiltros.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.ForeColor = System.Drawing.Color.Gray;
-            this.txtNome.Location = new System.Drawing.Point(71, 19);
-            this.txtNome.Multiline = true;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(618, 24);
-            this.txtNome.TabIndex = 30;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(3, 17);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(62, 28);
-            this.lblNome.TabIndex = 29;
-            this.lblNome.Text = "Nome:";
-            // 
-            // dgvProdutos
-            // 
-            this.dgvProdutos.AllowUserToAddRows = false;
-            this.dgvProdutos.AllowUserToDeleteRows = false;
-            this.dgvProdutos.AllowUserToResizeColumns = false;
-            this.dgvProdutos.AllowUserToResizeRows = false;
-            this.dgvProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvProdutos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProdutos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutos.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvProdutos.EnableHeadersVisualStyles = false;
-            this.dgvProdutos.Location = new System.Drawing.Point(0, 73);
-            this.dgvProdutos.MultiSelect = false;
-            this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.ReadOnly = true;
-            this.dgvProdutos.RowHeadersVisible = false;
-            this.dgvProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProdutos.Size = new System.Drawing.Size(689, 442);
-            this.dgvProdutos.TabIndex = 28;
-            // 
             // frmProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,6 +602,9 @@
             this.Load += new System.EventHandler(this.frmProdutos_Load);
             this.pnlProdutos.ResumeLayout(false);
             this.pnlProdutos.PerformLayout();
+            this.pnlFiltros.ResumeLayout(false);
+            this.pnlFiltros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
@@ -605,9 +619,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            this.pnlFiltros.ResumeLayout(false);
-            this.pnlFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

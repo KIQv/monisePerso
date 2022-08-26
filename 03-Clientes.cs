@@ -276,5 +276,11 @@ namespace monisePerso
                 chkAtivo.Enabled = true;
             }
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            new frmCadCliente().Show();
+            Hide();
+        }
     }
 }

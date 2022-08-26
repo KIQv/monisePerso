@@ -60,14 +60,14 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.pnlFiltros = new System.Windows.Forms.Panel();
+            this.chkInativo = new System.Windows.Forms.CheckBox();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.lblFiltros = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.pctFechar = new System.Windows.Forms.PictureBox();
-            this.chkAtivo = new System.Windows.Forms.CheckBox();
-            this.chkInativo = new System.Windows.Forms.CheckBox();
             this.pnlSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -457,6 +457,30 @@
             this.pnlFiltros.Size = new System.Drawing.Size(220, 165);
             this.pnlFiltros.TabIndex = 16;
             // 
+            // chkInativo
+            // 
+            this.chkInativo.AutoSize = true;
+            this.chkInativo.Font = new System.Drawing.Font("Poppins", 12F);
+            this.chkInativo.Location = new System.Drawing.Point(17, 119);
+            this.chkInativo.Name = "chkInativo";
+            this.chkInativo.Size = new System.Drawing.Size(85, 32);
+            this.chkInativo.TabIndex = 4;
+            this.chkInativo.Text = "Inativo";
+            this.chkInativo.UseVisualStyleBackColor = true;
+            this.chkInativo.CheckedChanged += new System.EventHandler(this.chkInativo_CheckedChanged);
+            // 
+            // chkAtivo
+            // 
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Font = new System.Drawing.Font("Poppins", 12F);
+            this.chkAtivo.Location = new System.Drawing.Point(17, 72);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(71, 32);
+            this.chkAtivo.TabIndex = 3;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
+            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged);
+            // 
             // lblFiltros
             // 
             this.lblFiltros.Dock = System.Windows.Forms.DockStyle.Top;
@@ -483,6 +507,7 @@
             this.btnCadastrar.TabIndex = 15;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // dgvClientes
             // 
@@ -556,30 +581,6 @@
             this.pctFechar.TabIndex = 3;
             this.pctFechar.TabStop = false;
             this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
-            // 
-            // chkAtivo
-            // 
-            this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Font = new System.Drawing.Font("Poppins", 12F);
-            this.chkAtivo.Location = new System.Drawing.Point(17, 72);
-            this.chkAtivo.Name = "chkAtivo";
-            this.chkAtivo.Size = new System.Drawing.Size(71, 32);
-            this.chkAtivo.TabIndex = 3;
-            this.chkAtivo.Text = "Ativo";
-            this.chkAtivo.UseVisualStyleBackColor = true;
-            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged);
-            // 
-            // chkInativo
-            // 
-            this.chkInativo.AutoSize = true;
-            this.chkInativo.Font = new System.Drawing.Font("Poppins", 12F);
-            this.chkInativo.Location = new System.Drawing.Point(17, 119);
-            this.chkInativo.Name = "chkInativo";
-            this.chkInativo.Size = new System.Drawing.Size(85, 32);
-            this.chkInativo.TabIndex = 4;
-            this.chkInativo.Text = "Inativo";
-            this.chkInativo.UseVisualStyleBackColor = true;
-            this.chkInativo.CheckedChanged += new System.EventHandler(this.chkInativo_CheckedChanged);
             // 
             // frmClientes
             // 
