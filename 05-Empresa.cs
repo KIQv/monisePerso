@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,130 @@ namespace monisePerso
             InitializeComponent();
         }
 
+        private void CarregarEmpresa()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `empresaCompleta`";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvEmpresas.DataSource = dt;
+
+                dgvEmpresas.ClearSelection();
+
+                banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar a empresa.\n\n" + erro.Message);
+            }
+        }
+
+        private void CarregarEmpresaAtiva()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `empresaAtiva`";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvEmpresas.DataSource = dt;
+
+                dgvEmpresas.ClearSelection();
+
+                banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar a empresa.\n\n" + erro.Message);
+            }
+        }
+
+        private void CarregarEmpresaInativa()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `empresainativa`";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvEmpresas.DataSource = dt;
+
+                dgvEmpresas.ClearSelection();
+
+                banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar a empresa.\n\n" + erro.Message);
+            }
+        }
+
+        private void CarregarEmpresaNome()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `empresacompleta` WHERE `NOME DA EMPRESA` LIKE '%" + Variaveis.nomeEmpresa + "%'";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvEmpresas.DataSource = dt;
+
+                dgvEmpresas.ClearSelection();
+
+                banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar a empresa.\n\n" + erro.Message);
+            }
+        }
+
+        private void ExcluirEmpresa()
+        {
+            try
+            {
+                banco.Conectar();
+                string excluir = "DELETE FROM `empresa` WHERE `idEmpresa`=@codigo";
+                MySqlCommand cmd = new MySqlCommand(excluir, banco.conexao);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codEmpresa);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvEmpresas.DataSource = dt;
+
+                dgvEmpresas.ClearSelection();
+
+                banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao excluir a Empresa.\n\n" + erro.Message);
+            }
+        }
+
         private void frmEmpresa_Load(object sender, EventArgs e)
         {
             pnlEmpresa.Location = new Point(this.Width / 2 - pnlEmpresa.Width / 2, this.Height / 2 - pnlEmpresa.Height / 2);
 
             lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
+
+            Variaveis.linhaSelecionada = -1;
+            CarregarEmpresa();
         }
 
         private void pctFechar_Click(object sender, EventArgs e)
@@ -113,6 +233,54 @@ namespace monisePerso
         {
             //new frmEmail().Show();
             //Hide();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+            {
+                chkAtivo.Enabled = true;
+                CarregarEmpresa();
+            }
+            else
+            {
+                chkAtivo.Checked = false;
+                chkAtivo.Enabled = false;
+                chkInativo.Checked = false;
+                chkInativo.Enabled = false;
+                Variaveis.nomeEmpresa = txtNome.Text;
+                CarregarEmpresaNome();
+            }
+        }
+
+        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkAtivo.Checked == true)
+            {
+                CarregarEmpresaAtiva();
+                chkInativo.Checked = false;
+                chkInativo.Enabled = false;
+            }
+            else
+            {
+                CarregarEmpresa();
+                chkInativo.Enabled = true;
+            }
+        }
+
+        private void chkInativo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkInativo.Checked == true)
+            {
+                CarregarEmpresaInativa();
+                chkAtivo.Checked = false;
+                chkAtivo.Enabled = false;
+            }
+            else
+            {
+                CarregarEmpresa();
+                chkAtivo.Enabled = true;
+            }
         }
     }
 }
