@@ -185,8 +185,8 @@ namespace monisePerso
 
         private void lblProdutos_Click(object sender, EventArgs e)
         {
-            //new frmProdutos().Show();
-            //Hide();
+            new frmProdutos().Show();
+            Hide();
         }
 
         private void lblSobre_Click(object sender, EventArgs e)

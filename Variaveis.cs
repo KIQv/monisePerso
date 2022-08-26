@@ -41,5 +41,11 @@ namespace monisePerso
         //FoneFuncionario
         public static int codFoneFuncionario;
         public static string numeroFuncionario, operFoneFuncionario, descFoneFuncionario;
+
+        //Produtos
+        public static int codProduto;
+        public static string nomeProduto, descProduto, tipoProduto, fotoProduto1, fotoProduto2, fotoProduto3, fotoProduto4, caminhoFotoProduto1, caminhoFotoProduto2, caminhoFotoProduto3, caminhoFotoProduto4, destaqueProduto, statusProduto;
+        public static DateTime dataCadProduto;
+        public static double valorProduto;
     }
 }
