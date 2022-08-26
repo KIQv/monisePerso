@@ -41,19 +41,8 @@
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblSair = new System.Windows.Forms.Label();
-            this.lblAplicativo = new System.Windows.Forms.Label();
-            this.lblSobre = new System.Windows.Forms.Label();
-            this.lblContato = new System.Windows.Forms.Label();
-            this.lblProdutos = new System.Windows.Forms.Label();
-            this.lblFuncionarios = new System.Windows.Forms.Label();
-            this.lblClientes = new System.Windows.Forms.Label();
-            this.lblEncomendas = new System.Windows.Forms.Label();
-            this.lblMenu = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.pctFechar = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -63,12 +52,22 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblSair = new System.Windows.Forms.Label();
+            this.lblAplicativo = new System.Windows.Forms.Label();
+            this.lblSobre = new System.Windows.Forms.Label();
+            this.lblProdutos = new System.Windows.Forms.Label();
+            this.lblEmpresa = new System.Windows.Forms.Label();
+            this.lblFuncionarios = new System.Windows.Forms.Label();
+            this.lblClientes = new System.Windows.Forms.Label();
+            this.lblEncomendas = new System.Windows.Forms.Label();
+            this.lblMenu = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.pctFechar = new System.Windows.Forms.PictureBox();
             this.pnlFuncionarios.SuspendLayout();
             this.pnlFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             this.pnlSideMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -80,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblData
@@ -251,8 +251,8 @@
             this.pnlSideMenu.Controls.Add(this.lblSair);
             this.pnlSideMenu.Controls.Add(this.lblAplicativo);
             this.pnlSideMenu.Controls.Add(this.lblSobre);
-            this.pnlSideMenu.Controls.Add(this.lblContato);
             this.pnlSideMenu.Controls.Add(this.lblProdutos);
+            this.pnlSideMenu.Controls.Add(this.lblEmpresa);
             this.pnlSideMenu.Controls.Add(this.lblFuncionarios);
             this.pnlSideMenu.Controls.Add(this.lblClientes);
             this.pnlSideMenu.Controls.Add(this.lblEncomendas);
@@ -265,6 +265,16 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(200, 650);
             this.pnlSideMenu.TabIndex = 29;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::monisePerso.Properties.Resources.iconEmail;
+            this.pictureBox10.Location = new System.Drawing.Point(16, 525);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox10.TabIndex = 23;
+            this.pictureBox10.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -275,142 +285,7 @@
             this.label3.Size = new System.Drawing.Size(53, 26);
             this.label3.TabIndex = 22;
             this.label3.Text = "Email";
-            // 
-            // lblSair
-            // 
-            this.lblSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSair.AutoSize = true;
-            this.lblSair.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblSair.Location = new System.Drawing.Point(119, 583);
-            this.lblSair.Name = "lblSair";
-            this.lblSair.Size = new System.Drawing.Size(41, 26);
-            this.lblSair.TabIndex = 8;
-            this.lblSair.Text = "Sair";
-            // 
-            // lblAplicativo
-            // 
-            this.lblAplicativo.AutoSize = true;
-            this.lblAplicativo.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAplicativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblAplicativo.Location = new System.Drawing.Point(53, 485);
-            this.lblAplicativo.Name = "lblAplicativo";
-            this.lblAplicativo.Size = new System.Drawing.Size(86, 26);
-            this.lblAplicativo.TabIndex = 7;
-            this.lblAplicativo.Text = "Aplicativo";
-            // 
-            // lblSobre
-            // 
-            this.lblSobre.AutoSize = true;
-            this.lblSobre.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSobre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblSobre.Location = new System.Drawing.Point(53, 445);
-            this.lblSobre.Name = "lblSobre";
-            this.lblSobre.Size = new System.Drawing.Size(56, 26);
-            this.lblSobre.TabIndex = 6;
-            this.lblSobre.Text = "Sobre";
-            // 
-            // lblContato
-            // 
-            this.lblContato.AutoSize = true;
-            this.lblContato.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblContato.Location = new System.Drawing.Point(53, 405);
-            this.lblContato.Name = "lblContato";
-            this.lblContato.Size = new System.Drawing.Size(74, 26);
-            this.lblContato.TabIndex = 5;
-            this.lblContato.Text = "Contato";
-            // 
-            // lblProdutos
-            // 
-            this.lblProdutos.AutoSize = true;
-            this.lblProdutos.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblProdutos.Location = new System.Drawing.Point(53, 365);
-            this.lblProdutos.Name = "lblProdutos";
-            this.lblProdutos.Size = new System.Drawing.Size(80, 26);
-            this.lblProdutos.TabIndex = 4;
-            this.lblProdutos.Text = "Produtos";
-            // 
-            // lblFuncionarios
-            // 
-            this.lblFuncionarios.AutoSize = true;
-            this.lblFuncionarios.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFuncionarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
-            this.lblFuncionarios.Location = new System.Drawing.Point(53, 325);
-            this.lblFuncionarios.Name = "lblFuncionarios";
-            this.lblFuncionarios.Size = new System.Drawing.Size(111, 26);
-            this.lblFuncionarios.TabIndex = 3;
-            this.lblFuncionarios.Text = "Funcionarios";
-            // 
-            // lblClientes
-            // 
-            this.lblClientes.AutoSize = true;
-            this.lblClientes.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblClientes.Location = new System.Drawing.Point(53, 285);
-            this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(73, 26);
-            this.lblClientes.TabIndex = 2;
-            this.lblClientes.Text = "Clientes";
-            // 
-            // lblEncomendas
-            // 
-            this.lblEncomendas.AutoSize = true;
-            this.lblEncomendas.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEncomendas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblEncomendas.Location = new System.Drawing.Point(53, 245);
-            this.lblEncomendas.Name = "lblEncomendas";
-            this.lblEncomendas.Size = new System.Drawing.Size(111, 26);
-            this.lblEncomendas.TabIndex = 1;
-            this.lblEncomendas.Text = "Encomendas";
-            // 
-            // lblMenu
-            // 
-            this.lblMenu.AutoSize = true;
-            this.lblMenu.BackColor = System.Drawing.Color.Transparent;
-            this.lblMenu.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblMenu.Location = new System.Drawing.Point(53, 205);
-            this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(54, 26);
-            this.lblMenu.TabIndex = 0;
-            this.lblMenu.Text = "Menu";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblUsuario.Location = new System.Drawing.Point(18, 160);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(165, 23);
-            this.lblUsuario.TabIndex = 3;
-            this.lblUsuario.Text = "Seja bem-vindo Uusario";
-            // 
-            // pctFechar
-            // 
-            this.pctFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.pctFechar.Image = global::monisePerso.Properties.Resources.fechar;
-            this.pctFechar.Location = new System.Drawing.Point(1163, 4);
-            this.pctFechar.Name = "pctFechar";
-            this.pctFechar.Size = new System.Drawing.Size(32, 32);
-            this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctFechar.TabIndex = 28;
-            this.pctFechar.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::monisePerso.Properties.Resources.iconEmail;
-            this.pictureBox10.Location = new System.Drawing.Point(16, 525);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox10.TabIndex = 23;
-            this.pictureBox10.TabStop = false;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox9
             // 
@@ -422,6 +297,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox8
             // 
@@ -503,6 +379,129 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // lblSair
+            // 
+            this.lblSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSair.AutoSize = true;
+            this.lblSair.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblSair.Location = new System.Drawing.Point(119, 583);
+            this.lblSair.Name = "lblSair";
+            this.lblSair.Size = new System.Drawing.Size(41, 26);
+            this.lblSair.TabIndex = 8;
+            this.lblSair.Text = "Sair";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
+            // 
+            // lblAplicativo
+            // 
+            this.lblAplicativo.AutoSize = true;
+            this.lblAplicativo.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAplicativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblAplicativo.Location = new System.Drawing.Point(53, 485);
+            this.lblAplicativo.Name = "lblAplicativo";
+            this.lblAplicativo.Size = new System.Drawing.Size(86, 26);
+            this.lblAplicativo.TabIndex = 7;
+            this.lblAplicativo.Text = "Aplicativo";
+            this.lblAplicativo.Click += new System.EventHandler(this.lblAplicativo_Click);
+            // 
+            // lblSobre
+            // 
+            this.lblSobre.AutoSize = true;
+            this.lblSobre.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblSobre.Location = new System.Drawing.Point(53, 445);
+            this.lblSobre.Name = "lblSobre";
+            this.lblSobre.Size = new System.Drawing.Size(56, 26);
+            this.lblSobre.TabIndex = 6;
+            this.lblSobre.Text = "Sobre";
+            this.lblSobre.Click += new System.EventHandler(this.lblSobre_Click);
+            // 
+            // lblProdutos
+            // 
+            this.lblProdutos.AutoSize = true;
+            this.lblProdutos.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblProdutos.Location = new System.Drawing.Point(53, 405);
+            this.lblProdutos.Name = "lblProdutos";
+            this.lblProdutos.Size = new System.Drawing.Size(80, 26);
+            this.lblProdutos.TabIndex = 5;
+            this.lblProdutos.Text = "Produtos";
+            this.lblProdutos.Click += new System.EventHandler(this.lblProdutos_Click);
+            // 
+            // lblEmpresa
+            // 
+            this.lblEmpresa.AutoSize = true;
+            this.lblEmpresa.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblEmpresa.Location = new System.Drawing.Point(53, 365);
+            this.lblEmpresa.Name = "lblEmpresa";
+            this.lblEmpresa.Size = new System.Drawing.Size(78, 26);
+            this.lblEmpresa.TabIndex = 4;
+            this.lblEmpresa.Text = "Empresa";
+            this.lblEmpresa.Click += new System.EventHandler(this.lblEmpresa_Click);
+            // 
+            // lblFuncionarios
+            // 
+            this.lblFuncionarios.AutoSize = true;
+            this.lblFuncionarios.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFuncionarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
+            this.lblFuncionarios.Location = new System.Drawing.Point(53, 325);
+            this.lblFuncionarios.Name = "lblFuncionarios";
+            this.lblFuncionarios.Size = new System.Drawing.Size(111, 26);
+            this.lblFuncionarios.TabIndex = 3;
+            this.lblFuncionarios.Text = "Funcionarios";
+            this.lblFuncionarios.Click += new System.EventHandler(this.lblFuncionarios_Click);
+            // 
+            // lblClientes
+            // 
+            this.lblClientes.AutoSize = true;
+            this.lblClientes.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblClientes.Location = new System.Drawing.Point(53, 285);
+            this.lblClientes.Name = "lblClientes";
+            this.lblClientes.Size = new System.Drawing.Size(73, 26);
+            this.lblClientes.TabIndex = 2;
+            this.lblClientes.Text = "Clientes";
+            this.lblClientes.Click += new System.EventHandler(this.lblClientes_Click);
+            // 
+            // lblEncomendas
+            // 
+            this.lblEncomendas.AutoSize = true;
+            this.lblEncomendas.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncomendas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblEncomendas.Location = new System.Drawing.Point(53, 245);
+            this.lblEncomendas.Name = "lblEncomendas";
+            this.lblEncomendas.Size = new System.Drawing.Size(111, 26);
+            this.lblEncomendas.TabIndex = 1;
+            this.lblEncomendas.Text = "Encomendas";
+            this.lblEncomendas.Click += new System.EventHandler(this.lblEncomendas_Click);
+            // 
+            // lblMenu
+            // 
+            this.lblMenu.AutoSize = true;
+            this.lblMenu.BackColor = System.Drawing.Color.Transparent;
+            this.lblMenu.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblMenu.Location = new System.Drawing.Point(53, 205);
+            this.lblMenu.Name = "lblMenu";
+            this.lblMenu.Size = new System.Drawing.Size(54, 26);
+            this.lblMenu.TabIndex = 0;
+            this.lblMenu.Text = "Menu";
+            this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblUsuario.Location = new System.Drawing.Point(18, 160);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(165, 23);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Text = "Seja bem-vindo Uusario";
+            // 
             // pctLogo
             // 
             this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -514,6 +513,19 @@
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctLogo.TabIndex = 3;
             this.pctLogo.TabStop = false;
+            // 
+            // pctFechar
+            // 
+            this.pctFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.pctFechar.Image = global::monisePerso.Properties.Resources.fechar;
+            this.pctFechar.Location = new System.Drawing.Point(1163, 4);
+            this.pctFechar.Name = "pctFechar";
+            this.pctFechar.Size = new System.Drawing.Size(32, 32);
+            this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctFechar.TabIndex = 28;
+            this.pctFechar.TabStop = false;
+            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
             // frmFuncionarios
             // 
@@ -532,13 +544,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmFuncionarios_Load);
             this.pnlFuncionarios.ResumeLayout(false);
             this.pnlFiltros.ResumeLayout(false);
             this.pnlFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -550,6 +562,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,8 +598,8 @@
         private System.Windows.Forms.Label lblSair;
         private System.Windows.Forms.Label lblAplicativo;
         private System.Windows.Forms.Label lblSobre;
-        private System.Windows.Forms.Label lblContato;
         private System.Windows.Forms.Label lblProdutos;
+        private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.Label lblFuncionarios;
         private System.Windows.Forms.Label lblClientes;
         private System.Windows.Forms.Label lblEncomendas;

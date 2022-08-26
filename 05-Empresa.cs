@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace monisePerso
 {
-    public partial class frmClientes : Form
+    public partial class frmEmpresa : Form
     {
-        public frmClientes()
+        public frmEmpresa()
         {
             InitializeComponent();
         }
 
-        private void frmClientes_Load(object sender, EventArgs e)
+        private void frmEmpresa_Load(object sender, EventArgs e)
         {
-            pnlClientes.Location = new Point(this.Width / 2 -  pnlClientes.Width / 2, this.Height / 2 - pnlClientes.Height / 2);
+            pnlEmpresa.Location = new Point(this.Width / 2 - pnlEmpresa.Width / 2, this.Height / 2 - pnlEmpresa.Height / 2);
 
             lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
         }
@@ -37,6 +37,34 @@ namespace monisePerso
                 new frmLogin().Show();
                 Close();
             }
+        }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                new frmLogin().Show();
+                Close();
+            }
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                new frmLogin().Show();
+                Close();
+            }
+        }
+
+        private void lblMenu_Click(object sender, EventArgs e)
+        {
+            new frmMenu().Show();
+            Hide();
         }
 
         private void lblEncomendas_Click(object sender, EventArgs e)
@@ -81,33 +109,10 @@ namespace monisePerso
             //Hide();
         }
 
-        private void lblEmail_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
             //new frmEmail().Show();
             //Hide();
         }
-
-        private void lblSair_Click(object sender, EventArgs e)
-        {
-            var resultado = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (resultado == DialogResult.Yes)
-            {
-                new frmLogin().Show();
-                Close();
-            }
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-            var resultado = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (resultado == DialogResult.Yes)
-            {
-                new frmLogin().Show();
-                Close();
-            }
-        }
-
     }
 }

@@ -38,5 +38,81 @@ namespace monisePerso
                 Close();
             }
         }
+
+        private void lblMenu_Click(object sender, EventArgs e)
+        {
+            new frmMenu().Show();
+            Hide();
+        }
+
+        private void lblEncomendas_Click(object sender, EventArgs e)
+        {
+            //new frmEncomendas().Show();
+            //Hide();
+        }
+
+        private void lblClientes_Click(object sender, EventArgs e)
+        {
+            new frmClientes().Show();
+            Hide();
+        }
+
+        private void lblFuncionarios_Click(object sender, EventArgs e)
+        {
+            new frmFuncionarios().Show();
+            Hide();
+        }
+
+        private void lblProdutos_Click(object sender, EventArgs e)
+        {
+            new frmEmpresa().Show();
+            Hide();
+        }
+
+        private void lblProdutos_Click_1(object sender, EventArgs e)
+        {
+            //new frmProdutos().Show();
+            //Hide();
+        }
+
+        private void lblSobre_Click(object sender, EventArgs e)
+        {
+            //new frmSobre().Show();
+            //Hide();
+        }
+
+        private void lblAplicativo_Click(object sender, EventArgs e)
+        {
+            //new frmAplicativo().Show();
+            //Hide();
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+            //new frmEmail().Show();
+            //Hide();
+        }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                new frmLogin().Show();
+                Close();
+            }
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                new frmLogin().Show();
+                Close();
+            }
+        }
     }
 }
