@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSair = new System.Windows.Forms.Label();
             this.lblAplicativo = new System.Windows.Forms.Label();
             this.lblSobre = new System.Windows.Forms.Label();
@@ -53,7 +45,6 @@
             this.lblEncomendas = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pnlCadCliente = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -68,17 +59,31 @@
             this.lblNomeCliente = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblFoto = new System.Windows.Forms.Label();
-            this.pctFoto = new System.Windows.Forms.PictureBox();
-            this.pctFechar = new System.Windows.Forms.PictureBox();
             this.pnlTelCliente = new System.Windows.Forms.Panel();
             this.lblTelCliente = new System.Windows.Forms.Label();
-            this.dgvTelCliente = new System.Windows.Forms.DataGridView();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.pctFechar = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.pctFoto = new System.Windows.Forms.PictureBox();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.pnlSideMenu.SuspendLayout();
+            this.pnlCadCliente.SuspendLayout();
+            this.pnlTelCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -90,11 +95,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            this.pnlCadCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
-            this.pnlTelCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTelCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -168,16 +170,6 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(200, 650);
             this.pnlSideMenu.TabIndex = 26;
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::monisePerso.Properties.Resources.iconEmail;
-            this.pictureBox10.Location = new System.Drawing.Point(16, 525);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox10.TabIndex = 23;
-            this.pictureBox10.TabStop = false;
-            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
@@ -188,97 +180,6 @@
             this.lblEmail.Size = new System.Drawing.Size(53, 26);
             this.lblEmail.TabIndex = 19;
             this.lblEmail.Text = "Email";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.Image = global::monisePerso.Properties.Resources.iconSair;
-            this.pictureBox9.Location = new System.Drawing.Point(166, 584);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox9.TabIndex = 21;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::monisePerso.Properties.Resources.iconAplicativo;
-            this.pictureBox8.Location = new System.Drawing.Point(16, 486);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox8.TabIndex = 20;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconMenu;
-            this.pictureBox7.Location = new System.Drawing.Point(16, 446);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconContato;
-            this.pictureBox6.Location = new System.Drawing.Point(16, 406);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 18;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconProdutos;
-            this.pictureBox5.Location = new System.Drawing.Point(16, 366);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::monisePerso.Properties.Resources.iconFuncionario;
-            this.pictureBox4.Location = new System.Drawing.Point(16, 326);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::monisePerso.Properties.Resources.iconCliente;
-            this.pictureBox3.Location = new System.Drawing.Point(16, 286);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::monisePerso.Properties.Resources.iconEncomenda;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 246);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::monisePerso.Properties.Resources.iconMenu;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 206);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // lblSair
             // 
@@ -351,7 +252,7 @@
             // 
             this.lblClientes.AutoSize = true;
             this.lblClientes.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.lblClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
             this.lblClientes.Location = new System.Drawing.Point(53, 285);
             this.lblClientes.Name = "lblClientes";
             this.lblClientes.Size = new System.Drawing.Size(73, 26);
@@ -374,7 +275,7 @@
             this.lblMenu.AutoSize = true;
             this.lblMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblMenu.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.lblMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
+            this.lblMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.lblMenu.Location = new System.Drawing.Point(53, 205);
             this.lblMenu.Name = "lblMenu";
             this.lblMenu.Size = new System.Drawing.Size(54, 26);
@@ -393,18 +294,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(165, 23);
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Seja bem-vindo Uusario";
-            // 
-            // pctLogo
-            // 
-            this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctLogo.Image = global::monisePerso.Properties.Resources.logoMenu;
-            this.pctLogo.Location = new System.Drawing.Point(50, 50);
-            this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(100, 100);
-            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctLogo.TabIndex = 3;
-            this.pctLogo.TabStop = false;
             // 
             // pnlCadCliente
             // 
@@ -577,35 +466,13 @@
             this.lblFoto.Text = "Foto";
             this.lblFoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pctFoto
-            // 
-            this.pctFoto.Image = global::monisePerso.Properties.Resources.userFoto;
-            this.pctFoto.Location = new System.Drawing.Point(0, 34);
-            this.pctFoto.Name = "pctFoto";
-            this.pctFoto.Size = new System.Drawing.Size(220, 220);
-            this.pctFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctFoto.TabIndex = 0;
-            this.pctFoto.TabStop = false;
-            // 
-            // pctFechar
-            // 
-            this.pctFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.pctFechar.Image = global::monisePerso.Properties.Resources.fechar;
-            this.pctFechar.Location = new System.Drawing.Point(1163, 4);
-            this.pctFechar.Name = "pctFechar";
-            this.pctFechar.Size = new System.Drawing.Size(32, 32);
-            this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctFechar.TabIndex = 25;
-            this.pctFechar.TabStop = false;
-            // 
             // pnlTelCliente
             // 
+            this.pnlTelCliente.Controls.Add(this.lblTelCliente);
+            this.pnlTelCliente.Controls.Add(this.dgvClientes);
             this.pnlTelCliente.Controls.Add(this.btnExcluir);
             this.pnlTelCliente.Controls.Add(this.btnAlterar);
             this.pnlTelCliente.Controls.Add(this.btnCadastrar);
-            this.pnlTelCliente.Controls.Add(this.dgvTelCliente);
-            this.pnlTelCliente.Controls.Add(this.lblTelCliente);
             this.pnlTelCliente.Location = new System.Drawing.Point(0, 286);
             this.pnlTelCliente.Name = "pnlTelCliente";
             this.pnlTelCliente.Size = new System.Drawing.Size(692, 260);
@@ -624,15 +491,6 @@
             this.lblTelCliente.TabIndex = 0;
             this.lblTelCliente.Text = "Telefone Cliente";
             this.lblTelCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgvTelCliente
-            // 
-            this.dgvTelCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.dgvTelCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTelCliente.Location = new System.Drawing.Point(0, 34);
-            this.dgvTelCliente.Name = "dgvTelCliente";
-            this.dgvTelCliente.Size = new System.Drawing.Size(692, 166);
-            this.dgvTelCliente.TabIndex = 1;
             // 
             // btnCadastrar
             // 
@@ -704,6 +562,177 @@
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
             // 
+            // pctFechar
+            // 
+            this.pctFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.pctFechar.Image = global::monisePerso.Properties.Resources.fechar;
+            this.pctFechar.Location = new System.Drawing.Point(1163, 4);
+            this.pctFechar.Name = "pctFechar";
+            this.pctFechar.Size = new System.Drawing.Size(32, 32);
+            this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctFechar.TabIndex = 25;
+            this.pctFechar.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::monisePerso.Properties.Resources.iconEmail;
+            this.pictureBox10.Location = new System.Drawing.Point(16, 525);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox10.TabIndex = 23;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox9.Image = global::monisePerso.Properties.Resources.iconSair;
+            this.pictureBox9.Location = new System.Drawing.Point(166, 584);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox9.TabIndex = 21;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::monisePerso.Properties.Resources.iconAplicativo;
+            this.pictureBox8.Location = new System.Drawing.Point(16, 486);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox8.TabIndex = 20;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconMenu;
+            this.pictureBox7.Location = new System.Drawing.Point(16, 446);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 19;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconContato;
+            this.pictureBox6.Location = new System.Drawing.Point(16, 406);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 18;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconProdutos;
+            this.pictureBox5.Location = new System.Drawing.Point(16, 366);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::monisePerso.Properties.Resources.iconFuncionario;
+            this.pictureBox4.Location = new System.Drawing.Point(16, 326);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::monisePerso.Properties.Resources.iconCliente;
+            this.pictureBox3.Location = new System.Drawing.Point(16, 286);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::monisePerso.Properties.Resources.iconEncomenda;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 246);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::monisePerso.Properties.Resources.iconMenu;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 206);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pctLogo
+            // 
+            this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctLogo.Image = global::monisePerso.Properties.Resources.logoMenu;
+            this.pctLogo.Location = new System.Drawing.Point(50, 50);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(100, 100);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctLogo.TabIndex = 3;
+            this.pctLogo.TabStop = false;
+            // 
+            // pctFoto
+            // 
+            this.pctFoto.Image = global::monisePerso.Properties.Resources.userFoto;
+            this.pctFoto.Location = new System.Drawing.Point(0, 34);
+            this.pctFoto.Name = "pctFoto";
+            this.pctFoto.Size = new System.Drawing.Size(220, 220);
+            this.pctFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFoto.TabIndex = 0;
+            this.pctFoto.TabStop = false;
+            // 
+            // dgvClientes
+            // 
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.AllowUserToResizeColumns = false;
+            this.dgvClientes.AllowUserToResizeRows = false;
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvClientes.EnableHeadersVisualStyles = false;
+            this.dgvClientes.Location = new System.Drawing.Point(0, 33);
+            this.dgvClientes.MultiSelect = false;
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.RowHeadersVisible = false;
+            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvClientes.Size = new System.Drawing.Size(692, 166);
+            this.dgvClientes.TabIndex = 15;
+            // 
             // frmCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -724,6 +753,10 @@
             this.Load += new System.EventHandler(this.frmCadCliente_Load);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
+            this.pnlCadCliente.ResumeLayout(false);
+            this.pnlCadCliente.PerformLayout();
+            this.pnlTelCliente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -735,12 +768,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            this.pnlCadCliente.ResumeLayout(false);
-            this.pnlCadCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
-            this.pnlTelCliente.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTelCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -791,12 +820,12 @@
         private System.Windows.Forms.Label lblNomeCliente;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Panel pnlTelCliente;
-        private System.Windows.Forms.DataGridView dgvTelCliente;
         private System.Windows.Forms.Label lblTelCliente;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.DataGridView dgvClientes;
     }
 }
