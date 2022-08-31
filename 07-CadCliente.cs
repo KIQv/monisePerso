@@ -62,8 +62,8 @@ namespace monisePerso
 
         private void lblSobre_Click(object sender, EventArgs e)
         {
-            //new frmSobre().Show();
-            //Close();
+            new frmSobre().Show();
+            Close();
         }
 
         private void lblAplicativo_Click(object sender, EventArgs e)

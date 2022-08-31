@@ -43,7 +43,7 @@
             this.lblEncomendas = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnlSobre = new System.Windows.Forms.Panel();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -56,7 +56,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnlSideMenu.SuspendLayout();
+            this.pnlSobre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -152,6 +160,7 @@
             this.lblEmail.Size = new System.Drawing.Size(53, 26);
             this.lblEmail.TabIndex = 22;
             this.lblEmail.Text = "Email";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblSair
             // 
@@ -175,6 +184,7 @@
             this.lblAplicativo.Size = new System.Drawing.Size(86, 26);
             this.lblAplicativo.TabIndex = 7;
             this.lblAplicativo.Text = "Aplicativo";
+            this.lblAplicativo.Click += new System.EventHandler(this.lblAplicativo_Click);
             // 
             // lblSobre
             // 
@@ -186,6 +196,7 @@
             this.lblSobre.Size = new System.Drawing.Size(56, 26);
             this.lblSobre.TabIndex = 6;
             this.lblSobre.Text = "Sobre";
+            this.lblSobre.Click += new System.EventHandler(this.lblSobre_Click);
             // 
             // lblProdutos
             // 
@@ -197,6 +208,7 @@
             this.lblProdutos.Size = new System.Drawing.Size(80, 26);
             this.lblProdutos.TabIndex = 5;
             this.lblProdutos.Text = "Produtos";
+            this.lblProdutos.Click += new System.EventHandler(this.lblProdutos_Click);
             // 
             // lblEmpresa
             // 
@@ -208,6 +220,7 @@
             this.lblEmpresa.Size = new System.Drawing.Size(78, 26);
             this.lblEmpresa.TabIndex = 4;
             this.lblEmpresa.Text = "Empresa";
+            this.lblEmpresa.Click += new System.EventHandler(this.lblEmpresa_Click);
             // 
             // lblFuncionarios
             // 
@@ -219,6 +232,7 @@
             this.lblFuncionarios.Size = new System.Drawing.Size(111, 26);
             this.lblFuncionarios.TabIndex = 3;
             this.lblFuncionarios.Text = "Funcionarios";
+            this.lblFuncionarios.Click += new System.EventHandler(this.lblFuncionarios_Click);
             // 
             // lblClientes
             // 
@@ -230,6 +244,7 @@
             this.lblClientes.Size = new System.Drawing.Size(73, 26);
             this.lblClientes.TabIndex = 2;
             this.lblClientes.Text = "Clientes";
+            this.lblClientes.Click += new System.EventHandler(this.lblClientes_Click);
             // 
             // lblEncomendas
             // 
@@ -241,6 +256,7 @@
             this.lblEncomendas.Size = new System.Drawing.Size(111, 26);
             this.lblEncomendas.TabIndex = 1;
             this.lblEncomendas.Text = "Encomendas";
+            this.lblEncomendas.Click += new System.EventHandler(this.lblEncomendas_Click);
             // 
             // lblMenu
             // 
@@ -253,6 +269,7 @@
             this.lblMenu.Size = new System.Drawing.Size(54, 26);
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Menu";
+            this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
             // 
             // lblUsuario
             // 
@@ -267,12 +284,20 @@
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Seja bem-vindo Uusario";
             // 
-            // pnlMenu
+            // pnlSobre
             // 
-            this.pnlMenu.Location = new System.Drawing.Point(231, 71);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(935, 515);
-            this.pnlMenu.TabIndex = 29;
+            this.pnlSobre.Controls.Add(this.label7);
+            this.pnlSobre.Controls.Add(this.label6);
+            this.pnlSobre.Controls.Add(this.label5);
+            this.pnlSobre.Controls.Add(this.label4);
+            this.pnlSobre.Controls.Add(this.label3);
+            this.pnlSobre.Controls.Add(this.label2);
+            this.pnlSobre.Controls.Add(this.label1);
+            this.pnlSobre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.pnlSobre.Location = new System.Drawing.Point(231, 71);
+            this.pnlSobre.Name = "pnlSobre";
+            this.pnlSobre.Size = new System.Drawing.Size(935, 515);
+            this.pnlSobre.TabIndex = 29;
             // 
             // pctFechar
             // 
@@ -399,6 +424,84 @@
             this.pctLogo.TabIndex = 3;
             this.pctLogo.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label1.Location = new System.Drawing.Point(343, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(248, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Kaique Oliveira de Paula";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label2.Location = new System.Drawing.Point(3, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(573, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Projeto desenvolvido para a empresa Monise Personalizados - Doceria";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label3.Location = new System.Drawing.Point(3, 114);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(357, 208);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "O intuito deste sistema é o gerenciamento de:\r\n• Clientes\r\n• Funcionarios\r\n• Empr" +
+    "esas\r\n• Produtos\r\n• Encomendas\r\n• Aplicativo\r\n• Web Site";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label4.Location = new System.Drawing.Point(3, 361);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 28);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "E-MAIL:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label5.Location = new System.Drawing.Point(314, 361);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 28);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Telefone:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label6.Location = new System.Drawing.Point(3, 389);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(239, 26);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "kaiqueoliveira257@gmail.com";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label7.Location = new System.Drawing.Point(314, 389);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(162, 26);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "+55 (11) 96967-0335";
+            // 
             // frmSobre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,14 +513,17 @@
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.pnlSideMenu);
-            this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.pnlSobre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSobre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sobre";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmSobre_Load);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
+            this.pnlSobre.ResumeLayout(false);
+            this.pnlSobre.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -464,6 +570,13 @@
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.PictureBox pctLogo;
-        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Panel pnlSobre;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
