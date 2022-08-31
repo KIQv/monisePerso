@@ -142,6 +142,19 @@ namespace monisePerso
 
             Variaveis.linhaSelecionada = -1;
             CarregarEmpresa();
+
+            if (Variaveis.nivel != "ADMINISTRADOR")
+            {
+                lblEmpresa.Enabled = false;
+                lblFuncionarios.Enabled = false;
+                lblAplicativo.Enabled = false;
+            }
+            else
+            {
+                lblEmpresa.Enabled = true;
+                lblFuncionarios.Enabled = true;
+                lblAplicativo.Enabled = true;
+            }
         }
 
         private void pctFechar_Click(object sender, EventArgs e)

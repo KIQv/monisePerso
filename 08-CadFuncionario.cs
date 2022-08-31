@@ -76,6 +76,19 @@ namespace monisePerso
             pnlCadFuncionario.Location = new Point(this.Width / 2 - pnlCadFuncionario.Width / 2, this.Height / 2 - pnlCadFuncionario.Height / 2);
 
             lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
+
+            if (Variaveis.nivel != "ADMINISTRADOR")
+            {
+                lblEmpresa.Enabled = false;
+                lblFuncionarios.Enabled = false;
+                lblAplicativo.Enabled = false;
+            }
+            else
+            {
+                lblEmpresa.Enabled = true;
+                lblFuncionarios.Enabled = true;
+                lblAplicativo.Enabled = true;
+            }
         }
     }
 }

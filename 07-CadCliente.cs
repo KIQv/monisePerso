@@ -22,6 +22,19 @@ namespace monisePerso
             pnlCadCliente.Location = new Point(this.Width / 2 - pnlCadCliente.Width / 2, this.Height / 2 - pnlCadCliente.Height / 2);
 
             lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
+
+            if (Variaveis.nivel != "ADMINISTRADOR")
+            {
+                lblEmpresa.Enabled = false;
+                lblFuncionarios.Enabled = false;
+                lblAplicativo.Enabled = false;
+            }
+            else
+            {
+                lblEmpresa.Enabled = true;
+                lblFuncionarios.Enabled = true;
+                lblAplicativo.Enabled = true;
+            }
         }
 
         private void lblMenu_Click(object sender, EventArgs e)

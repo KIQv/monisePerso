@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,7 +44,7 @@ namespace monisePerso
             Variaveis.usuario = txtUsuario.Text;
             Variaveis.senha = txtSenha.Text;
 
-            if(Variaveis.usuario == "kaique" && Variaveis.senha == "123")
+            if (Variaveis.usuario == "Kaique" && Variaveis.senha == "123")
             {
                 Variaveis.nivel = "ADMINISTRADOR";
                 new frmMenu().Show();
@@ -51,11 +52,40 @@ namespace monisePerso
             }
             else
             {
-                MessageBox.Show("Acesso negado! Digite um usuario valido");
-                txtUsuario.Clear();
-                txtSenha.Clear();
-                txtUsuario.Focus();
+                try
+                {
+                    banco.Conectar();
+                    string selecionar = "SELECT `nomeFuncionario`,`emailFuncionario`,`senhaFuncionario`,`nivelFuncionario` FROM `funcionario` WHERE `emailFuncionario`=@email AND `senhaFuncionario`=@senha AND `statusFuncionario`=@status";
+                    MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                    cmd.Parameters.AddWithValue("@email", Variaveis.usuario);
+                    cmd.Parameters.AddWithValue("@senha", Variaveis.senha);
+                    cmd.Parameters.AddWithValue("@status", "ATIVO");
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        Variaveis.usuario = reader.GetString(0);
+                        Variaveis.nivel = reader.GetString(3);
+                        new frmMenu().Show();
+                        Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("ACESSO NEGADO");
+                        txtUsuario.Clear();
+                        txtSenha.Clear();
+                        txtUsuario.Focus();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("ERRO AO ACESSAR O BANCO DE DADOS");
+                }
             }
+        }
+
+        private void pnlLogin_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -141,6 +141,19 @@ namespace monisePerso
             lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
 
             CarregarProduto();
+
+            if (Variaveis.nivel != "ADMINISTRADOR")
+            {
+                lblEmpresa.Enabled = false;
+                lblFuncionarios.Enabled = false;
+                lblAplicativo.Enabled = false;
+            }
+            else
+            {
+                lblEmpresa.Enabled = true;
+                lblFuncionarios.Enabled = true;
+                lblAplicativo.Enabled = true;
+            }
         }
 
         private void chkAtivo_CheckedChanged(object sender, EventArgs e)
