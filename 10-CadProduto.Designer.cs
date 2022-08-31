@@ -57,6 +57,15 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblValor = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblDestaque = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.lblFotoProduto02 = new System.Windows.Forms.Label();
+            this.lblFotoProduto03 = new System.Windows.Forms.Label();
+            this.lblFotoProduto04 = new System.Windows.Forms.Label();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -69,19 +78,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.pctFoto01 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblValor = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblDestaque = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.lblFotoProduto02 = new System.Windows.Forms.Label();
-            this.pctFoto02 = new System.Windows.Forms.PictureBox();
-            this.lblFotoProduto03 = new System.Windows.Forms.Label();
-            this.pctFoto03 = new System.Windows.Forms.PictureBox();
-            this.lblFotoProduto04 = new System.Windows.Forms.Label();
             this.pctFoto04 = new System.Windows.Forms.PictureBox();
+            this.pctFoto03 = new System.Windows.Forms.PictureBox();
+            this.pctFoto02 = new System.Windows.Forms.PictureBox();
+            this.pctFoto01 = new System.Windows.Forms.PictureBox();
             this.pnlSideMenu.SuspendLayout();
             this.pnlCadProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
@@ -96,10 +96,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFoto01)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFoto02)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFoto03)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFoto04)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto02)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto01)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSideMenu
@@ -494,6 +494,117 @@
             this.lblHora.TabIndex = 33;
             this.lblHora.Text = "00:00";
             // 
+            // textBox1
+            // 
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.textBox1.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.textBox1.Location = new System.Drawing.Point(504, 99);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(210, 26);
+            this.textBox1.TabIndex = 51;
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.BackColor = System.Drawing.Color.Transparent;
+            this.lblValor.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblValor.Location = new System.Drawing.Point(499, 69);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(57, 28);
+            this.lblValor.TabIndex = 52;
+            this.lblValor.Text = "Valor:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ATIVO",
+            "INATIVO"});
+            this.comboBox1.Location = new System.Drawing.Point(746, 99);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(188, 26);
+            this.comboBox1.TabIndex = 53;
+            // 
+            // lblDestaque
+            // 
+            this.lblDestaque.AutoSize = true;
+            this.lblDestaque.BackColor = System.Drawing.Color.Transparent;
+            this.lblDestaque.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblDestaque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblDestaque.Location = new System.Drawing.Point(741, 69);
+            this.lblDestaque.Name = "lblDestaque";
+            this.lblDestaque.Size = new System.Drawing.Size(92, 28);
+            this.lblDestaque.TabIndex = 54;
+            this.lblDestaque.Text = "Destaque:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.textBox2.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.textBox2.Location = new System.Drawing.Point(0, 167);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(472, 26);
+            this.textBox2.TabIndex = 55;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTipo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblTipo.Location = new System.Drawing.Point(-5, 137);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(49, 28);
+            this.lblTipo.TabIndex = 56;
+            this.lblTipo.Text = "Tipo:";
+            // 
+            // lblFotoProduto02
+            // 
+            this.lblFotoProduto02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.lblFotoProduto02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFotoProduto02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFotoProduto02.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFotoProduto02.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
+            this.lblFotoProduto02.Location = new System.Drawing.Point(238, 214);
+            this.lblFotoProduto02.Name = "lblFotoProduto02";
+            this.lblFotoProduto02.Size = new System.Drawing.Size(220, 34);
+            this.lblFotoProduto02.TabIndex = 58;
+            this.lblFotoProduto02.Text = "Foto produto 02";
+            this.lblFotoProduto02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFotoProduto03
+            // 
+            this.lblFotoProduto03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.lblFotoProduto03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFotoProduto03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFotoProduto03.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFotoProduto03.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
+            this.lblFotoProduto03.Location = new System.Drawing.Point(476, 214);
+            this.lblFotoProduto03.Name = "lblFotoProduto03";
+            this.lblFotoProduto03.Size = new System.Drawing.Size(220, 34);
+            this.lblFotoProduto03.TabIndex = 60;
+            this.lblFotoProduto03.Text = "Foto produto 03";
+            this.lblFotoProduto03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFotoProduto04
+            // 
+            this.lblFotoProduto04.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.lblFotoProduto04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFotoProduto04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFotoProduto04.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFotoProduto04.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
+            this.lblFotoProduto04.Location = new System.Drawing.Point(714, 214);
+            this.lblFotoProduto04.Name = "lblFotoProduto04";
+            this.lblFotoProduto04.Size = new System.Drawing.Size(220, 34);
+            this.lblFotoProduto04.TabIndex = 62;
+            this.lblFotoProduto04.Text = "Foto produto 04";
+            this.lblFotoProduto04.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pctFechar
             // 
             this.pctFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -619,122 +730,15 @@
             this.pctLogo.TabIndex = 3;
             this.pctLogo.TabStop = false;
             // 
-            // pctFoto01
+            // pctFoto04
             // 
-            this.pctFoto01.Image = global::monisePerso.Properties.Resources.fotoProduto;
-            this.pctFoto01.Location = new System.Drawing.Point(0, 247);
-            this.pctFoto01.Name = "pctFoto01";
-            this.pctFoto01.Size = new System.Drawing.Size(220, 220);
-            this.pctFoto01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctFoto01.TabIndex = 0;
-            this.pctFoto01.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.textBox1.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.textBox1.Location = new System.Drawing.Point(504, 99);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 26);
-            this.textBox1.TabIndex = 51;
-            // 
-            // lblValor
-            // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.BackColor = System.Drawing.Color.Transparent;
-            this.lblValor.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblValor.Location = new System.Drawing.Point(499, 69);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(57, 28);
-            this.lblValor.TabIndex = 52;
-            this.lblValor.Text = "Valor:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "ATIVO",
-            "INATIVO"});
-            this.comboBox1.Location = new System.Drawing.Point(746, 99);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 26);
-            this.comboBox1.TabIndex = 53;
-            // 
-            // lblDestaque
-            // 
-            this.lblDestaque.AutoSize = true;
-            this.lblDestaque.BackColor = System.Drawing.Color.Transparent;
-            this.lblDestaque.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblDestaque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblDestaque.Location = new System.Drawing.Point(741, 69);
-            this.lblDestaque.Name = "lblDestaque";
-            this.lblDestaque.Size = new System.Drawing.Size(92, 28);
-            this.lblDestaque.TabIndex = 54;
-            this.lblDestaque.Text = "Destaque:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.textBox2.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.textBox2.Location = new System.Drawing.Point(0, 167);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(472, 26);
-            this.textBox2.TabIndex = 55;
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTipo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblTipo.Location = new System.Drawing.Point(-5, 137);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(49, 28);
-            this.lblTipo.TabIndex = 56;
-            this.lblTipo.Text = "Tipo:";
-            // 
-            // lblFotoProduto02
-            // 
-            this.lblFotoProduto02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.lblFotoProduto02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFotoProduto02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblFotoProduto02.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFotoProduto02.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
-            this.lblFotoProduto02.Location = new System.Drawing.Point(238, 214);
-            this.lblFotoProduto02.Name = "lblFotoProduto02";
-            this.lblFotoProduto02.Size = new System.Drawing.Size(220, 34);
-            this.lblFotoProduto02.TabIndex = 58;
-            this.lblFotoProduto02.Text = "Foto produto 02";
-            this.lblFotoProduto02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pctFoto02
-            // 
-            this.pctFoto02.Image = global::monisePerso.Properties.Resources.fotoProduto;
-            this.pctFoto02.Location = new System.Drawing.Point(238, 247);
-            this.pctFoto02.Name = "pctFoto02";
-            this.pctFoto02.Size = new System.Drawing.Size(220, 220);
-            this.pctFoto02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctFoto02.TabIndex = 57;
-            this.pctFoto02.TabStop = false;
-            // 
-            // lblFotoProduto03
-            // 
-            this.lblFotoProduto03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.lblFotoProduto03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFotoProduto03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblFotoProduto03.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFotoProduto03.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
-            this.lblFotoProduto03.Location = new System.Drawing.Point(476, 214);
-            this.lblFotoProduto03.Name = "lblFotoProduto03";
-            this.lblFotoProduto03.Size = new System.Drawing.Size(220, 34);
-            this.lblFotoProduto03.TabIndex = 60;
-            this.lblFotoProduto03.Text = "Foto produto 03";
-            this.lblFotoProduto03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pctFoto04.Image = global::monisePerso.Properties.Resources.fotoProduto;
+            this.pctFoto04.Location = new System.Drawing.Point(714, 247);
+            this.pctFoto04.Name = "pctFoto04";
+            this.pctFoto04.Size = new System.Drawing.Size(220, 220);
+            this.pctFoto04.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFoto04.TabIndex = 61;
+            this.pctFoto04.TabStop = false;
             // 
             // pctFoto03
             // 
@@ -746,29 +750,25 @@
             this.pctFoto03.TabIndex = 59;
             this.pctFoto03.TabStop = false;
             // 
-            // lblFotoProduto04
+            // pctFoto02
             // 
-            this.lblFotoProduto04.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.lblFotoProduto04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFotoProduto04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblFotoProduto04.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFotoProduto04.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
-            this.lblFotoProduto04.Location = new System.Drawing.Point(714, 214);
-            this.lblFotoProduto04.Name = "lblFotoProduto04";
-            this.lblFotoProduto04.Size = new System.Drawing.Size(220, 34);
-            this.lblFotoProduto04.TabIndex = 62;
-            this.lblFotoProduto04.Text = "Foto produto 04";
-            this.lblFotoProduto04.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pctFoto02.Image = global::monisePerso.Properties.Resources.fotoProduto;
+            this.pctFoto02.Location = new System.Drawing.Point(238, 247);
+            this.pctFoto02.Name = "pctFoto02";
+            this.pctFoto02.Size = new System.Drawing.Size(220, 220);
+            this.pctFoto02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFoto02.TabIndex = 57;
+            this.pctFoto02.TabStop = false;
             // 
-            // pctFoto04
+            // pctFoto01
             // 
-            this.pctFoto04.Image = global::monisePerso.Properties.Resources.fotoProduto;
-            this.pctFoto04.Location = new System.Drawing.Point(714, 247);
-            this.pctFoto04.Name = "pctFoto04";
-            this.pctFoto04.Size = new System.Drawing.Size(220, 220);
-            this.pctFoto04.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctFoto04.TabIndex = 61;
-            this.pctFoto04.TabStop = false;
+            this.pctFoto01.Image = global::monisePerso.Properties.Resources.fotoProduto;
+            this.pctFoto01.Location = new System.Drawing.Point(0, 247);
+            this.pctFoto01.Name = "pctFoto01";
+            this.pctFoto01.Size = new System.Drawing.Size(220, 220);
+            this.pctFoto01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFoto01.TabIndex = 0;
+            this.pctFoto01.TabStop = false;
             // 
             // frmCadProduto
             // 
@@ -787,6 +787,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Produto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmCadProduto_Load);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
             this.pnlCadProduto.ResumeLayout(false);
@@ -803,10 +804,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFoto01)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFoto02)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFoto03)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFoto04)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto02)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto01)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

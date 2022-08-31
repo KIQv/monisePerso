@@ -143,6 +143,12 @@
     <Compile Include="10-CadProduto.Designer.cs">
       <DependentUpon>10-CadProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="11-Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="11-Sobre.Designer.cs">
+      <DependentUpon>11-Sobre.cs</DependentUpon>
+    </Compile>
     <Compile Include="banco.cs" />
     <Compile Include="ftp.cs" />
     <Compile Include="06-Produtos.cs">
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="10-CadProduto.resx">
       <DependentUpon>10-CadProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="11-Sobre.resx">
+      <DependentUpon>11-Sobre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

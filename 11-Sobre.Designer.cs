@@ -1,6 +1,6 @@
 ﻿namespace monisePerso
 {
-    partial class frmMenu
+    partial class frmSobre
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
@@ -41,14 +43,6 @@
             this.lblEncomendas = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.dgvEmail = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dgvEncomendas = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblData = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -63,13 +57,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pnlSideMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEncomendas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
-            this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -95,9 +82,33 @@
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(1200, 40);
-            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.TabIndex = 24;
             this.lblTitulo.Text = "Monise Personalizados";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblData
+            // 
+            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblData.AutoSize = true;
+            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblData.Location = new System.Drawing.Point(1033, 615);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(80, 18);
+            this.lblData.TabIndex = 28;
+            this.lblData.Text = "00/00/0000";
+            // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblHora.Location = new System.Drawing.Point(1137, 615);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(44, 18);
+            this.lblHora.TabIndex = 27;
+            this.lblHora.Text = "00:00";
             // 
             // pnlSideMenu
             // 
@@ -129,7 +140,7 @@
             this.pnlSideMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlSideMenu.Name = "pnlSideMenu";
             this.pnlSideMenu.Size = new System.Drawing.Size(200, 650);
-            this.pnlSideMenu.TabIndex = 9;
+            this.pnlSideMenu.TabIndex = 26;
             // 
             // lblEmail
             // 
@@ -141,7 +152,6 @@
             this.lblEmail.Size = new System.Drawing.Size(53, 26);
             this.lblEmail.TabIndex = 22;
             this.lblEmail.Text = "Email";
-            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblSair
             // 
@@ -154,7 +164,6 @@
             this.lblSair.Size = new System.Drawing.Size(41, 26);
             this.lblSair.TabIndex = 8;
             this.lblSair.Text = "Sair";
-            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // lblAplicativo
             // 
@@ -166,7 +175,6 @@
             this.lblAplicativo.Size = new System.Drawing.Size(86, 26);
             this.lblAplicativo.TabIndex = 7;
             this.lblAplicativo.Text = "Aplicativo";
-            this.lblAplicativo.Click += new System.EventHandler(this.lblAplicativo_Click);
             // 
             // lblSobre
             // 
@@ -178,7 +186,6 @@
             this.lblSobre.Size = new System.Drawing.Size(56, 26);
             this.lblSobre.TabIndex = 6;
             this.lblSobre.Text = "Sobre";
-            this.lblSobre.Click += new System.EventHandler(this.lblSobre_Click);
             // 
             // lblProdutos
             // 
@@ -190,7 +197,6 @@
             this.lblProdutos.Size = new System.Drawing.Size(80, 26);
             this.lblProdutos.TabIndex = 5;
             this.lblProdutos.Text = "Produtos";
-            this.lblProdutos.Click += new System.EventHandler(this.lblProdutos_Click_1);
             // 
             // lblEmpresa
             // 
@@ -202,7 +208,6 @@
             this.lblEmpresa.Size = new System.Drawing.Size(78, 26);
             this.lblEmpresa.TabIndex = 4;
             this.lblEmpresa.Text = "Empresa";
-            this.lblEmpresa.Click += new System.EventHandler(this.lblProdutos_Click);
             // 
             // lblFuncionarios
             // 
@@ -214,7 +219,6 @@
             this.lblFuncionarios.Size = new System.Drawing.Size(111, 26);
             this.lblFuncionarios.TabIndex = 3;
             this.lblFuncionarios.Text = "Funcionarios";
-            this.lblFuncionarios.Click += new System.EventHandler(this.lblFuncionarios_Click);
             // 
             // lblClientes
             // 
@@ -226,7 +230,6 @@
             this.lblClientes.Size = new System.Drawing.Size(73, 26);
             this.lblClientes.TabIndex = 2;
             this.lblClientes.Text = "Clientes";
-            this.lblClientes.Click += new System.EventHandler(this.lblClientes_Click);
             // 
             // lblEncomendas
             // 
@@ -238,7 +241,6 @@
             this.lblEncomendas.Size = new System.Drawing.Size(111, 26);
             this.lblEncomendas.TabIndex = 1;
             this.lblEncomendas.Text = "Encomendas";
-            this.lblEncomendas.Click += new System.EventHandler(this.lblEncomendas_Click);
             // 
             // lblMenu
             // 
@@ -251,7 +253,6 @@
             this.lblMenu.Size = new System.Drawing.Size(54, 26);
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Menu";
-            this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
             // 
             // lblUsuario
             // 
@@ -266,96 +267,12 @@
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Seja bem-vindo Uusario";
             // 
-            // dgvEmail
-            // 
-            this.dgvEmail.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.dgvEmail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmail.Location = new System.Drawing.Point(0, 0);
-            this.dgvEmail.Name = "dgvEmail";
-            this.dgvEmail.Size = new System.Drawing.Size(343, 269);
-            this.dgvEmail.TabIndex = 10;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(366, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(343, 269);
-            this.dataGridView2.TabIndex = 11;
-            // 
-            // dgvEncomendas
-            // 
-            this.dgvEncomendas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.dgvEncomendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEncomendas.Location = new System.Drawing.Point(0, 294);
-            this.dgvEncomendas.Name = "dgvEncomendas";
-            this.dgvEncomendas.Size = new System.Drawing.Size(566, 221);
-            this.dgvEncomendas.TabIndex = 14;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(592, 294);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(343, 221);
-            this.dataGridView4.TabIndex = 15;
-            // 
-            // dgvClientes
-            // 
-            this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(738, 0);
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.Size = new System.Drawing.Size(197, 126);
-            this.dgvClientes.TabIndex = 12;
-            // 
-            // dgvFuncionarios
-            // 
-            this.dgvFuncionarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFuncionarios.Location = new System.Drawing.Point(738, 143);
-            this.dgvFuncionarios.Name = "dgvFuncionarios";
-            this.dgvFuncionarios.Size = new System.Drawing.Size(197, 126);
-            this.dgvFuncionarios.TabIndex = 13;
-            // 
-            // lblHora
-            // 
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblHora.Location = new System.Drawing.Point(1137, 615);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(44, 18);
-            this.lblHora.TabIndex = 21;
-            this.lblHora.Text = "00:00";
-            // 
-            // lblData
-            // 
-            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblData.AutoSize = true;
-            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblData.Location = new System.Drawing.Point(1033, 615);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(80, 18);
-            this.lblData.TabIndex = 22;
-            this.lblData.Text = "00/00/0000";
-            // 
             // pnlMenu
             // 
-            this.pnlMenu.Controls.Add(this.dgvEmail);
-            this.pnlMenu.Controls.Add(this.dgvEncomendas);
-            this.pnlMenu.Controls.Add(this.dataGridView2);
-            this.pnlMenu.Controls.Add(this.dgvClientes);
-            this.pnlMenu.Controls.Add(this.dgvFuncionarios);
-            this.pnlMenu.Controls.Add(this.dataGridView4);
             this.pnlMenu.Location = new System.Drawing.Point(231, 71);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(935, 515);
-            this.pnlMenu.TabIndex = 23;
+            this.pnlMenu.TabIndex = 29;
             // 
             // pctFechar
             // 
@@ -366,9 +283,8 @@
             this.pctFechar.Name = "pctFechar";
             this.pctFechar.Size = new System.Drawing.Size(32, 32);
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctFechar.TabIndex = 1;
+            this.pctFechar.TabIndex = 25;
             this.pctFechar.TabStop = false;
-            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
             // pictureBox10
             // 
@@ -390,7 +306,6 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox8
             // 
@@ -484,7 +399,7 @@
             this.pctLogo.TabIndex = 3;
             this.pctLogo.TabStop = false;
             // 
-            // frmMenu
+            // frmSobre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -497,20 +412,12 @@
             this.Controls.Add(this.pnlSideMenu);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmMenu";
+            this.Name = "frmSobre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu";
+            this.Text = "Sobre";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEncomendas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
-            this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -530,9 +437,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox pctFechar;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel pnlSideMenu;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblSair;
         private System.Windows.Forms.Label lblAplicativo;
         private System.Windows.Forms.Label lblSobre;
@@ -544,25 +464,6 @@
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.PictureBox pctLogo;
-        private System.Windows.Forms.DataGridView dgvEmail;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dgvEncomendas;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridView dgvClientes;
-        private System.Windows.Forms.DataGridView dgvFuncionarios;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Label lblData;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Panel pnlMenu;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Label lblEmail;
     }
 }

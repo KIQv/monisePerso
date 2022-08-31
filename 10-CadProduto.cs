@@ -70,5 +70,12 @@ namespace monisePerso
             //new frmEmail().Show();
             //Close();
         }
+
+        private void frmCadProduto_Load(object sender, EventArgs e)
+        {
+            pnlCadProduto.Location = new Point(this.Width / 2 - pnlCadProduto.Width / 2, this.Height / 2 - pnlCadProduto.Height / 2);
+
+            lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
+        }
     }
 }

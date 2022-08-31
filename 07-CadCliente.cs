@@ -19,7 +19,9 @@ namespace monisePerso
 
         private void frmCadCliente_Load(object sender, EventArgs e)
         {
+            pnlCadCliente.Location = new Point(this.Width / 2 - pnlCadCliente.Width / 2, this.Height / 2 - pnlCadCliente.Height / 2);
 
+            lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
         }
 
         private void lblMenu_Click(object sender, EventArgs e)
