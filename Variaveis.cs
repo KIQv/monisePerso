@@ -47,5 +47,10 @@ namespace monisePerso
         public static string nomeProduto, descProduto, tipoProduto, fotoProduto1, fotoProduto2, fotoProduto3, fotoProduto4, caminhoFotoProduto1, caminhoFotoProduto2, caminhoFotoProduto3, caminhoFotoProduto4, destaqueProduto, statusProduto;
         public static DateTime dataCadProduto;
         public static double valorProduto;
+
+        //FOTOS FTP
+        public static string enderecoServidorFtp = "ftp://127.0.0.1/admin/";
+        public static string usuarioFtp = "ti14";
+        public static string senhaFtp = "123";
     }
 }
