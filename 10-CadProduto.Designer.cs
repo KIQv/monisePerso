@@ -1,6 +1,6 @@
 ﻿namespace monisePerso
 {
-    partial class frmCadEmpresa
+    partial class frmCadProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblData = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
@@ -45,32 +40,23 @@
             this.lblEncomendas = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.pnlCadEmpresa = new System.Windows.Forms.Panel();
-            this.cmbHorarioAtendimento = new System.Windows.Forms.ComboBox();
-            this.lblHorarioAtendimento = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.pnlTelEmpresa = new System.Windows.Forms.Panel();
-            this.lblTelEmpresa = new System.Windows.Forms.Label();
-            this.dgvTelEmpresa = new System.Windows.Forms.DataGridView();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtRazaoSocial = new System.Windows.Forms.TextBox();
-            this.txtEmailEmpresa = new System.Windows.Forms.TextBox();
-            this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.mkdData = new System.Windows.Forms.MaskedTextBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblDataCad = new System.Windows.Forms.Label();
-            this.lblRazaoSocial = new System.Windows.Forms.Label();
-            this.lblEmailEmpresa = new System.Windows.Forms.Label();
-            this.lblNomeEmpresa = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.Label();
+            this.lblNomeProduto = new System.Windows.Forms.Label();
+            this.pnlCadProduto = new System.Windows.Forms.Panel();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.mkdCnpjCpf = new System.Windows.Forms.MaskedTextBox();
-            this.radCnpj = new System.Windows.Forms.RadioButton();
-            this.radCpf = new System.Windows.Forms.RadioButton();
+            this.lblFotoProduto01 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -83,10 +69,21 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.pctFoto01 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblValor = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblDestaque = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.lblFotoProduto02 = new System.Windows.Forms.Label();
+            this.pctFoto02 = new System.Windows.Forms.PictureBox();
+            this.lblFotoProduto03 = new System.Windows.Forms.Label();
+            this.pctFoto03 = new System.Windows.Forms.PictureBox();
+            this.lblFotoProduto04 = new System.Windows.Forms.Label();
+            this.pctFoto04 = new System.Windows.Forms.PictureBox();
             this.pnlSideMenu.SuspendLayout();
-            this.pnlCadEmpresa.SuspendLayout();
-            this.pnlTelEmpresa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTelEmpresa)).BeginInit();
+            this.pnlCadProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -99,46 +96,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto01)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto02)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto04)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.lblTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTitulo.Font = new System.Drawing.Font("Poppins", 14.25F);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(122)))), ((int)(((byte)(122)))));
-            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(1200, 40);
-            this.lblTitulo.TabIndex = 36;
-            this.lblTitulo.Text = "Monise Personalizados";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblData
-            // 
-            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblData.AutoSize = true;
-            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblData.Location = new System.Drawing.Point(1053, 613);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(80, 18);
-            this.lblData.TabIndex = 40;
-            this.lblData.Text = "00/00/0000";
-            // 
-            // lblHora
-            // 
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.lblHora.Location = new System.Drawing.Point(1149, 613);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(44, 18);
-            this.lblHora.TabIndex = 39;
-            this.lblHora.Text = "00:00";
             // 
             // pnlSideMenu
             // 
@@ -170,7 +132,7 @@
             this.pnlSideMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlSideMenu.Name = "pnlSideMenu";
             this.pnlSideMenu.Size = new System.Drawing.Size(200, 650);
-            this.pnlSideMenu.TabIndex = 38;
+            this.pnlSideMenu.TabIndex = 32;
             // 
             // lblEmail
             // 
@@ -224,7 +186,7 @@
             // 
             this.lblProdutos.AutoSize = true;
             this.lblProdutos.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.lblProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
             this.lblProdutos.Location = new System.Drawing.Point(53, 405);
             this.lblProdutos.Name = "lblProdutos";
             this.lblProdutos.Size = new System.Drawing.Size(80, 26);
@@ -236,7 +198,7 @@
             // 
             this.lblEmpresa.AutoSize = true;
             this.lblEmpresa.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.lblEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
+            this.lblEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.lblEmpresa.Location = new System.Drawing.Point(53, 365);
             this.lblEmpresa.Name = "lblEmpresa";
             this.lblEmpresa.Size = new System.Drawing.Size(78, 26);
@@ -306,57 +268,62 @@
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Seja bem-vindo Uusario";
             // 
-            // pnlCadEmpresa
+            // btnLimpar
             // 
-            this.pnlCadEmpresa.Controls.Add(this.txtCodigo);
-            this.pnlCadEmpresa.Controls.Add(this.txtNomeEmpresa);
-            this.pnlCadEmpresa.Controls.Add(this.mkdCnpjCpf);
-            this.pnlCadEmpresa.Controls.Add(this.radCpf);
-            this.pnlCadEmpresa.Controls.Add(this.radCnpj);
-            this.pnlCadEmpresa.Controls.Add(this.cmbHorarioAtendimento);
-            this.pnlCadEmpresa.Controls.Add(this.lblHorarioAtendimento);
-            this.pnlCadEmpresa.Controls.Add(this.cmbStatus);
-            this.pnlCadEmpresa.Controls.Add(this.lblStatus);
-            this.pnlCadEmpresa.Controls.Add(this.btnLimpar);
-            this.pnlCadEmpresa.Controls.Add(this.pnlTelEmpresa);
-            this.pnlCadEmpresa.Controls.Add(this.btnSalvar);
-            this.pnlCadEmpresa.Controls.Add(this.txtRazaoSocial);
-            this.pnlCadEmpresa.Controls.Add(this.txtEmailEmpresa);
-            this.pnlCadEmpresa.Controls.Add(this.mkdData);
-            this.pnlCadEmpresa.Controls.Add(this.lblDataCad);
-            this.pnlCadEmpresa.Controls.Add(this.lblRazaoSocial);
-            this.pnlCadEmpresa.Controls.Add(this.lblEmailEmpresa);
-            this.pnlCadEmpresa.Controls.Add(this.lblNomeEmpresa);
-            this.pnlCadEmpresa.Controls.Add(this.lblCodigo);
-            this.pnlCadEmpresa.Location = new System.Drawing.Point(233, 72);
-            this.pnlCadEmpresa.Name = "pnlCadEmpresa";
-            this.pnlCadEmpresa.Size = new System.Drawing.Size(935, 546);
-            this.pnlCadEmpresa.TabIndex = 41;
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.btnLimpar.Location = new System.Drawing.Point(234, 495);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(211, 51);
+            this.btnLimpar.TabIndex = 7;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
             // 
-            // cmbHorarioAtendimento
+            // btnSalvar
             // 
-            this.cmbHorarioAtendimento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbHorarioAtendimento.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.cmbHorarioAtendimento.FormattingEnabled = true;
-            this.cmbHorarioAtendimento.Items.AddRange(new object[] {
-            "ATIVO",
-            "INATIVO"});
-            this.cmbHorarioAtendimento.Location = new System.Drawing.Point(721, 227);
-            this.cmbHorarioAtendimento.Name = "cmbHorarioAtendimento";
-            this.cmbHorarioAtendimento.Size = new System.Drawing.Size(211, 26);
-            this.cmbHorarioAtendimento.TabIndex = 57;
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.btnSalvar.Location = new System.Drawing.Point(0, 495);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(211, 51);
+            this.btnSalvar.TabIndex = 6;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
-            // lblHorarioAtendimento
+            // txtEmail
             // 
-            this.lblHorarioAtendimento.AutoSize = true;
-            this.lblHorarioAtendimento.BackColor = System.Drawing.Color.Transparent;
-            this.lblHorarioAtendimento.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblHorarioAtendimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblHorarioAtendimento.Location = new System.Drawing.Point(716, 200);
-            this.lblHorarioAtendimento.Name = "lblHorarioAtendimento";
-            this.lblHorarioAtendimento.Size = new System.Drawing.Size(206, 28);
-            this.lblHorarioAtendimento.TabIndex = 58;
-            this.lblHorarioAtendimento.Text = "Horario de atendimento:";
+            this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtEmail.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.txtEmail.Location = new System.Drawing.Point(0, 99);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(472, 26);
+            this.txtEmail.TabIndex = 2;
+            // 
+            // txtNomeProduto
+            // 
+            this.txtNomeProduto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNomeProduto.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.txtNomeProduto.Location = new System.Drawing.Point(252, 30);
+            this.txtNomeProduto.Multiline = true;
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.Size = new System.Drawing.Size(462, 26);
+            this.txtNomeProduto.TabIndex = 1;
+            // 
+            // mkdData
+            // 
+            this.mkdData.Font = new System.Drawing.Font("Poppins", 9.25F);
+            this.mkdData.Location = new System.Drawing.Point(504, 167);
+            this.mkdData.Name = "mkdData";
+            this.mkdData.Size = new System.Drawing.Size(210, 26);
+            this.mkdData.TabIndex = 5;
+            this.mkdData.Text = "__/__/____";
             // 
             // cmbStatus
             // 
@@ -366,198 +333,16 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "ATIVO",
             "INATIVO"});
-            this.cmbStatus.Location = new System.Drawing.Point(721, 162);
+            this.cmbStatus.Location = new System.Drawing.Point(746, 30);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(211, 26);
-            this.cmbStatus.TabIndex = 55;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatus.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblStatus.Location = new System.Drawing.Point(716, 135);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(65, 28);
-            this.lblStatus.TabIndex = 56;
-            this.lblStatus.Text = "Status:";
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.btnLimpar.Location = new System.Drawing.Point(721, 367);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(211, 51);
-            this.btnLimpar.TabIndex = 7;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = false;
-            // 
-            // pnlTelEmpresa
-            // 
-            this.pnlTelEmpresa.Controls.Add(this.lblTelEmpresa);
-            this.pnlTelEmpresa.Controls.Add(this.dgvTelEmpresa);
-            this.pnlTelEmpresa.Controls.Add(this.btnExcluir);
-            this.pnlTelEmpresa.Controls.Add(this.btnAlterar);
-            this.pnlTelEmpresa.Controls.Add(this.btnCadastrar);
-            this.pnlTelEmpresa.Location = new System.Drawing.Point(0, 286);
-            this.pnlTelEmpresa.Name = "pnlTelEmpresa";
-            this.pnlTelEmpresa.Size = new System.Drawing.Size(692, 260);
-            this.pnlTelEmpresa.TabIndex = 52;
-            // 
-            // lblTelEmpresa
-            // 
-            this.lblTelEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.lblTelEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTelEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTelEmpresa.Font = new System.Drawing.Font("Poppins", 14.25F);
-            this.lblTelEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
-            this.lblTelEmpresa.Location = new System.Drawing.Point(0, 0);
-            this.lblTelEmpresa.Name = "lblTelEmpresa";
-            this.lblTelEmpresa.Size = new System.Drawing.Size(692, 34);
-            this.lblTelEmpresa.TabIndex = 0;
-            this.lblTelEmpresa.Text = "Telefone Empresa";
-            this.lblTelEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgvTelEmpresa
-            // 
-            this.dgvTelEmpresa.AllowUserToAddRows = false;
-            this.dgvTelEmpresa.AllowUserToDeleteRows = false;
-            this.dgvTelEmpresa.AllowUserToResizeColumns = false;
-            this.dgvTelEmpresa.AllowUserToResizeRows = false;
-            this.dgvTelEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvTelEmpresa.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvTelEmpresa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTelEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.dgvTelEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTelEmpresa.DefaultCellStyle = dataGridViewCellStyle20;
-            this.dgvTelEmpresa.EnableHeadersVisualStyles = false;
-            this.dgvTelEmpresa.Location = new System.Drawing.Point(0, 33);
-            this.dgvTelEmpresa.MultiSelect = false;
-            this.dgvTelEmpresa.Name = "dgvTelEmpresa";
-            this.dgvTelEmpresa.ReadOnly = true;
-            this.dgvTelEmpresa.RowHeadersVisible = false;
-            this.dgvTelEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTelEmpresa.Size = new System.Drawing.Size(692, 166);
-            this.dgvTelEmpresa.TabIndex = 16;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.btnExcluir.Location = new System.Drawing.Point(444, 212);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(132, 36);
-            this.btnExcluir.TabIndex = 10;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.btnAlterar.Location = new System.Drawing.Point(280, 212);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(132, 36);
-            this.btnAlterar.TabIndex = 9;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = false;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.btnCadastrar.Location = new System.Drawing.Point(116, 212);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(132, 36);
-            this.btnCadastrar.TabIndex = 8;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.btnSalvar.Location = new System.Drawing.Point(721, 286);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(211, 51);
-            this.btnSalvar.TabIndex = 6;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            // 
-            // txtRazaoSocial
-            // 
-            this.txtRazaoSocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtRazaoSocial.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.txtRazaoSocial.Location = new System.Drawing.Point(0, 162);
-            this.txtRazaoSocial.Multiline = true;
-            this.txtRazaoSocial.Name = "txtRazaoSocial";
-            this.txtRazaoSocial.Size = new System.Drawing.Size(692, 26);
-            this.txtRazaoSocial.TabIndex = 2;
-            // 
-            // txtEmailEmpresa
-            // 
-            this.txtEmailEmpresa.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.txtEmailEmpresa.Location = new System.Drawing.Point(0, 228);
-            this.txtEmailEmpresa.Multiline = true;
-            this.txtEmailEmpresa.Name = "txtEmailEmpresa";
-            this.txtEmailEmpresa.Size = new System.Drawing.Size(431, 26);
-            this.txtEmailEmpresa.TabIndex = 3;
-            // 
-            // txtNomeEmpresa
-            // 
-            this.txtNomeEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNomeEmpresa.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.txtNomeEmpresa.Location = new System.Drawing.Point(0, 95);
-            this.txtNomeEmpresa.Multiline = true;
-            this.txtNomeEmpresa.Name = "txtNomeEmpresa";
-            this.txtNomeEmpresa.Size = new System.Drawing.Size(692, 26);
-            this.txtNomeEmpresa.TabIndex = 1;
-            // 
-            // mkdData
-            // 
-            this.mkdData.Font = new System.Drawing.Font("Poppins", 9.25F);
-            this.mkdData.Location = new System.Drawing.Point(721, 95);
-            this.mkdData.Name = "mkdData";
-            this.mkdData.Size = new System.Drawing.Size(211, 26);
-            this.mkdData.TabIndex = 5;
-            this.mkdData.Text = "__/__/____";
+            this.cmbStatus.Size = new System.Drawing.Size(188, 26);
+            this.cmbStatus.TabIndex = 4;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.txtCodigo.Location = new System.Drawing.Point(0, 31);
+            this.txtCodigo.Location = new System.Drawing.Point(0, 30);
             this.txtCodigo.Multiline = true;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(220, 26);
@@ -569,47 +354,80 @@
             this.lblDataCad.BackColor = System.Drawing.Color.Transparent;
             this.lblDataCad.Font = new System.Drawing.Font("Poppins", 12F);
             this.lblDataCad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblDataCad.Location = new System.Drawing.Point(716, 67);
+            this.lblDataCad.Location = new System.Drawing.Point(499, 137);
             this.lblDataCad.Name = "lblDataCad";
             this.lblDataCad.Size = new System.Drawing.Size(158, 28);
             this.lblDataCad.TabIndex = 50;
             this.lblDataCad.Text = "Data de Cadastro:";
             // 
-            // lblRazaoSocial
+            // lblStatus
             // 
-            this.lblRazaoSocial.AutoSize = true;
-            this.lblRazaoSocial.BackColor = System.Drawing.Color.Transparent;
-            this.lblRazaoSocial.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRazaoSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblRazaoSocial.Location = new System.Drawing.Point(0, 135);
-            this.lblRazaoSocial.Name = "lblRazaoSocial";
-            this.lblRazaoSocial.Size = new System.Drawing.Size(116, 28);
-            this.lblRazaoSocial.TabIndex = 48;
-            this.lblRazaoSocial.Text = "Razão Social:";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblStatus.Location = new System.Drawing.Point(741, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(65, 28);
+            this.lblStatus.TabIndex = 49;
+            this.lblStatus.Text = "Status:";
             // 
-            // lblEmailEmpresa
+            // txtDescricao
             // 
-            this.lblEmailEmpresa.AutoSize = true;
-            this.lblEmailEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmailEmpresa.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblEmailEmpresa.Location = new System.Drawing.Point(0, 200);
-            this.lblEmailEmpresa.Name = "lblEmailEmpresa";
-            this.lblEmailEmpresa.Size = new System.Drawing.Size(58, 28);
-            this.lblEmailEmpresa.TabIndex = 47;
-            this.lblEmailEmpresa.Text = "Email:";
+            this.txtDescricao.AutoSize = true;
+            this.txtDescricao.BackColor = System.Drawing.Color.Transparent;
+            this.txtDescricao.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.txtDescricao.Location = new System.Drawing.Point(-5, 69);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(95, 28);
+            this.txtDescricao.TabIndex = 48;
+            this.txtDescricao.Text = "Descrição:";
             // 
-            // lblNomeEmpresa
+            // lblNomeProduto
             // 
-            this.lblNomeEmpresa.AutoSize = true;
-            this.lblNomeEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.lblNomeEmpresa.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblNomeEmpresa.Location = new System.Drawing.Point(0, 67);
-            this.lblNomeEmpresa.Name = "lblNomeEmpresa";
-            this.lblNomeEmpresa.Size = new System.Drawing.Size(164, 28);
-            this.lblNomeEmpresa.TabIndex = 46;
-            this.lblNomeEmpresa.Text = "Nome da empresa:";
+            this.lblNomeProduto.AutoSize = true;
+            this.lblNomeProduto.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeProduto.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblNomeProduto.Location = new System.Drawing.Point(247, 0);
+            this.lblNomeProduto.Name = "lblNomeProduto";
+            this.lblNomeProduto.Size = new System.Drawing.Size(155, 28);
+            this.lblNomeProduto.TabIndex = 46;
+            this.lblNomeProduto.Text = "Nome do produto:";
+            // 
+            // pnlCadProduto
+            // 
+            this.pnlCadProduto.Controls.Add(this.lblFotoProduto04);
+            this.pnlCadProduto.Controls.Add(this.pctFoto04);
+            this.pnlCadProduto.Controls.Add(this.lblFotoProduto03);
+            this.pnlCadProduto.Controls.Add(this.pctFoto03);
+            this.pnlCadProduto.Controls.Add(this.lblFotoProduto02);
+            this.pnlCadProduto.Controls.Add(this.pctFoto02);
+            this.pnlCadProduto.Controls.Add(this.textBox2);
+            this.pnlCadProduto.Controls.Add(this.lblTipo);
+            this.pnlCadProduto.Controls.Add(this.comboBox1);
+            this.pnlCadProduto.Controls.Add(this.lblDestaque);
+            this.pnlCadProduto.Controls.Add(this.textBox1);
+            this.pnlCadProduto.Controls.Add(this.lblValor);
+            this.pnlCadProduto.Controls.Add(this.btnLimpar);
+            this.pnlCadProduto.Controls.Add(this.btnSalvar);
+            this.pnlCadProduto.Controls.Add(this.txtEmail);
+            this.pnlCadProduto.Controls.Add(this.txtNomeProduto);
+            this.pnlCadProduto.Controls.Add(this.mkdData);
+            this.pnlCadProduto.Controls.Add(this.cmbStatus);
+            this.pnlCadProduto.Controls.Add(this.txtCodigo);
+            this.pnlCadProduto.Controls.Add(this.lblDataCad);
+            this.pnlCadProduto.Controls.Add(this.lblStatus);
+            this.pnlCadProduto.Controls.Add(this.txtDescricao);
+            this.pnlCadProduto.Controls.Add(this.lblNomeProduto);
+            this.pnlCadProduto.Controls.Add(this.lblCodigo);
+            this.pnlCadProduto.Controls.Add(this.lblFotoProduto01);
+            this.pnlCadProduto.Controls.Add(this.pctFoto01);
+            this.pnlCadProduto.Location = new System.Drawing.Point(233, 73);
+            this.pnlCadProduto.Name = "pnlCadProduto";
+            this.pnlCadProduto.Size = new System.Drawing.Size(935, 546);
+            this.pnlCadProduto.TabIndex = 35;
             // 
             // lblCodigo
             // 
@@ -617,46 +435,64 @@
             this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
             this.lblCodigo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblCodigo.Location = new System.Drawing.Point(0, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(-5, 0);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(73, 28);
             this.lblCodigo.TabIndex = 45;
             this.lblCodigo.Text = "Código:";
             // 
-            // mkdCnpjCpf
+            // lblFotoProduto01
             // 
-            this.mkdCnpjCpf.Font = new System.Drawing.Font("Poppins", 9.25F);
-            this.mkdCnpjCpf.Location = new System.Drawing.Point(463, 228);
-            this.mkdCnpjCpf.Name = "mkdCnpjCpf";
-            this.mkdCnpjCpf.Size = new System.Drawing.Size(229, 26);
-            this.mkdCnpjCpf.TabIndex = 59;
-            this.mkdCnpjCpf.Text = "__/__/____";
+            this.lblFotoProduto01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.lblFotoProduto01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFotoProduto01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFotoProduto01.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFotoProduto01.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
+            this.lblFotoProduto01.Location = new System.Drawing.Point(0, 214);
+            this.lblFotoProduto01.Name = "lblFotoProduto01";
+            this.lblFotoProduto01.Size = new System.Drawing.Size(220, 34);
+            this.lblFotoProduto01.TabIndex = 1;
+            this.lblFotoProduto01.Text = "Foto produto 01";
+            this.lblFotoProduto01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // radCnpj
+            // lblTitulo
             // 
-            this.radCnpj.AutoSize = true;
-            this.radCnpj.BackColor = System.Drawing.Color.Transparent;
-            this.radCnpj.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radCnpj.Location = new System.Drawing.Point(463, 198);
-            this.radCnpj.Name = "radCnpj";
-            this.radCnpj.Size = new System.Drawing.Size(70, 32);
-            this.radCnpj.TabIndex = 60;
-            this.radCnpj.TabStop = true;
-            this.radCnpj.Text = "CPNJ";
-            this.radCnpj.UseVisualStyleBackColor = false;
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.lblTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTitulo.Font = new System.Drawing.Font("Poppins", 14.25F);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(122)))), ((int)(((byte)(122)))));
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(1200, 40);
+            this.lblTitulo.TabIndex = 30;
+            this.lblTitulo.Text = "Monise Personalizados";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // radCpf
+            // lblData
             // 
-            this.radCpf.AutoSize = true;
-            this.radCpf.BackColor = System.Drawing.Color.Transparent;
-            this.radCpf.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radCpf.Location = new System.Drawing.Point(564, 198);
-            this.radCpf.Name = "radCpf";
-            this.radCpf.Size = new System.Drawing.Size(59, 32);
-            this.radCpf.TabIndex = 61;
-            this.radCpf.TabStop = true;
-            this.radCpf.Text = "CPF";
-            this.radCpf.UseVisualStyleBackColor = false;
+            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblData.AutoSize = true;
+            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblData.Location = new System.Drawing.Point(1053, 613);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(80, 18);
+            this.lblData.TabIndex = 34;
+            this.lblData.Text = "00/00/0000";
+            // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.lblHora.Location = new System.Drawing.Point(1149, 613);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(44, 18);
+            this.lblHora.TabIndex = 33;
+            this.lblHora.Text = "00:00";
             // 
             // pctFechar
             // 
@@ -667,7 +503,7 @@
             this.pctFechar.Name = "pctFechar";
             this.pctFechar.Size = new System.Drawing.Size(32, 32);
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctFechar.TabIndex = 37;
+            this.pctFechar.TabIndex = 31;
             this.pctFechar.TabStop = false;
             // 
             // pictureBox10
@@ -783,7 +619,158 @@
             this.pctLogo.TabIndex = 3;
             this.pctLogo.TabStop = false;
             // 
-            // frmCadEmpresa
+            // pctFoto01
+            // 
+            this.pctFoto01.Image = global::monisePerso.Properties.Resources.fotoProduto;
+            this.pctFoto01.Location = new System.Drawing.Point(0, 247);
+            this.pctFoto01.Name = "pctFoto01";
+            this.pctFoto01.Size = new System.Drawing.Size(220, 220);
+            this.pctFoto01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFoto01.TabIndex = 0;
+            this.pctFoto01.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.textBox1.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.textBox1.Location = new System.Drawing.Point(504, 99);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(210, 26);
+            this.textBox1.TabIndex = 51;
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.BackColor = System.Drawing.Color.Transparent;
+            this.lblValor.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblValor.Location = new System.Drawing.Point(499, 69);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(57, 28);
+            this.lblValor.TabIndex = 52;
+            this.lblValor.Text = "Valor:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ATIVO",
+            "INATIVO"});
+            this.comboBox1.Location = new System.Drawing.Point(746, 99);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(188, 26);
+            this.comboBox1.TabIndex = 53;
+            // 
+            // lblDestaque
+            // 
+            this.lblDestaque.AutoSize = true;
+            this.lblDestaque.BackColor = System.Drawing.Color.Transparent;
+            this.lblDestaque.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblDestaque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblDestaque.Location = new System.Drawing.Point(741, 69);
+            this.lblDestaque.Name = "lblDestaque";
+            this.lblDestaque.Size = new System.Drawing.Size(92, 28);
+            this.lblDestaque.TabIndex = 54;
+            this.lblDestaque.Text = "Destaque:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.textBox2.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.textBox2.Location = new System.Drawing.Point(0, 167);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(472, 26);
+            this.textBox2.TabIndex = 55;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTipo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblTipo.Location = new System.Drawing.Point(-5, 137);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(49, 28);
+            this.lblTipo.TabIndex = 56;
+            this.lblTipo.Text = "Tipo:";
+            // 
+            // lblFotoProduto02
+            // 
+            this.lblFotoProduto02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.lblFotoProduto02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFotoProduto02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFotoProduto02.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFotoProduto02.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
+            this.lblFotoProduto02.Location = new System.Drawing.Point(238, 214);
+            this.lblFotoProduto02.Name = "lblFotoProduto02";
+            this.lblFotoProduto02.Size = new System.Drawing.Size(220, 34);
+            this.lblFotoProduto02.TabIndex = 58;
+            this.lblFotoProduto02.Text = "Foto produto 02";
+            this.lblFotoProduto02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pctFoto02
+            // 
+            this.pctFoto02.Image = global::monisePerso.Properties.Resources.fotoProduto;
+            this.pctFoto02.Location = new System.Drawing.Point(238, 247);
+            this.pctFoto02.Name = "pctFoto02";
+            this.pctFoto02.Size = new System.Drawing.Size(220, 220);
+            this.pctFoto02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFoto02.TabIndex = 57;
+            this.pctFoto02.TabStop = false;
+            // 
+            // lblFotoProduto03
+            // 
+            this.lblFotoProduto03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.lblFotoProduto03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFotoProduto03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFotoProduto03.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFotoProduto03.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
+            this.lblFotoProduto03.Location = new System.Drawing.Point(476, 214);
+            this.lblFotoProduto03.Name = "lblFotoProduto03";
+            this.lblFotoProduto03.Size = new System.Drawing.Size(220, 34);
+            this.lblFotoProduto03.TabIndex = 60;
+            this.lblFotoProduto03.Text = "Foto produto 03";
+            this.lblFotoProduto03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pctFoto03
+            // 
+            this.pctFoto03.Image = global::monisePerso.Properties.Resources.fotoProduto;
+            this.pctFoto03.Location = new System.Drawing.Point(476, 247);
+            this.pctFoto03.Name = "pctFoto03";
+            this.pctFoto03.Size = new System.Drawing.Size(220, 220);
+            this.pctFoto03.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFoto03.TabIndex = 59;
+            this.pctFoto03.TabStop = false;
+            // 
+            // lblFotoProduto04
+            // 
+            this.lblFotoProduto04.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.lblFotoProduto04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFotoProduto04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFotoProduto04.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFotoProduto04.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(134)))));
+            this.lblFotoProduto04.Location = new System.Drawing.Point(714, 214);
+            this.lblFotoProduto04.Name = "lblFotoProduto04";
+            this.lblFotoProduto04.Size = new System.Drawing.Size(220, 34);
+            this.lblFotoProduto04.TabIndex = 62;
+            this.lblFotoProduto04.Text = "Foto produto 04";
+            this.lblFotoProduto04.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pctFoto04
+            // 
+            this.pctFoto04.Image = global::monisePerso.Properties.Resources.fotoProduto;
+            this.pctFoto04.Location = new System.Drawing.Point(714, 247);
+            this.pctFoto04.Name = "pctFoto04";
+            this.pctFoto04.Size = new System.Drawing.Size(220, 220);
+            this.pctFoto04.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFoto04.TabIndex = 61;
+            this.pctFoto04.TabStop = false;
+            // 
+            // frmCadProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -794,18 +781,16 @@
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.pnlSideMenu);
-            this.Controls.Add(this.pnlCadEmpresa);
+            this.Controls.Add(this.pnlCadProduto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCadEmpresa";
+            this.Name = "frmCadProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro Empresa";
+            this.Text = "Cadastro Produto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
-            this.pnlCadEmpresa.ResumeLayout(false);
-            this.pnlCadEmpresa.PerformLayout();
-            this.pnlTelEmpresa.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTelEmpresa)).EndInit();
+            this.pnlCadProduto.ResumeLayout(false);
+            this.pnlCadProduto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -818,6 +803,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto01)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto02)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto04)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -826,9 +815,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pctFechar;
-        private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label lblData;
-        private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel pnlSideMenu;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label lblEmail;
@@ -852,31 +838,35 @@
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.PictureBox pctLogo;
-        private System.Windows.Forms.Panel pnlCadEmpresa;
-        private System.Windows.Forms.MaskedTextBox mkdCnpjCpf;
-        private System.Windows.Forms.ComboBox cmbHorarioAtendimento;
-        private System.Windows.Forms.Label lblHorarioAtendimento;
-        private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Panel pnlTelEmpresa;
-        private System.Windows.Forms.Label lblTelEmpresa;
-        private System.Windows.Forms.DataGridView dgvTelEmpresa;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.TextBox txtRazaoSocial;
-        private System.Windows.Forms.TextBox txtEmailEmpresa;
-        private System.Windows.Forms.TextBox txtNomeEmpresa;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.MaskedTextBox mkdData;
+        private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblDataCad;
-        private System.Windows.Forms.Label lblRazaoSocial;
-        private System.Windows.Forms.Label lblEmailEmpresa;
-        private System.Windows.Forms.Label lblNomeEmpresa;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label txtDescricao;
+        private System.Windows.Forms.Label lblNomeProduto;
+        private System.Windows.Forms.Panel pnlCadProduto;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.RadioButton radCpf;
-        private System.Windows.Forms.RadioButton radCnpj;
+        private System.Windows.Forms.Label lblFotoProduto01;
+        private System.Windows.Forms.PictureBox pctFoto01;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblDestaque;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblValor;
+        private System.Windows.Forms.Label lblFotoProduto04;
+        private System.Windows.Forms.PictureBox pctFoto04;
+        private System.Windows.Forms.Label lblFotoProduto03;
+        private System.Windows.Forms.PictureBox pctFoto03;
+        private System.Windows.Forms.Label lblFotoProduto02;
+        private System.Windows.Forms.PictureBox pctFoto02;
     }
 }

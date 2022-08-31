@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace monisePerso
 {
-    public partial class frmCadEmpresa : Form
+    public partial class frmCadProduto : Form
     {
-        public frmCadEmpresa()
+        public frmCadProduto()
         {
             InitializeComponent();
         }

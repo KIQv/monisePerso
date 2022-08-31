@@ -162,7 +162,7 @@ namespace monisePerso
         private void lblEncomendas_Click(object sender, EventArgs e)
         {
             //new frmEncomendas().Show();
-            //Hide();
+            //Close();
         }
 
         private void lblClientes_Click(object sender, EventArgs e)
@@ -174,37 +174,37 @@ namespace monisePerso
         private void lblFuncionarios_Click(object sender, EventArgs e)
         {
             new frmFuncionarios().Show();
-            Hide();
+            Close();
         }
 
         private void lblEmpresa_Click(object sender, EventArgs e)
         {
             new frmEmpresa().Show();
-            Hide();
+            Close();
         }
 
         private void lblProdutos_Click(object sender, EventArgs e)
         {
             new frmProdutos().Show();
-            Hide();
+            Close();
         }
 
         private void lblSobre_Click(object sender, EventArgs e)
         {
             //new frmSobre().Show();
-            //Hide();
+            //Close();
         }
 
         private void lblAplicativo_Click(object sender, EventArgs e)
         {
             //new frmAplicativo().Show();
-            //Hide();
+            //Close();
         }
 
         private void lblEmail_Click(object sender, EventArgs e)
         {
             //new frmEmail().Show();
-            //Hide();
+            //Close();
         }
 
         private void lblSair_Click(object sender, EventArgs e)
@@ -281,6 +281,12 @@ namespace monisePerso
         {
             new frmCadCliente().Show();
             Hide();
-        }   
+        }
+
+        private void lblMenu_Click(object sender, EventArgs e)
+        {
+            new frmMenu().Show();
+            Close();
+        }
     }
 }

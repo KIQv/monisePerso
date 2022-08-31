@@ -137,6 +137,12 @@
     <Compile Include="09-CadEmpresa.Designer.cs">
       <DependentUpon>09-CadEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="10-CadProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="10-CadProduto.Designer.cs">
+      <DependentUpon>10-CadProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="banco.cs" />
     <Compile Include="ftp.cs" />
     <Compile Include="06-Produtos.cs">
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="09-CadEmpresa.resx">
       <DependentUpon>09-CadEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="10-CadProduto.resx">
+      <DependentUpon>10-CadProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -240,6 +249,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\userFoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\fotoProduto.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

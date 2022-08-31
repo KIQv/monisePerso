@@ -200,49 +200,49 @@ namespace monisePerso
         private void lblMenu_Click(object sender, EventArgs e)
         {
             new frmMenu().Show();
-            Hide();
+            Close();
         }
 
         private void lblEncomendas_Click(object sender, EventArgs e)
         {
             //new frmEncomendas().Show();
-            //Hide();
+            //Close();
         }
 
         private void lblClientes_Click(object sender, EventArgs e)
         {
             new frmClientes().Show();
-            Hide();
+            Close();
         }
 
         private void lblFuncionarios_Click(object sender, EventArgs e)
         {
             new frmFuncionarios().Show();
-            Hide();
+            Close();
         }
 
         private void lblEmpresa_Click(object sender, EventArgs e)
         {
             new frmEmpresa().Show();
-            Hide();
+            Close();
         }
 
         private void lblSobre_Click(object sender, EventArgs e)
         {
             //new frmSobre().Show();
-            //Hide();
+            //Close();
         }
 
         private void lblAplicativo_Click(object sender, EventArgs e)
         {
             //new frmAplicativo().Show();
-            //Hide();
+            //Close();
         }
 
         private void lblEmail_Click(object sender, EventArgs e)
         {
             //new frmEmail().Show();
-            //Hide();
+            //Close();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)

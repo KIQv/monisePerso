@@ -73,6 +73,16 @@ namespace monisePerso.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fotoProduto {
+            get {
+                object obj = ResourceManager.GetObject("fotoProduto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconAplicativo {
             get {
                 object obj = ResourceManager.GetObject("iconAplicativo", resourceCulture);
