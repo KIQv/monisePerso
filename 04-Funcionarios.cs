@@ -295,5 +295,42 @@ namespace monisePerso
                 CarregarFuncionarioNome();
             }
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                var resultado = MessageBox.Show("Deseja realmente excluir?", "EXCLUIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    ExcluirFuncionario();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Para excluir selecione uma linha");
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.funcao = "ALTERAR";
+                new frmCadFuncionario().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Para alterar selecione uma linha.");
+            }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Variaveis.funcao = "CADASTRAR";
+            new frmCadFuncionario().Show();
+            Hide();
+        }
     }
 }
