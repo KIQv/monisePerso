@@ -50,7 +50,7 @@ namespace monisePerso
 
         //FOTOS FTP
         public static string enderecoServidorFtp = "ftp://127.0.0.1/admin/";
-        public static string usuarioFtp = "ti14";
+        public static string usuarioFtp = "persomonise";
         public static string senhaFtp = "123";
     }
 }

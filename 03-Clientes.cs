@@ -292,6 +292,7 @@ namespace monisePerso
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            Variaveis.funcao = "CADASTRAR";
             new frmCadCliente().Show();
             Hide();
         }
@@ -300,6 +301,51 @@ namespace monisePerso
         {
             new frmMenu().Show();
             Close();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.funcao = "ALTERAR";
+                new frmCadCliente().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Para alterar selecione uma linha.");
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                var resultado = MessageBox.Show("Deseja realmente excluir?", "EXCLUIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    ExcluirCliente();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Para excluir selecione uma linha");
+            }
+        }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variaveis.linhaSelecionada = int.Parse(e.RowIndex.ToString());
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.codCliente = Convert.ToInt32(dgvClientes[0, Variaveis.linhaSelecionada].Value);
+            }
+        }
+
+        private void dgvClientes_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvClientes.Sort(dgvClientes.Columns[1], ListSortDirection.Ascending);
+            dgvClientes.ClearSelection();
         }
     }
 }

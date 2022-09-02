@@ -271,6 +271,16 @@ namespace monisePerso
                 lblFuncionarios.Enabled = true;
                 lblAplicativo.Enabled = true;
             }
+
+            Variaveis.linhaFoneSelecionada = -1;
+
+            if (Variaveis.funcao == "ALTERAR")
+            {
+                lblTitulo.Text = "ALTERAÇÃO DO CLIENTE";
+                pnlTelCliente.Enabled = true;
+                CarregarDadosCliente();
+                CarregarFoneCliente();
+            }
         }
 
         private void lblMenu_Click(object sender, EventArgs e)
@@ -469,9 +479,79 @@ namespace monisePerso
             txtSenha.Clear();
             cmbStatus.SelectedIndex = -1;
             mkdData.Clear();
-            pctFoto.Image = Properties.Resources.semimagem;
+            pctFoto.Image = Properties.Resources.userFoto;
 
             txtNomeCliente.Focus();
+        }
+
+        private void txtNomeCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtEmail.Focus();
+            }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtSenha.Focus();
+            }
+        }
+
+        private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                cmbStatus.Focus();
+            }
+        }
+
+        private void cmbStatus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                mkdData.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                pctFoto.Focus();
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaFoneSelecionada >= 0)
+            {
+                var resultado = MessageBox.Show("Deseja realmente excluir?", "EXCLUIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    ExcluirFoneCliente();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Para excluir selecione uma linha.");
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            /*if (Variaveis.linhaFoneSelecionada >= 0)
+            {
+                Variaveis.funcao = "ALTERAR FONE";
+                new frmTelCliente().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Para alterar selecione uma linha.");
+            }*/
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            /*Variaveis.funcao = "CADASTRAR FONE";
+            new frmTelCliente().Show();
+            Hide();*/
         }
     }
 }
