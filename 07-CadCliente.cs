@@ -361,11 +361,12 @@ namespace monisePerso
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            lblNomeCliente.ForeColor = Color.FromArgb(70, 10, 45);
-            lblEmail.ForeColor = Color.FromArgb(70, 10, 45);
-            lblSenha.ForeColor = Color.FromArgb(70, 10, 45);
-            lblStatus.ForeColor = Color.FromArgb(70, 10, 45);
-            lblFoto.BackColor = Color.FromArgb(70, 10, 45);
+            lblNomeCliente.ForeColor = Color.FromArgb(73, 73, 73);
+            lblEmail.ForeColor = Color.FromArgb(73, 73, 73);
+            lblSenha.ForeColor = Color.FromArgb(73, 73, 73);
+            lblStatus.ForeColor = Color.FromArgb(73, 73, 73);
+            lblFoto.BackColor = Color.FromArgb(133, 133, 134);
+            lblFoto.ForeColor = Color.FromArgb(243, 243, 243);
 
             if (txtNomeCliente.Text == String.Empty)
             {

@@ -317,7 +317,7 @@ namespace monisePerso
             if (Variaveis.linhaSelecionada >= 0)
             {
                 Variaveis.funcao = "ALTERAR";
-                new frmCadFuncionario().Show();
+                new frmCadCliente().Show();
                 Hide();
             }
             else
@@ -329,8 +329,23 @@ namespace monisePerso
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Variaveis.funcao = "CADASTRAR";
-            new frmCadFuncionario().Show();
+            new frmCadCliente().Show();
             Hide();
+        }
+
+        private void dgvFuncionarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variaveis.linhaSelecionada = int.Parse(e.RowIndex.ToString());
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.codFuncionario = Convert.ToInt32(dgvFuncionarios[0, Variaveis.linhaSelecionada].Value);
+            }
+        }
+
+        private void dgvFuncionarios_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvFuncionarios.Sort(dgvFuncionarios.Columns[1], ListSortDirection.Ascending);
+            dgvFuncionarios.ClearSelection();
         }
     }
 }
