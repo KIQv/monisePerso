@@ -140,6 +140,7 @@ namespace monisePerso
 
             lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
 
+            Variaveis.linhaSelecionada = -1;
             CarregarProduto();
 
             if (Variaveis.nivel != "ADMINISTRADOR")
@@ -293,6 +294,42 @@ namespace monisePerso
                 new frmLogin().Show();
                 Close();
             }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Variaveis.funcao = "CADASTRAR";
+            new frmCadProduto().Show();
+            Hide();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.funcao = "ALTERAR";
+                new frmCadProduto().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Para alterar selecione uma linha.");
+            }
+        }
+
+        private void dgvProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variaveis.linhaSelecionada = int.Parse(e.RowIndex.ToString());
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.codProduto = Convert.ToInt32(dgvProdutos[0, Variaveis.linhaSelecionada].Value);
+            }
+        }
+
+        private void dgvProdutos_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvProdutos.Sort(dgvProdutos.Columns[1], ListSortDirection.Ascending);
+            dgvProdutos.ClearSelection();
         }
     }
 }

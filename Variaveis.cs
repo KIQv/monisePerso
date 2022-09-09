@@ -44,7 +44,7 @@ namespace monisePerso
 
         //Produtos
         public static int codProduto;
-        public static string nomeProduto, descProduto, tipoProduto, fotoProduto1, fotoProduto2, fotoProduto3, fotoProduto4, caminhoFotoProduto1, caminhoFotoProduto2, caminhoFotoProduto3, caminhoFotoProduto4, destaqueProduto, statusProduto;
+        public static string nomeProduto, descProduto, tipoProduto,atFotoProduto,fotoProduto1, fotoProduto2, fotoProduto3, fotoProduto4, caminhoFotoProduto1, caminhoFotoProduto2, caminhoFotoProduto3, caminhoFotoProduto4, destaqueProduto, statusProduto;
         public static DateTime dataCadProduto;
         public static double valorProduto;
 
