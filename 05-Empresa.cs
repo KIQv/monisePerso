@@ -295,5 +295,57 @@ namespace monisePerso
                 chkAtivo.Enabled = true;
             }
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Variaveis.funcao = "CADASTRAR";
+            new frmCadEmpresa().Show();
+            Hide();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.funcao = "ALTERAR";
+                new frmCadEmpresa().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Para alterar selecione uma linha.");
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                var resultado = MessageBox.Show("Deseja realmente excluir?", "EXCLUIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    ExcluirEmpresa();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Para excluir selecione uma linha.");
+            }
+        }
+
+        private void dgvEmpresas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variaveis.linhaSelecionada = int.Parse(e.RowIndex.ToString());
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.codEmpresa = Convert.ToInt32(dgvEmpresas[0, Variaveis.linhaSelecionada].Value);
+            }
+        }
+
+        private void dgvEmpresas_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvEmpresas.Sort(dgvEmpresas.Columns[1], ListSortDirection.Ascending);
+            dgvEmpresas.ClearSelection();
+        }
     }
 }

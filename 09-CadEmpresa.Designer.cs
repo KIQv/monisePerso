@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSair = new System.Windows.Forms.Label();
             this.lblAplicativo = new System.Windows.Forms.Label();
             this.lblSobre = new System.Windows.Forms.Label();
@@ -45,7 +55,13 @@
             this.lblEncomendas = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pnlCadEmpresa = new System.Windows.Forms.Panel();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
+            this.mkdCnpjCpf = new System.Windows.Forms.MaskedTextBox();
+            this.radCpf = new System.Windows.Forms.RadioButton();
+            this.radCnpj = new System.Windows.Forms.RadioButton();
             this.cmbHorarioAtendimento = new System.Windows.Forms.ComboBox();
             this.lblHorarioAtendimento = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
@@ -60,34 +76,14 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtRazaoSocial = new System.Windows.Forms.TextBox();
             this.txtEmailEmpresa = new System.Windows.Forms.TextBox();
-            this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
             this.mkdData = new System.Windows.Forms.MaskedTextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblDataCad = new System.Windows.Forms.Label();
             this.lblRazaoSocial = new System.Windows.Forms.Label();
             this.lblEmailEmpresa = new System.Windows.Forms.Label();
             this.lblNomeEmpresa = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.mkdCnpjCpf = new System.Windows.Forms.MaskedTextBox();
-            this.radCnpj = new System.Windows.Forms.RadioButton();
-            this.radCpf = new System.Windows.Forms.RadioButton();
             this.pctFechar = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pnlSideMenu.SuspendLayout();
-            this.pnlCadEmpresa.SuspendLayout();
-            this.pnlTelEmpresa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTelEmpresa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -99,6 +95,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
+            this.pnlCadEmpresa.SuspendLayout();
+            this.pnlTelEmpresa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTelEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -172,6 +172,16 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(200, 650);
             this.pnlSideMenu.TabIndex = 38;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::monisePerso.Properties.Resources.iconEmail;
+            this.pictureBox10.Location = new System.Drawing.Point(16, 525);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox10.TabIndex = 23;
+            this.pictureBox10.TabStop = false;
+            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
@@ -183,6 +193,97 @@
             this.lblEmail.TabIndex = 19;
             this.lblEmail.Text = "Email";
             this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox9.Image = global::monisePerso.Properties.Resources.iconSair;
+            this.pictureBox9.Location = new System.Drawing.Point(166, 584);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox9.TabIndex = 21;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::monisePerso.Properties.Resources.iconAplicativo;
+            this.pictureBox8.Location = new System.Drawing.Point(16, 486);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox8.TabIndex = 20;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconMenu;
+            this.pictureBox7.Location = new System.Drawing.Point(16, 446);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 19;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconContato;
+            this.pictureBox6.Location = new System.Drawing.Point(16, 406);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 18;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconProdutos;
+            this.pictureBox5.Location = new System.Drawing.Point(16, 366);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::monisePerso.Properties.Resources.iconFuncionario;
+            this.pictureBox4.Location = new System.Drawing.Point(16, 326);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::monisePerso.Properties.Resources.iconCliente;
+            this.pictureBox3.Location = new System.Drawing.Point(16, 286);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::monisePerso.Properties.Resources.iconEncomenda;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 246);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::monisePerso.Properties.Resources.iconMenu;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 206);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // lblSair
             // 
@@ -306,6 +407,18 @@
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Seja bem-vindo Uusario";
             // 
+            // pctLogo
+            // 
+            this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctLogo.Image = global::monisePerso.Properties.Resources.logoMenu;
+            this.pctLogo.Location = new System.Drawing.Point(50, 50);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(100, 100);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctLogo.TabIndex = 3;
+            this.pctLogo.TabStop = false;
+            // 
             // pnlCadEmpresa
             // 
             this.pnlCadEmpresa.Controls.Add(this.txtCodigo);
@@ -333,18 +446,83 @@
             this.pnlCadEmpresa.Size = new System.Drawing.Size(935, 546);
             this.pnlCadEmpresa.TabIndex = 41;
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.txtCodigo.Location = new System.Drawing.Point(0, 31);
+            this.txtCodigo.Multiline = true;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(220, 26);
+            this.txtCodigo.TabIndex = 0;
+            // 
+            // txtNomeEmpresa
+            // 
+            this.txtNomeEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNomeEmpresa.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.txtNomeEmpresa.Location = new System.Drawing.Point(0, 95);
+            this.txtNomeEmpresa.Multiline = true;
+            this.txtNomeEmpresa.Name = "txtNomeEmpresa";
+            this.txtNomeEmpresa.Size = new System.Drawing.Size(692, 26);
+            this.txtNomeEmpresa.TabIndex = 1;
+            this.txtNomeEmpresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomeEmpresa_KeyPress);
+            // 
+            // mkdCnpjCpf
+            // 
+            this.mkdCnpjCpf.Font = new System.Drawing.Font("Poppins", 9.25F);
+            this.mkdCnpjCpf.Location = new System.Drawing.Point(463, 228);
+            this.mkdCnpjCpf.Mask = "00,000,000/0000-00";
+            this.mkdCnpjCpf.Name = "mkdCnpjCpf";
+            this.mkdCnpjCpf.Size = new System.Drawing.Size(229, 26);
+            this.mkdCnpjCpf.TabIndex = 59;
+            this.mkdCnpjCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCnpjCpf_KeyPress);
+            // 
+            // radCpf
+            // 
+            this.radCpf.AutoSize = true;
+            this.radCpf.BackColor = System.Drawing.Color.Transparent;
+            this.radCpf.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radCpf.Location = new System.Drawing.Point(564, 198);
+            this.radCpf.Name = "radCpf";
+            this.radCpf.Size = new System.Drawing.Size(59, 32);
+            this.radCpf.TabIndex = 61;
+            this.radCpf.TabStop = true;
+            this.radCpf.Text = "CPF";
+            this.radCpf.UseVisualStyleBackColor = false;
+            this.radCpf.CheckedChanged += new System.EventHandler(this.radCpf_CheckedChanged);
+            // 
+            // radCnpj
+            // 
+            this.radCnpj.AutoSize = true;
+            this.radCnpj.BackColor = System.Drawing.Color.Transparent;
+            this.radCnpj.Checked = true;
+            this.radCnpj.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radCnpj.Location = new System.Drawing.Point(463, 198);
+            this.radCnpj.Name = "radCnpj";
+            this.radCnpj.Size = new System.Drawing.Size(70, 32);
+            this.radCnpj.TabIndex = 60;
+            this.radCnpj.TabStop = true;
+            this.radCnpj.Text = "CPNJ";
+            this.radCnpj.UseVisualStyleBackColor = false;
+            this.radCnpj.CheckedChanged += new System.EventHandler(this.radCnpj_CheckedChanged);
+            // 
             // cmbHorarioAtendimento
             // 
             this.cmbHorarioAtendimento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHorarioAtendimento.Font = new System.Drawing.Font("Poppins", 7.75F);
             this.cmbHorarioAtendimento.FormattingEnabled = true;
             this.cmbHorarioAtendimento.Items.AddRange(new object[] {
-            "ATIVO",
-            "INATIVO"});
-            this.cmbHorarioAtendimento.Location = new System.Drawing.Point(721, 227);
+            "06:00",
+            "08:00",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00"});
+            this.cmbHorarioAtendimento.Location = new System.Drawing.Point(721, 162);
             this.cmbHorarioAtendimento.Name = "cmbHorarioAtendimento";
-            this.cmbHorarioAtendimento.Size = new System.Drawing.Size(211, 26);
+            this.cmbHorarioAtendimento.Size = new System.Drawing.Size(211, 25);
             this.cmbHorarioAtendimento.TabIndex = 57;
+            this.cmbHorarioAtendimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbHorarioAtendimento_KeyPress);
             // 
             // lblHorarioAtendimento
             // 
@@ -352,7 +530,7 @@
             this.lblHorarioAtendimento.BackColor = System.Drawing.Color.Transparent;
             this.lblHorarioAtendimento.Font = new System.Drawing.Font("Poppins", 12F);
             this.lblHorarioAtendimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblHorarioAtendimento.Location = new System.Drawing.Point(716, 200);
+            this.lblHorarioAtendimento.Location = new System.Drawing.Point(716, 135);
             this.lblHorarioAtendimento.Name = "lblHorarioAtendimento";
             this.lblHorarioAtendimento.Size = new System.Drawing.Size(206, 28);
             this.lblHorarioAtendimento.TabIndex = 58;
@@ -366,10 +544,11 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "ATIVO",
             "INATIVO"});
-            this.cmbStatus.Location = new System.Drawing.Point(721, 162);
+            this.cmbStatus.Location = new System.Drawing.Point(721, 94);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(211, 26);
+            this.cmbStatus.Size = new System.Drawing.Size(211, 25);
             this.cmbStatus.TabIndex = 55;
+            this.cmbStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbStatus_KeyPress);
             // 
             // lblStatus
             // 
@@ -377,7 +556,7 @@
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblStatus.Font = new System.Drawing.Font("Poppins", 12F);
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblStatus.Location = new System.Drawing.Point(716, 135);
+            this.lblStatus.Location = new System.Drawing.Point(716, 67);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(65, 28);
             this.lblStatus.TabIndex = 56;
@@ -396,6 +575,7 @@
             this.btnLimpar.TabIndex = 7;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // pnlTelEmpresa
             // 
@@ -432,23 +612,23 @@
             this.dgvTelEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvTelEmpresa.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTelEmpresa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTelEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTelEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvTelEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTelEmpresa.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTelEmpresa.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvTelEmpresa.EnableHeadersVisualStyles = false;
             this.dgvTelEmpresa.Location = new System.Drawing.Point(0, 33);
             this.dgvTelEmpresa.MultiSelect = false;
@@ -514,54 +694,38 @@
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtRazaoSocial
             // 
-            this.txtRazaoSocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtRazaoSocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRazaoSocial.Font = new System.Drawing.Font("Poppins", 7.75F);
             this.txtRazaoSocial.Location = new System.Drawing.Point(0, 162);
             this.txtRazaoSocial.Multiline = true;
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(692, 26);
             this.txtRazaoSocial.TabIndex = 2;
+            this.txtRazaoSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazaoSocial_KeyPress);
             // 
             // txtEmailEmpresa
             // 
+            this.txtEmailEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtEmailEmpresa.Font = new System.Drawing.Font("Poppins", 7.75F);
             this.txtEmailEmpresa.Location = new System.Drawing.Point(0, 228);
             this.txtEmailEmpresa.Multiline = true;
             this.txtEmailEmpresa.Name = "txtEmailEmpresa";
             this.txtEmailEmpresa.Size = new System.Drawing.Size(431, 26);
             this.txtEmailEmpresa.TabIndex = 3;
-            // 
-            // txtNomeEmpresa
-            // 
-            this.txtNomeEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNomeEmpresa.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.txtNomeEmpresa.Location = new System.Drawing.Point(0, 95);
-            this.txtNomeEmpresa.Multiline = true;
-            this.txtNomeEmpresa.Name = "txtNomeEmpresa";
-            this.txtNomeEmpresa.Size = new System.Drawing.Size(692, 26);
-            this.txtNomeEmpresa.TabIndex = 1;
+            this.txtEmailEmpresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmailEmpresa_KeyPress);
             // 
             // mkdData
             // 
             this.mkdData.Font = new System.Drawing.Font("Poppins", 9.25F);
-            this.mkdData.Location = new System.Drawing.Point(721, 95);
+            this.mkdData.Location = new System.Drawing.Point(721, 228);
             this.mkdData.Name = "mkdData";
             this.mkdData.Size = new System.Drawing.Size(211, 26);
             this.mkdData.TabIndex = 5;
             this.mkdData.Text = "__/__/____";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.txtCodigo.Location = new System.Drawing.Point(0, 31);
-            this.txtCodigo.Multiline = true;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(220, 26);
-            this.txtCodigo.TabIndex = 0;
             // 
             // lblDataCad
             // 
@@ -569,7 +733,7 @@
             this.lblDataCad.BackColor = System.Drawing.Color.Transparent;
             this.lblDataCad.Font = new System.Drawing.Font("Poppins", 12F);
             this.lblDataCad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblDataCad.Location = new System.Drawing.Point(716, 67);
+            this.lblDataCad.Location = new System.Drawing.Point(716, 200);
             this.lblDataCad.Name = "lblDataCad";
             this.lblDataCad.Size = new System.Drawing.Size(158, 28);
             this.lblDataCad.TabIndex = 50;
@@ -623,41 +787,6 @@
             this.lblCodigo.TabIndex = 45;
             this.lblCodigo.Text = "Código:";
             // 
-            // mkdCnpjCpf
-            // 
-            this.mkdCnpjCpf.Font = new System.Drawing.Font("Poppins", 9.25F);
-            this.mkdCnpjCpf.Location = new System.Drawing.Point(463, 228);
-            this.mkdCnpjCpf.Name = "mkdCnpjCpf";
-            this.mkdCnpjCpf.Size = new System.Drawing.Size(229, 26);
-            this.mkdCnpjCpf.TabIndex = 59;
-            this.mkdCnpjCpf.Text = "__/__/____";
-            // 
-            // radCnpj
-            // 
-            this.radCnpj.AutoSize = true;
-            this.radCnpj.BackColor = System.Drawing.Color.Transparent;
-            this.radCnpj.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radCnpj.Location = new System.Drawing.Point(463, 198);
-            this.radCnpj.Name = "radCnpj";
-            this.radCnpj.Size = new System.Drawing.Size(70, 32);
-            this.radCnpj.TabIndex = 60;
-            this.radCnpj.TabStop = true;
-            this.radCnpj.Text = "CPNJ";
-            this.radCnpj.UseVisualStyleBackColor = false;
-            // 
-            // radCpf
-            // 
-            this.radCpf.AutoSize = true;
-            this.radCpf.BackColor = System.Drawing.Color.Transparent;
-            this.radCpf.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radCpf.Location = new System.Drawing.Point(564, 198);
-            this.radCpf.Name = "radCpf";
-            this.radCpf.Size = new System.Drawing.Size(59, 32);
-            this.radCpf.TabIndex = 61;
-            this.radCpf.TabStop = true;
-            this.radCpf.Text = "CPF";
-            this.radCpf.UseVisualStyleBackColor = false;
-            // 
             // pctFechar
             // 
             this.pctFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -670,131 +799,18 @@
             this.pctFechar.TabIndex = 37;
             this.pctFechar.TabStop = false;
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::monisePerso.Properties.Resources.iconEmail;
-            this.pictureBox10.Location = new System.Drawing.Point(16, 525);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox10.TabIndex = 23;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.Image = global::monisePerso.Properties.Resources.iconSair;
-            this.pictureBox9.Location = new System.Drawing.Point(166, 584);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox9.TabIndex = 21;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::monisePerso.Properties.Resources.iconAplicativo;
-            this.pictureBox8.Location = new System.Drawing.Point(16, 486);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox8.TabIndex = 20;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconMenu;
-            this.pictureBox7.Location = new System.Drawing.Point(16, 446);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconContato;
-            this.pictureBox6.Location = new System.Drawing.Point(16, 406);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 18;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconProdutos;
-            this.pictureBox5.Location = new System.Drawing.Point(16, 366);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::monisePerso.Properties.Resources.iconFuncionario;
-            this.pictureBox4.Location = new System.Drawing.Point(16, 326);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::monisePerso.Properties.Resources.iconCliente;
-            this.pictureBox3.Location = new System.Drawing.Point(16, 286);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::monisePerso.Properties.Resources.iconEncomenda;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 246);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::monisePerso.Properties.Resources.iconMenu;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 206);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pctLogo
-            // 
-            this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctLogo.Image = global::monisePerso.Properties.Resources.logoMenu;
-            this.pctLogo.Location = new System.Drawing.Point(50, 50);
-            this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(100, 100);
-            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctLogo.TabIndex = 3;
-            this.pctLogo.TabStop = false;
-            // 
             // frmCadEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.pnlCadEmpresa);
             this.Controls.Add(this.pctFechar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.pnlSideMenu);
-            this.Controls.Add(this.pnlCadEmpresa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -803,11 +819,6 @@
             this.Load += new System.EventHandler(this.frmCadEmpresa_Load);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
-            this.pnlCadEmpresa.ResumeLayout(false);
-            this.pnlCadEmpresa.PerformLayout();
-            this.pnlTelEmpresa.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTelEmpresa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -819,6 +830,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
+            this.pnlCadEmpresa.ResumeLayout(false);
+            this.pnlCadEmpresa.PerformLayout();
+            this.pnlTelEmpresa.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTelEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
