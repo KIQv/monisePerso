@@ -23,7 +23,7 @@ namespace monisePerso
             try
             {
                 banco.Conectar();
-                string inserir = "INSERT INTO `funcionario`(`idFuncionario`, `nomeFuncionario`, `emailFuncionario`, `senhaFuncionario`, `nivelFuncionario`, `statusFuncionario`, `dataCadFuncionario`, `horarioTrabalhoFuncionario`, `idEmpresa`) VALUES (DEFAULT,@nome,@email,@senha,@nivel,@status,@dataCad,horario,@codEmpresa)";
+                string inserir = "INSERT INTO `funcionario`(`idFuncionario`, `nomeFuncionario`, `emailFuncionario`, `senhaFuncionario`, `nivelFuncionario`, `statusFuncionario`, `dataCadFuncionario`, `horarioTrabalhoFuncionario`, `idEmpresa`) VALUES (DEFAULT,@nome,@email,@senha,@nivel,@status,@dataCad,@horario,@codEmpresa)";
                 MySqlCommand cmd = new MySqlCommand(inserir, banco.conexao);
                 cmd.Parameters.AddWithValue("@nome", Variaveis.nomeFuncionario);
                 cmd.Parameters.AddWithValue("@email", Variaveis.emailFuncionario);
@@ -48,7 +48,7 @@ namespace monisePerso
             try
             {
                 banco.Conectar();
-                string alterar = "UPDATE funcionario SET nomeFuncionario=@nome,emailFuncionario=@email,senhaFuncionario=@senha,nivelFuncionario=@nivel,statusFuncionario=@status,horarioTrabalhoFuncionario=@horario,idEmpresa=@codEmpresa, WHERE idFuncionario=@codigo";
+                string alterar = "UPDATE `funcionario` SET `nomeFuncionario`=@nome,`emailFuncionario`=@email,`senhaFuncionario`=@senha,`nivelFuncionario`=@nivel,`statusFuncionario`=@status,`horarioTrabalhoFuncionario`=@horario,`idEmpresa`=@codEmpresa WHERE idFuncionario=@codigo";
                 MySqlCommand cmd = new MySqlCommand(alterar, banco.conexao);
                 cmd.Parameters.AddWithValue("@nome", Variaveis.nomeFuncionario);
                 cmd.Parameters.AddWithValue("@email", Variaveis.emailFuncionario);
@@ -95,7 +95,7 @@ namespace monisePerso
                     cmbNivel.Text = Variaveis.nivelFuncionario;
                     cmbStatus.Text = Variaveis.statusFuncionario;
                     mkdData.Text = Variaveis.dataCadFuncionario.ToString("dd/MM/yyyy");
-                    mkdData.Text = Variaveis.dataCadFuncionario.ToString("HH: mm");
+                    cmbHorarioTrabalho.Text = Variaveis.horarioFuncionario.ToString("HH:mm");
                     cmbEmpresaFuncionario.Text = Variaveis.codEmpresa.ToString();
                 }
                 banco.Desconectar();
@@ -259,6 +259,9 @@ namespace monisePerso
 
             lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
 
+            CarregarEmpresas();
+            cmbEmpresaFuncionario.Text = Variaveis.nomeEmpresa;
+
             if (Variaveis.nivel != "ADMINISTRADOR")
             {
                 lblEmpresa.Enabled = false;
@@ -286,7 +289,7 @@ namespace monisePerso
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             lblNomeFuncionario.ForeColor = Color.FromArgb(73, 73, 73);
-            lblEmail.ForeColor = Color.FromArgb(73, 73, 73);
+            lblEmailFuncionario.ForeColor = Color.FromArgb(73, 73, 73);
             lblSenha.ForeColor = Color.FromArgb(73, 73, 73);
             lblNivel.ForeColor = Color.FromArgb(73, 73, 73);
             lblStatus.ForeColor = Color.FromArgb(73, 73, 73);
@@ -351,12 +354,10 @@ namespace monisePerso
                 {
                     InserirFuncionario();
                     CarregarFuncionarioCadastrado();
-
                 }
                 else if (Variaveis.funcao == "ALTERAR")
                 {
                     AlterarFuncionario();
-
                 }
 
                 pnlTelFuncionario.Enabled = true;

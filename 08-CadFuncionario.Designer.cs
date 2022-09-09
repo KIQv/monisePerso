@@ -422,6 +422,8 @@
             // 
             // pnlCadFuncionario
             // 
+            this.pnlCadFuncionario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCadFuncionario.Controls.Add(this.cmbEmpresaFuncionario);
             this.pnlCadFuncionario.Controls.Add(this.lblEmpresaFuncionario);
             this.pnlCadFuncionario.Controls.Add(this.cmbHorarioTrabalho);
@@ -453,12 +455,9 @@
             this.cmbEmpresaFuncionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmpresaFuncionario.Font = new System.Drawing.Font("Poppins", 7.75F);
             this.cmbEmpresaFuncionario.FormattingEnabled = true;
-            this.cmbEmpresaFuncionario.Items.AddRange(new object[] {
-            "ATIVO",
-            "INATIVO"});
             this.cmbEmpresaFuncionario.Location = new System.Drawing.Point(721, 227);
             this.cmbEmpresaFuncionario.Name = "cmbEmpresaFuncionario";
-            this.cmbEmpresaFuncionario.Size = new System.Drawing.Size(211, 26);
+            this.cmbEmpresaFuncionario.Size = new System.Drawing.Size(211, 25);
             this.cmbEmpresaFuncionario.TabIndex = 57;
             // 
             // lblEmpresaFuncionario
@@ -479,11 +478,14 @@
             this.cmbHorarioTrabalho.Font = new System.Drawing.Font("Poppins", 7.75F);
             this.cmbHorarioTrabalho.FormattingEnabled = true;
             this.cmbHorarioTrabalho.Items.AddRange(new object[] {
-            "ATIVO",
-            "INATIVO"});
+            "08:00",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00"});
             this.cmbHorarioTrabalho.Location = new System.Drawing.Point(721, 162);
             this.cmbHorarioTrabalho.Name = "cmbHorarioTrabalho";
-            this.cmbHorarioTrabalho.Size = new System.Drawing.Size(211, 26);
+            this.cmbHorarioTrabalho.Size = new System.Drawing.Size(211, 25);
             this.cmbHorarioTrabalho.TabIndex = 55;
             // 
             // lblHorarioTrabalho
@@ -504,11 +506,11 @@
             this.cmbNivel.Font = new System.Drawing.Font("Poppins", 7.75F);
             this.cmbNivel.FormattingEnabled = true;
             this.cmbNivel.Items.AddRange(new object[] {
-            "ATIVO",
-            "INATIVO"});
+            "ADMINISTRADOR",
+            "OUTROS"});
             this.cmbNivel.Location = new System.Drawing.Point(504, 226);
             this.cmbNivel.Name = "cmbNivel";
-            this.cmbNivel.Size = new System.Drawing.Size(188, 26);
+            this.cmbNivel.Size = new System.Drawing.Size(188, 25);
             this.cmbNivel.TabIndex = 53;
             // 
             // lblNivel
@@ -704,7 +706,7 @@
             "INATIVO"});
             this.cmbStatus.Location = new System.Drawing.Point(252, 228);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(220, 26);
+            this.cmbStatus.Size = new System.Drawing.Size(220, 25);
             this.cmbStatus.TabIndex = 4;
             // 
             // txtCodigo
@@ -807,12 +809,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.pnlCadFuncionario);
             this.Controls.Add(this.pctFechar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.pnlSideMenu);
-            this.Controls.Add(this.pnlCadFuncionario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

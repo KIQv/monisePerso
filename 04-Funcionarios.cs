@@ -317,7 +317,7 @@ namespace monisePerso
             if (Variaveis.linhaSelecionada >= 0)
             {
                 Variaveis.funcao = "ALTERAR";
-                new frmCadCliente().Show();
+                new frmCadFuncionario().Show();
                 Hide();
             }
             else
@@ -329,7 +329,7 @@ namespace monisePerso
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Variaveis.funcao = "CADASTRAR";
-            new frmCadCliente().Show();
+            new frmCadFuncionario().Show();
             Hide();
         }
 
