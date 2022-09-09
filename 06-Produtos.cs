@@ -30,7 +30,7 @@ namespace monisePerso
                 da.Fill(dt);
 
                 dgvProdutos.DataSource = dt;
-
+                dgvProdutos.Columns[0].Visible = false;
                 dgvProdutos.ClearSelection();
 
                 banco.Conectar();

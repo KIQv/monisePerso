@@ -63,6 +63,7 @@ namespace monisePerso
                 cmd.Parameters.AddWithValue("@nome", Variaveis.nomeProduto);
                 cmd.Parameters.AddWithValue("@descricao", Variaveis.descProduto);
                 cmd.Parameters.AddWithValue("@tipo", Variaveis.tipoProduto);
+                cmd.Parameters.AddWithValue("@valor", Variaveis.valorProduto);
                 cmd.Parameters.AddWithValue("@dataCad", Variaveis.dataCadProduto.ToString("yyyy-MM-dd"));
                 cmd.Parameters.AddWithValue("@foto1", Variaveis.fotoProduto1);
                 cmd.Parameters.AddWithValue("@foto2", Variaveis.fotoProduto2);
@@ -89,6 +90,9 @@ namespace monisePerso
                             MessageBox.Show("Foto não selecionada", "Foto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                }
+                if (ValidarFtp())
+                {
                     if (!string.IsNullOrEmpty(Variaveis.fotoProduto2))
                     {
                         string urlEnviarArquivo = Variaveis.enderecoServidorFtp + "produto/" + Path.GetFileName(Variaveis.fotoProduto2);
@@ -101,6 +105,9 @@ namespace monisePerso
                             MessageBox.Show("Foto não selecionada", "Foto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                }
+                if (ValidarFtp())
+                {
                     if (!string.IsNullOrEmpty(Variaveis.fotoProduto3))
                     {
                         string urlEnviarArquivo = Variaveis.enderecoServidorFtp + "produto/" + Path.GetFileName(Variaveis.fotoProduto3);
@@ -113,6 +120,9 @@ namespace monisePerso
                             MessageBox.Show("Foto não selecionada", "Foto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                }
+                if (ValidarFtp())
+                {
                     if (!string.IsNullOrEmpty(Variaveis.fotoProduto4))
                     {
                         string urlEnviarArquivo = Variaveis.enderecoServidorFtp + "produto/" + Path.GetFileName(Variaveis.fotoProduto4);
@@ -129,7 +139,7 @@ namespace monisePerso
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao cadastrar o produto!\n\n" + erro.Message, "ERRO!");
+                MessageBox.Show("Erro ao cadastrar o produto!\n\n" + erro, "ERRO!");
             }
         }
 
@@ -157,17 +167,14 @@ namespace monisePerso
             }
         }
 
-        private void AlterarFotoProduto()
+        private void AlterarFotoProduto1()
         {
             try
             {
                 banco.Conectar();
-                string alterar = "UPDATE produto SET fotoProduto1=@foto1,fotoProduto2=@foto2,fotoProduto3=@foto3,fotoProduto4=@foto4 WHERE idProduto=@codigo";
+                string alterar = "UPDATE produto SET fotoProduto1=@foto1 WHERE idProduto=@codigo";
                 MySqlCommand cmd = new MySqlCommand(alterar, banco.conexao);
                 cmd.Parameters.AddWithValue("@foto1", Variaveis.fotoProduto1);
-                cmd.Parameters.AddWithValue("@foto2", Variaveis.fotoProduto2);
-                cmd.Parameters.AddWithValue("@foto3", Variaveis.fotoProduto3);
-                cmd.Parameters.AddWithValue("@foto4", Variaveis.fotoProduto4);
                 cmd.Parameters.AddWithValue("@codigo", Variaveis.codProduto);
                 cmd.ExecuteNonQuery();
                 banco.Desconectar();
@@ -185,6 +192,28 @@ namespace monisePerso
                             MessageBox.Show("Foto não selecionada", "Foto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                }
+                MessageBox.Show("Foto alterada com sucesso!", "Alteração do produto");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao alterar a foto do produto\n\n" + ex.Message, "ERRO");
+            }
+        }
+
+        private void AlterarFotoProduto2()
+        {
+            try
+            {
+                banco.Conectar();
+                string alterar = "UPDATE produto SET fotoProduto2=@foto2 WHERE idProduto=@codigo";
+                MySqlCommand cmd = new MySqlCommand(alterar, banco.conexao);
+                cmd.Parameters.AddWithValue("@foto2", Variaveis.fotoProduto2);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codProduto);
+                cmd.ExecuteNonQuery();
+                banco.Desconectar();
+                if (ValidarFtp())
+                {
                     if (!string.IsNullOrEmpty(Variaveis.fotoProduto2))
                     {
                         string urlEnviarArquivo = Variaveis.enderecoServidorFtp + "produto/" + Path.GetFileName(Variaveis.fotoProduto2);
@@ -197,6 +226,27 @@ namespace monisePerso
                             MessageBox.Show("Foto não selecionada", "Foto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                }
+                MessageBox.Show("Foto alterada com sucesso!", "Alteração do produto");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao alterar a foto do produto\n\n" + ex.Message, "ERRO");
+            }
+        }
+        private void AlterarFotoProduto3()
+        {
+            try
+            {
+                banco.Conectar();
+                string alterar = "UPDATE produto SET fotoProduto3=@foto3 WHERE idProduto=@codigo";
+                MySqlCommand cmd = new MySqlCommand(alterar, banco.conexao);
+                cmd.Parameters.AddWithValue("@foto3", Variaveis.fotoProduto3);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codProduto);
+                cmd.ExecuteNonQuery();
+                banco.Desconectar();
+                if (ValidarFtp())
+                {
                     if (!string.IsNullOrEmpty(Variaveis.fotoProduto3))
                     {
                         string urlEnviarArquivo = Variaveis.enderecoServidorFtp + "produto/" + Path.GetFileName(Variaveis.fotoProduto3);
@@ -209,6 +259,28 @@ namespace monisePerso
                             MessageBox.Show("Foto não selecionada", "Foto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                }
+                MessageBox.Show("Foto alterada com sucesso!", "Alteração do produto");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao alterar a foto do produto\n\n" + ex.Message, "ERRO");
+            }
+        }
+
+        private void AlterarFotoProduto4()
+        {
+            try
+            {
+                banco.Conectar();
+                string alterar = "UPDATE produto SET fotoProduto4=@foto4 WHERE idProduto=@codigo";
+                MySqlCommand cmd = new MySqlCommand(alterar, banco.conexao);
+                cmd.Parameters.AddWithValue("@foto4", Variaveis.fotoProduto4);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codProduto);
+                cmd.ExecuteNonQuery();
+                banco.Desconectar();
+                if (ValidarFtp())
+                {
                     if (!string.IsNullOrEmpty(Variaveis.fotoProduto4))
                     {
                         string urlEnviarArquivo = Variaveis.enderecoServidorFtp + "produto/" + Path.GetFileName(Variaveis.fotoProduto4);
@@ -246,28 +318,30 @@ namespace monisePerso
                     Variaveis.tipoProduto = reader.GetString(3);
                     Variaveis.valorProduto = reader.GetInt32(4);
                     Variaveis.dataCadProduto = DateTime.Parse(reader.GetString(5));
+                    Variaveis.destaqueProduto = reader.GetString(10);
+                    Variaveis.statusProduto = reader.GetString(11);
                     Variaveis.fotoProduto1 = reader.GetString(6);
                     Variaveis.fotoProduto1 = Variaveis.fotoProduto1.Remove(0, 8);
                     Variaveis.fotoProduto2 = reader.GetString(7);
-                    Variaveis.fotoProduto2 = Variaveis.fotoProduto1.Remove(0, 8);
+                    Variaveis.fotoProduto2 = Variaveis.fotoProduto2.Remove(0, 8);
                     Variaveis.fotoProduto3 = reader.GetString(8);
-                    Variaveis.fotoProduto3 = Variaveis.fotoProduto1.Remove(0, 8);
+                    Variaveis.fotoProduto3 = Variaveis.fotoProduto3.Remove(0, 8);
                     Variaveis.fotoProduto4 = reader.GetString(9);
-                    Variaveis.fotoProduto4 = Variaveis.fotoProduto1.Remove(0, 8);
-                    Variaveis.destaqueProduto = reader.GetString(10);
-                    Variaveis.statusProduto = reader.GetString(11);
+                    Variaveis.fotoProduto4 = Variaveis.fotoProduto4.Remove(0, 8);
+
                     txtCodigo.Text = Variaveis.codProduto.ToString();
                     txtNomeProduto.Text = Variaveis.nomeProduto;
-                    lblDescricao.Text = Variaveis.descProduto;
+                    txtDescricao.Text = Variaveis.descProduto;
                     txtTipo.Text = Variaveis.tipoProduto;
                     txtValor.Text = Variaveis.valorProduto.ToString();
                     mkdData.Text = Variaveis.dataCadProduto.ToString("dd/MM/yyyy");
+                    cmbDestaque.Text = Variaveis.destaqueProduto;
+                    cmbStatus.Text = Variaveis.statusProduto;
                     pctFoto01.Image = ByteToImage(GetImgToByte(Variaveis.enderecoServidorFtp + "produto/" + Variaveis.fotoProduto1));
                     pctFoto02.Image = ByteToImage(GetImgToByte(Variaveis.enderecoServidorFtp + "produto/" + Variaveis.fotoProduto2));
                     pctFoto03.Image = ByteToImage(GetImgToByte(Variaveis.enderecoServidorFtp + "produto/" + Variaveis.fotoProduto3));
                     pctFoto04.Image = ByteToImage(GetImgToByte(Variaveis.enderecoServidorFtp + "produto/" + Variaveis.fotoProduto4));
-                    cmbDestaque.Text = Variaveis.statusProduto;
-                    cmbStatus.Text = Variaveis.statusProduto;
+
                 }
                 banco.Desconectar();
             }
@@ -385,7 +459,7 @@ namespace monisePerso
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                lblDescricao.Focus();
+                txtDescricao.Focus();
             }
         }
 
@@ -453,7 +527,7 @@ namespace monisePerso
                 {
                     try
                     {
-                        Variaveis.atFotoProduto = "S";
+                        Variaveis.atFotoProduto1 = "S";
                         Variaveis.caminhoFotoProduto1 = ofdFoto.FileName;
                     }
                     catch (SecurityException ex)
@@ -464,7 +538,7 @@ namespace monisePerso
                     {
                         MessageBox.Show("Você não tem permissão." + ex.Message);
                     }
-                    Variaveis.atFotoProduto = "S";
+                    Variaveis.atFotoProduto1 = "S";
                     pctFoto02.Focus();
                 }
             }
@@ -494,7 +568,7 @@ namespace monisePerso
                 {
                     try
                     {
-                        Variaveis.atFotoProduto = "S";
+                        Variaveis.atFotoProduto2 = "S";
                         Variaveis.caminhoFotoProduto2 = ofdFoto.FileName;
                     }
                     catch (SecurityException ex)
@@ -505,7 +579,7 @@ namespace monisePerso
                     {
                         MessageBox.Show("Você não tem permissão." + ex.Message);
                     }
-                    Variaveis.atFotoProduto = "S";
+                    Variaveis.atFotoProduto2 = "S";
                     pctFoto03.Focus();
                 }
             }
@@ -535,7 +609,7 @@ namespace monisePerso
                 {
                     try
                     {
-                        Variaveis.atFotoProduto = "S";
+                        Variaveis.atFotoProduto3 = "S";
                         Variaveis.caminhoFotoProduto3 = ofdFoto.FileName;
                     }
                     catch (SecurityException ex)
@@ -546,7 +620,7 @@ namespace monisePerso
                     {
                         MessageBox.Show("Você não tem permissão." + ex.Message);
                     }
-                    Variaveis.atFotoProduto = "S";
+                    Variaveis.atFotoProduto3 = "S";
                     pctFoto04.Focus();
                 }
             }
@@ -576,7 +650,7 @@ namespace monisePerso
                 {
                     try
                     {
-                        Variaveis.atFotoProduto = "S";
+                        Variaveis.atFotoProduto4 = "S";
                         Variaveis.caminhoFotoProduto4 = ofdFoto.FileName;
                     }
                     catch (SecurityException ex)
@@ -587,7 +661,7 @@ namespace monisePerso
                     {
                         MessageBox.Show("Você não tem permissão." + ex.Message);
                     }
-                    Variaveis.atFotoProduto = "S";
+                    Variaveis.atFotoProduto4 = "S";
                     btnSalvar.Focus();
                 }
             }
@@ -649,14 +723,6 @@ namespace monisePerso
                 lblDestaque.ForeColor = Color.Red;
                 MessageBox.Show("Favor preencher o destaque");
             }
-            else if (Variaveis.atFotoProduto != "S")
-            {
-                lblFotoProduto01.BackColor = Color.Red;
-                lblFotoProduto02.BackColor = Color.Red;
-                lblFotoProduto03.BackColor = Color.Red;
-                lblFotoProduto04.BackColor = Color.Red;
-                MessageBox.Show("Favor selecionar uma foto");
-            }
             else
             {
                 Variaveis.nomeProduto = txtNomeProduto.Text;
@@ -667,7 +733,6 @@ namespace monisePerso
                 Variaveis.dataCadProduto = DateTime.Parse(mkdData.Text);
                 Variaveis.destaqueProduto = cmbDestaque.Text;
                 Variaveis.statusProduto = cmbStatus.Text;
-
                 //Variaveis.fotoCliente = "cliente/" + nomeFoto;
 
                 if (Variaveis.funcao == "CADASTRAR")
@@ -678,11 +743,27 @@ namespace monisePerso
                 else if (Variaveis.funcao == "ALTERAR")
                 {
                     AlterarProduto();
-                    if (Variaveis.atFotoProduto == "S")
+                    if (Variaveis.atFotoProduto1 == "S")
                     {
-                        AlterarFotoProduto();
+                        AlterarFotoProduto1();
+                    }
+                    if (Variaveis.atFotoProduto2 == "S")
+                    {
+                        AlterarFotoProduto2();
+                    }
+                    if (Variaveis.atFotoProduto3 == "S")
+                    {
+                        AlterarFotoProduto3();
+                    }
+                    if (Variaveis.atFotoProduto4 == "S")
+                    {
+                        AlterarFotoProduto4();
                     }
                 }
+                Variaveis.atFotoProduto1 = "N";
+                Variaveis.atFotoProduto2 = "N";
+                Variaveis.atFotoProduto3 = "N";
+                Variaveis.atFotoProduto4 = "N";
 
                 btnSalvar.Enabled = false;
                 btnLimpar.Enabled = false;
