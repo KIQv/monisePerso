@@ -151,9 +151,9 @@
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.lblEmail.Location = new System.Drawing.Point(53, 525);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(53, 26);
+            this.lblEmail.Size = new System.Drawing.Size(69, 26);
             this.lblEmail.TabIndex = 19;
-            this.lblEmail.Text = "Email";
+            this.lblEmail.Text = "E-mails";
             this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // pictureBox9
@@ -451,7 +451,7 @@
             "INATIVO"});
             this.cmbStatus.Location = new System.Drawing.Point(504, 167);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(210, 26);
+            this.cmbStatus.Size = new System.Drawing.Size(210, 25);
             this.cmbStatus.TabIndex = 5;
             this.cmbStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbStatus_KeyPress);
             // 
@@ -654,7 +654,7 @@
             "INATIVO"});
             this.cmbDestaque.Location = new System.Drawing.Point(746, 30);
             this.cmbDestaque.Name = "cmbDestaque";
-            this.cmbDestaque.Size = new System.Drawing.Size(188, 26);
+            this.cmbDestaque.Size = new System.Drawing.Size(188, 25);
             this.cmbDestaque.TabIndex = 6;
             this.cmbDestaque.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDestaque_KeyPress);
             // 

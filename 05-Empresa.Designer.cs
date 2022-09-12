@@ -342,9 +342,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.label3.Location = new System.Drawing.Point(53, 525);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 26);
+            this.label3.Size = new System.Drawing.Size(69, 26);
             this.label3.TabIndex = 22;
-            this.label3.Text = "Email";
+            this.label3.Text = "E-mails";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox9

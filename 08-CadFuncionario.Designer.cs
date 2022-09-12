@@ -190,9 +190,9 @@
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.lblEmail.Location = new System.Drawing.Point(53, 525);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(53, 26);
+            this.lblEmail.Size = new System.Drawing.Size(69, 26);
             this.lblEmail.TabIndex = 19;
-            this.lblEmail.Text = "Email";
+            this.lblEmail.Text = "E-mails";
             this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // pictureBox9
