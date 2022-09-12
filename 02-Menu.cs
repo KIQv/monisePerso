@@ -124,8 +124,8 @@ namespace monisePerso
 
         private void lblAplicativo_Click(object sender, EventArgs e)
         {
-            //new frmAplicativo().Show();
-            //Hide();
+            new frmAplicativo().Show();
+            Hide();
         }
 
         private void lblEmail_Click(object sender, EventArgs e)

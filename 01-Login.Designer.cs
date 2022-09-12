@@ -35,11 +35,11 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pctFechar = new System.Windows.Forms.PictureBox();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pnlLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -119,17 +119,6 @@
             this.pnlLogin.TabIndex = 6;
             this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
             // 
-            // pctLogo
-            // 
-            this.pctLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
-            this.pctLogo.Location = new System.Drawing.Point(219, 13);
-            this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(162, 162);
-            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctLogo.TabIndex = 0;
-            this.pctLogo.TabStop = false;
-            // 
             // pctFechar
             // 
             this.pctFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -141,6 +130,17 @@
             this.pctFechar.TabIndex = 5;
             this.pctFechar.TabStop = false;
             this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
+            // 
+            // pctLogo
+            // 
+            this.pctLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
+            this.pctLogo.Location = new System.Drawing.Point(219, 13);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(162, 162);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctLogo.TabIndex = 0;
+            this.pctLogo.TabStop = false;
             // 
             // frmLogin
             // 
@@ -158,8 +158,8 @@
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
