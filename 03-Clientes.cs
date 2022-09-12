@@ -155,6 +155,7 @@ namespace monisePerso
                 lblFuncionarios.Enabled = true;
                 lblAplicativo.Enabled = true;
             }
+
         }
 
         private void pctFechar_Click(object sender, EventArgs e)
