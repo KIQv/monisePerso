@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,36 @@ namespace monisePerso
             InitializeComponent();
         }
 
+        private void CarregarContato()
+        {
+            try
+            {
+                banco.Conectar();
+                string selecionar = "SELECT * FROM `contato`";
+                MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvEmails.DataSource = dt;
+
+                dgvEmails.ClearSelection();
+
+                banco.Conectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar o Cliente. \n\n" + erro.Message);
+            }
+        }
+
         private void frmMenu_Load(object sender, EventArgs e)
         {
             pnlMenu.Location = new Point(this.Width / 2 - pnlMenu.Width / 2, this.Height / 2 - pnlMenu.Height / 2);
 
             lblUsuario.Text = "Bem-vindo(a) " + Variaveis.usuario;
+
+            
 
             if (Variaveis.nivel != "ADMINISTRADOR")
             {
@@ -35,6 +61,8 @@ namespace monisePerso
                 lblFuncionarios.Enabled = true;
                 lblAplicativo.Enabled = true;
             }
+
+            CarregarContato();
         }
 
         private void pctFechar_Click(object sender, EventArgs e)
@@ -102,8 +130,8 @@ namespace monisePerso
 
         private void lblEmail_Click(object sender, EventArgs e)
         {
-            //new frmEmail().Show();
-            //Hide();
+            new frmEmail().Show();
+            Hide();
         }
 
         private void lblSair_Click(object sender, EventArgs e)

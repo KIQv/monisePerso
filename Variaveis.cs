@@ -15,6 +15,9 @@ namespace monisePerso
         //Login
         public static string usuario, senha, nivel;
 
+        //Contato
+        public static int codContato;
+
         //Empresa 
         public static int codEmpresa;
         public static string nomeEmpresa, cnpjCpf, razaoSocial, emailEmpresa, statusEmpresa;
