@@ -479,5 +479,20 @@ namespace monisePerso
                 MessageBox.Show("Para excluir selecione uma linha.");
             }
         }
+
+        private void dgvTelEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variaveis.linhaFoneSelecionada = int.Parse(e.RowIndex.ToString());
+            if (Variaveis.linhaFoneSelecionada >= 0)
+            {
+                Variaveis.codFoneEmpresa = Convert.ToInt32(dgvTelEmpresa[0, Variaveis.linhaFoneSelecionada].Value);
+            }
+        }
+
+        private void dgvTelEmpresa_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvTelEmpresa.Sort(dgvTelEmpresa.Columns[1], ListSortDirection.Ascending);
+            dgvTelEmpresa.ClearSelection();
+        }
     }
 }
