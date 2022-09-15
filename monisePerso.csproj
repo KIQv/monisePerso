@@ -167,6 +167,18 @@
     <Compile Include="14-TelEmpresa.Designer.cs">
       <DependentUpon>14-TelEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="15-TelCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="15-TelCliente.Designer.cs">
+      <DependentUpon>15-TelCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="16-TelFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="16-TelFuncionario.Designer.cs">
+      <DependentUpon>16-TelFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="banco.cs" />
     <Compile Include="ftp.cs" />
     <Compile Include="06-Produtos.cs">
@@ -219,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="14-TelEmpresa.resx">
       <DependentUpon>14-TelEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="15-TelCliente.resx">
+      <DependentUpon>15-TelCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="16-TelFuncionario.resx">
+      <DependentUpon>16-TelFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
