@@ -341,7 +341,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconMenu;
+            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconContato;
             this.pictureBox7.Location = new System.Drawing.Point(16, 446);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(24, 24);
@@ -351,7 +351,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconContato;
+            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconProdutos;
             this.pictureBox6.Location = new System.Drawing.Point(16, 406);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(24, 24);
@@ -361,7 +361,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconProdutos;
+            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconEmpresa;
             this.pictureBox5.Location = new System.Drawing.Point(16, 366);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);

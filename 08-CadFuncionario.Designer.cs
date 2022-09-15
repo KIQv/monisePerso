@@ -218,7 +218,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconMenu;
+            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconContato;
             this.pictureBox7.Location = new System.Drawing.Point(16, 446);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(24, 24);
@@ -228,7 +228,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconContato;
+            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconProdutos;
             this.pictureBox6.Location = new System.Drawing.Point(16, 406);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(24, 24);
@@ -238,7 +238,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconProdutos;
+            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconEmpresa;
             this.pictureBox5.Location = new System.Drawing.Point(16, 366);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
@@ -457,7 +457,7 @@
             this.cmbEmpresaFuncionario.FormattingEnabled = true;
             this.cmbEmpresaFuncionario.Location = new System.Drawing.Point(721, 227);
             this.cmbEmpresaFuncionario.Name = "cmbEmpresaFuncionario";
-            this.cmbEmpresaFuncionario.Size = new System.Drawing.Size(211, 25);
+            this.cmbEmpresaFuncionario.Size = new System.Drawing.Size(211, 26);
             this.cmbEmpresaFuncionario.TabIndex = 57;
             // 
             // lblEmpresaFuncionario
@@ -485,7 +485,7 @@
             "16:00"});
             this.cmbHorarioTrabalho.Location = new System.Drawing.Point(721, 162);
             this.cmbHorarioTrabalho.Name = "cmbHorarioTrabalho";
-            this.cmbHorarioTrabalho.Size = new System.Drawing.Size(211, 25);
+            this.cmbHorarioTrabalho.Size = new System.Drawing.Size(211, 26);
             this.cmbHorarioTrabalho.TabIndex = 55;
             // 
             // lblHorarioTrabalho
@@ -510,7 +510,7 @@
             "OUTROS"});
             this.cmbNivel.Location = new System.Drawing.Point(504, 226);
             this.cmbNivel.Name = "cmbNivel";
-            this.cmbNivel.Size = new System.Drawing.Size(188, 25);
+            this.cmbNivel.Size = new System.Drawing.Size(188, 26);
             this.cmbNivel.TabIndex = 53;
             // 
             // lblNivel
@@ -706,7 +706,7 @@
             "INATIVO"});
             this.cmbStatus.Location = new System.Drawing.Point(252, 228);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(220, 25);
+            this.cmbStatus.Size = new System.Drawing.Size(220, 26);
             this.cmbStatus.TabIndex = 4;
             // 
             // txtCodigo

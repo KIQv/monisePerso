@@ -123,6 +123,16 @@ namespace monisePerso.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconEmpresa {
+            get {
+                object obj = ResourceManager.GetObject("iconEmpresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconEncomenda {
             get {
                 object obj = ResourceManager.GetObject("iconEncomenda", resourceCulture);

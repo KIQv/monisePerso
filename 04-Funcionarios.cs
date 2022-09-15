@@ -238,14 +238,14 @@ namespace monisePerso
 
         private void lblAplicativo_Click(object sender, EventArgs e)
         {
-            //new frmAplicativo().Show();
-            //Close();
+            new frmAplicativo().Show();
+            Close();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            //new frmEmail().Show();
-            //Close();
+            new frmEmail().Show();
+            Close();
         }
 
         private void chkAtivo_CheckedChanged(object sender, EventArgs e)

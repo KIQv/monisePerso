@@ -327,14 +327,14 @@ namespace monisePerso
 
         private void lblAplicativo_Click(object sender, EventArgs e)
         {
-            //new frmAplicativo().Show();
-            //Close();
+            new frmAplicativo().Show();
+            Close();
         }
 
         private void lblEmail_Click(object sender, EventArgs e)
         {
-            //new frmEmail().Show();
-            //Close();
+            new frmEmail().Show();
+            Close();
         }
 
         private void lblSair_Click(object sender, EventArgs e)
