@@ -206,6 +206,7 @@
             this.lblEmail.Size = new System.Drawing.Size(69, 26);
             this.lblEmail.TabIndex = 19;
             this.lblEmail.Text = "E-mails";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // pictureBox9
             // 
@@ -320,6 +321,7 @@
             this.lblAplicativo.Size = new System.Drawing.Size(86, 26);
             this.lblAplicativo.TabIndex = 18;
             this.lblAplicativo.Text = "Aplicativo";
+            this.lblAplicativo.Click += new System.EventHandler(this.lblAplicativo_Click);
             // 
             // lblSobre
             // 
@@ -331,6 +333,7 @@
             this.lblSobre.Size = new System.Drawing.Size(56, 26);
             this.lblSobre.TabIndex = 17;
             this.lblSobre.Text = "Sobre";
+            this.lblSobre.Click += new System.EventHandler(this.lblSobre_Click);
             // 
             // lblProdutos
             // 
@@ -342,6 +345,7 @@
             this.lblProdutos.Size = new System.Drawing.Size(80, 26);
             this.lblProdutos.TabIndex = 16;
             this.lblProdutos.Text = "Produtos";
+            this.lblProdutos.Click += new System.EventHandler(this.lblProdutos_Click);
             // 
             // lblEmpresa
             // 
@@ -353,6 +357,7 @@
             this.lblEmpresa.Size = new System.Drawing.Size(78, 26);
             this.lblEmpresa.TabIndex = 15;
             this.lblEmpresa.Text = "Empresa";
+            this.lblEmpresa.Click += new System.EventHandler(this.lblEmpresa_Click);
             // 
             // lblFuncionarios
             // 
@@ -364,6 +369,7 @@
             this.lblFuncionarios.Size = new System.Drawing.Size(111, 26);
             this.lblFuncionarios.TabIndex = 14;
             this.lblFuncionarios.Text = "Funcionarios";
+            this.lblFuncionarios.Click += new System.EventHandler(this.lblFuncionarios_Click);
             // 
             // lblClientes
             // 
@@ -375,6 +381,7 @@
             this.lblClientes.Size = new System.Drawing.Size(73, 26);
             this.lblClientes.TabIndex = 13;
             this.lblClientes.Text = "Clientes";
+            this.lblClientes.Click += new System.EventHandler(this.lblClientes_Click);
             // 
             // lblEncomendas
             // 
@@ -386,6 +393,7 @@
             this.lblEncomendas.Size = new System.Drawing.Size(111, 26);
             this.lblEncomendas.TabIndex = 12;
             this.lblEncomendas.Text = "Encomendas";
+            this.lblEncomendas.Click += new System.EventHandler(this.lblEncomendas_Click);
             // 
             // lblMenu
             // 
@@ -398,6 +406,7 @@
             this.lblMenu.Size = new System.Drawing.Size(54, 26);
             this.lblMenu.TabIndex = 11;
             this.lblMenu.Text = "Menu";
+            this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
             // 
             // lblUsuario
             // 
@@ -427,15 +436,8 @@
             // cmbEmpresa
             // 
             this.cmbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmpresa.Enabled = false;
             this.cmbEmpresa.Font = new System.Drawing.Font("Poppins", 7.75F);
             this.cmbEmpresa.FormattingEnabled = true;
-            this.cmbEmpresa.Items.AddRange(new object[] {
-            "VIVO",
-            "CLARO",
-            "TIM",
-            "OI",
-            "NEXTEL"});
             this.cmbEmpresa.Location = new System.Drawing.Point(326, 146);
             this.cmbEmpresa.Name = "cmbEmpresa";
             this.cmbEmpresa.Size = new System.Drawing.Size(288, 26);
@@ -558,6 +560,7 @@
             this.btnLimpar.TabIndex = 58;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click_1);
             // 
             // btnSalvar
             // 
@@ -572,6 +575,7 @@
             this.btnSalvar.TabIndex = 57;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmTelEmpresa
             // 
@@ -590,6 +594,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Telefone Empresa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmTelEmpresa_Load);
             this.pnlTelEmpresa.ResumeLayout(false);
             this.pnlTelEmpresa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
