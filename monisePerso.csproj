@@ -161,6 +161,12 @@
     <Compile Include="13-Aplicativo.Designer.cs">
       <DependentUpon>13-Aplicativo.cs</DependentUpon>
     </Compile>
+    <Compile Include="14-TelEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="14-TelEmpresa.Designer.cs">
+      <DependentUpon>14-TelEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="banco.cs" />
     <Compile Include="ftp.cs" />
     <Compile Include="06-Produtos.cs">
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="13-Aplicativo.resx">
       <DependentUpon>13-Aplicativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="14-TelEmpresa.resx">
+      <DependentUpon>14-TelEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

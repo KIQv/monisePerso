@@ -442,5 +442,42 @@ namespace monisePerso
                 btnSalvar.Focus();
             }
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Variaveis.funcao = "CADASTRAR FONE";
+            new frmTelEmpresa().Show();
+            Hide();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaFoneSelecionada >= 0)
+            {
+                Variaveis.funcao = "ALTERAR FONE";
+                new frmTelEmpresa().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Para alterar selecione uma linha.");
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaFoneSelecionada >= 0)
+            {
+                var resultado = MessageBox.Show("Deseja realmente excluir?", "EXCLUIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    ExcluirFoneEmpresa();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Para excluir selecione uma linha.");
+            }
+        }
     }
 }
