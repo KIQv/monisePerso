@@ -33,11 +33,11 @@
             this.pnlTelCliente = new System.Windows.Forms.Panel();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.cmbEmpresa = new System.Windows.Forms.ComboBox();
+            this.cmbClientes = new System.Windows.Forms.ComboBox();
             this.mkdTel = new System.Windows.Forms.MaskedTextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblNomeEmpresa = new System.Windows.Forms.Label();
+            this.lblNomeCliente = new System.Windows.Forms.Label();
             this.lblDescrição = new System.Windows.Forms.Label();
             this.lblNumeroTelefone = new System.Windows.Forms.Label();
             this.cmbOperadora = new System.Windows.Forms.ComboBox();
@@ -112,11 +112,11 @@
             // 
             this.pnlTelCliente.Controls.Add(this.btnLimpar);
             this.pnlTelCliente.Controls.Add(this.btnSalvar);
-            this.pnlTelCliente.Controls.Add(this.cmbEmpresa);
+            this.pnlTelCliente.Controls.Add(this.cmbClientes);
             this.pnlTelCliente.Controls.Add(this.mkdTel);
             this.pnlTelCliente.Controls.Add(this.lblCodigo);
             this.pnlTelCliente.Controls.Add(this.txtDescricao);
-            this.pnlTelCliente.Controls.Add(this.lblNomeEmpresa);
+            this.pnlTelCliente.Controls.Add(this.lblNomeCliente);
             this.pnlTelCliente.Controls.Add(this.lblDescrição);
             this.pnlTelCliente.Controls.Add(this.lblNumeroTelefone);
             this.pnlTelCliente.Controls.Add(this.cmbOperadora);
@@ -140,6 +140,7 @@
             this.btnLimpar.TabIndex = 58;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSalvar
             // 
@@ -154,16 +155,17 @@
             this.btnSalvar.TabIndex = 57;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // cmbEmpresa
+            // cmbClientes
             // 
-            this.cmbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmpresa.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.cmbEmpresa.FormattingEnabled = true;
-            this.cmbEmpresa.Location = new System.Drawing.Point(326, 146);
-            this.cmbEmpresa.Name = "cmbEmpresa";
-            this.cmbEmpresa.Size = new System.Drawing.Size(288, 25);
-            this.cmbEmpresa.TabIndex = 56;
+            this.cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClientes.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.cmbClientes.FormattingEnabled = true;
+            this.cmbClientes.Location = new System.Drawing.Point(326, 146);
+            this.cmbClientes.Name = "cmbClientes";
+            this.cmbClientes.Size = new System.Drawing.Size(288, 25);
+            this.cmbClientes.TabIndex = 56;
             // 
             // mkdTel
             // 
@@ -195,17 +197,17 @@
             this.txtDescricao.Size = new System.Drawing.Size(288, 26);
             this.txtDescricao.TabIndex = 4;
             // 
-            // lblNomeEmpresa
+            // lblNomeCliente
             // 
-            this.lblNomeEmpresa.AutoSize = true;
-            this.lblNomeEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.lblNomeEmpresa.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblNomeEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblNomeEmpresa.Location = new System.Drawing.Point(321, 115);
-            this.lblNomeEmpresa.Name = "lblNomeEmpresa";
-            this.lblNomeEmpresa.Size = new System.Drawing.Size(145, 28);
-            this.lblNomeEmpresa.TabIndex = 30;
-            this.lblNomeEmpresa.Text = "Nome do cliente:";
+            this.lblNomeCliente.AutoSize = true;
+            this.lblNomeCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeCliente.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblNomeCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblNomeCliente.Location = new System.Drawing.Point(321, 115);
+            this.lblNomeCliente.Name = "lblNomeCliente";
+            this.lblNomeCliente.Size = new System.Drawing.Size(145, 28);
+            this.lblNomeCliente.TabIndex = 30;
+            this.lblNomeCliente.Text = "Nome do cliente:";
             // 
             // lblDescrição
             // 
@@ -349,6 +351,7 @@
             this.lblEmail.Size = new System.Drawing.Size(69, 26);
             this.lblEmail.TabIndex = 19;
             this.lblEmail.Text = "E-mails";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // pictureBox9
             // 
@@ -465,6 +468,7 @@
             this.lblAplicativo.Size = new System.Drawing.Size(86, 26);
             this.lblAplicativo.TabIndex = 18;
             this.lblAplicativo.Text = "Aplicativo";
+            this.lblAplicativo.Click += new System.EventHandler(this.lblAplicativo_Click);
             // 
             // lblSobre
             // 
@@ -476,6 +480,7 @@
             this.lblSobre.Size = new System.Drawing.Size(56, 26);
             this.lblSobre.TabIndex = 17;
             this.lblSobre.Text = "Sobre";
+            this.lblSobre.Click += new System.EventHandler(this.lblSobre_Click);
             // 
             // lblProdutos
             // 
@@ -487,6 +492,7 @@
             this.lblProdutos.Size = new System.Drawing.Size(80, 26);
             this.lblProdutos.TabIndex = 16;
             this.lblProdutos.Text = "Produtos";
+            this.lblProdutos.Click += new System.EventHandler(this.lblProdutos_Click);
             // 
             // lblEmpresa
             // 
@@ -498,6 +504,7 @@
             this.lblEmpresa.Size = new System.Drawing.Size(78, 26);
             this.lblEmpresa.TabIndex = 15;
             this.lblEmpresa.Text = "Empresa";
+            this.lblEmpresa.Click += new System.EventHandler(this.lblEmpresa_Click);
             // 
             // lblFuncionarios
             // 
@@ -509,6 +516,7 @@
             this.lblFuncionarios.Size = new System.Drawing.Size(111, 26);
             this.lblFuncionarios.TabIndex = 14;
             this.lblFuncionarios.Text = "Funcionarios";
+            this.lblFuncionarios.Click += new System.EventHandler(this.lblFuncionarios_Click);
             // 
             // lblClientes
             // 
@@ -520,6 +528,7 @@
             this.lblClientes.Size = new System.Drawing.Size(73, 26);
             this.lblClientes.TabIndex = 13;
             this.lblClientes.Text = "Clientes";
+            this.lblClientes.Click += new System.EventHandler(this.lblClientes_Click);
             // 
             // lblEncomendas
             // 
@@ -531,6 +540,7 @@
             this.lblEncomendas.Size = new System.Drawing.Size(111, 26);
             this.lblEncomendas.TabIndex = 12;
             this.lblEncomendas.Text = "Encomendas";
+            this.lblEncomendas.Click += new System.EventHandler(this.lblEncomendas_Click);
             // 
             // lblMenu
             // 
@@ -543,6 +553,7 @@
             this.lblMenu.Size = new System.Drawing.Size(54, 26);
             this.lblMenu.TabIndex = 11;
             this.lblMenu.Text = "Menu";
+            this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
             // 
             // lblUsuario
             // 
@@ -586,6 +597,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Telefone Cliente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmTelCliente_Load);
             this.pnlTelCliente.ResumeLayout(false);
             this.pnlTelCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
@@ -614,11 +626,11 @@
         private System.Windows.Forms.Panel pnlTelCliente;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.ComboBox cmbEmpresa;
+        private System.Windows.Forms.ComboBox cmbClientes;
         private System.Windows.Forms.MaskedTextBox mkdTel;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Label lblNomeEmpresa;
+        private System.Windows.Forms.Label lblNomeCliente;
         private System.Windows.Forms.Label lblDescrição;
         private System.Windows.Forms.Label lblNumeroTelefone;
         private System.Windows.Forms.ComboBox cmbOperadora;

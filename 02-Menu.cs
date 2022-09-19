@@ -156,5 +156,9 @@ namespace monisePerso
             }
         }
 
+        private void dgvEmails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

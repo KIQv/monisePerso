@@ -28,9 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSair = new System.Windows.Forms.Label();
             this.lblAplicativo = new System.Windows.Forms.Label();
             this.lblSobre = new System.Windows.Forms.Label();
@@ -41,36 +53,16 @@
             this.lblEncomendas = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.dgvEmails = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.dgvEncomendas = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pctFechar = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.dgvEmails = new System.Windows.Forms.DataGridView();
             this.pnlSideMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmails)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEncomendas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
-            this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -82,6 +74,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEncomendas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
+            this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmails)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -131,6 +129,16 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(200, 650);
             this.pnlSideMenu.TabIndex = 9;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::monisePerso.Properties.Resources.iconEmail;
+            this.pictureBox10.Location = new System.Drawing.Point(16, 525);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox10.TabIndex = 23;
+            this.pictureBox10.TabStop = false;
+            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
@@ -142,6 +150,98 @@
             this.lblEmail.TabIndex = 22;
             this.lblEmail.Text = "E-mails";
             this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox9.Image = global::monisePerso.Properties.Resources.iconSair;
+            this.pictureBox9.Location = new System.Drawing.Point(166, 584);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox9.TabIndex = 21;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::monisePerso.Properties.Resources.iconAplicativo;
+            this.pictureBox8.Location = new System.Drawing.Point(16, 486);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox8.TabIndex = 20;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconContato;
+            this.pictureBox7.Location = new System.Drawing.Point(16, 446);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 19;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconProdutos;
+            this.pictureBox6.Location = new System.Drawing.Point(16, 406);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 18;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconEmpresa;
+            this.pictureBox5.Location = new System.Drawing.Point(16, 366);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::monisePerso.Properties.Resources.iconFuncionario;
+            this.pictureBox4.Location = new System.Drawing.Point(16, 326);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::monisePerso.Properties.Resources.iconCliente;
+            this.pictureBox3.Location = new System.Drawing.Point(16, 286);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::monisePerso.Properties.Resources.iconEncomenda;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 246);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::monisePerso.Properties.Resources.iconMenu;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 206);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // lblSair
             // 
@@ -266,23 +366,17 @@
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Seja bem-vindo Uusario";
             // 
-            // dgvEmails
+            // pctLogo
             // 
-            this.dgvEmails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.dgvEmails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmails.Location = new System.Drawing.Point(0, 0);
-            this.dgvEmails.Name = "dgvEmails";
-            this.dgvEmails.Size = new System.Drawing.Size(343, 269);
-            this.dgvEmails.TabIndex = 10;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(366, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(343, 269);
-            this.dataGridView2.TabIndex = 11;
+            this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctLogo.Image = global::monisePerso.Properties.Resources.logoMenu;
+            this.pctLogo.Location = new System.Drawing.Point(50, 50);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(100, 100);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctLogo.TabIndex = 3;
+            this.pctLogo.TabStop = false;
             // 
             // dgvEncomendas
             // 
@@ -290,17 +384,8 @@
             this.dgvEncomendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEncomendas.Location = new System.Drawing.Point(0, 294);
             this.dgvEncomendas.Name = "dgvEncomendas";
-            this.dgvEncomendas.Size = new System.Drawing.Size(566, 221);
+            this.dgvEncomendas.Size = new System.Drawing.Size(935, 221);
             this.dgvEncomendas.TabIndex = 14;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(592, 294);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(343, 221);
-            this.dataGridView4.TabIndex = 15;
             // 
             // dgvClientes
             // 
@@ -348,10 +433,8 @@
             // 
             this.pnlMenu.Controls.Add(this.dgvEmails);
             this.pnlMenu.Controls.Add(this.dgvEncomendas);
-            this.pnlMenu.Controls.Add(this.dataGridView2);
             this.pnlMenu.Controls.Add(this.dgvClientes);
             this.pnlMenu.Controls.Add(this.dgvFuncionarios);
-            this.pnlMenu.Controls.Add(this.dataGridView4);
             this.pnlMenu.Location = new System.Drawing.Point(231, 71);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(935, 515);
@@ -370,119 +453,41 @@
             this.pctFechar.TabStop = false;
             this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
-            // pictureBox10
+            // dgvEmails
             // 
-            this.pictureBox10.Image = global::monisePerso.Properties.Resources.iconEmail;
-            this.pictureBox10.Location = new System.Drawing.Point(16, 525);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox10.TabIndex = 23;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.Image = global::monisePerso.Properties.Resources.iconSair;
-            this.pictureBox9.Location = new System.Drawing.Point(166, 584);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox9.TabIndex = 21;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::monisePerso.Properties.Resources.iconAplicativo;
-            this.pictureBox8.Location = new System.Drawing.Point(16, 486);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox8.TabIndex = 20;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconContato;
-            this.pictureBox7.Location = new System.Drawing.Point(16, 446);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconProdutos;
-            this.pictureBox6.Location = new System.Drawing.Point(16, 406);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 18;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconEmpresa;
-            this.pictureBox5.Location = new System.Drawing.Point(16, 366);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::monisePerso.Properties.Resources.iconFuncionario;
-            this.pictureBox4.Location = new System.Drawing.Point(16, 326);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::monisePerso.Properties.Resources.iconCliente;
-            this.pictureBox3.Location = new System.Drawing.Point(16, 286);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::monisePerso.Properties.Resources.iconEncomenda;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 246);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::monisePerso.Properties.Resources.iconMenu;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 206);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pctLogo
-            // 
-            this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctLogo.Image = global::monisePerso.Properties.Resources.logoMenu;
-            this.pctLogo.Location = new System.Drawing.Point(50, 50);
-            this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(100, 100);
-            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctLogo.TabIndex = 3;
-            this.pctLogo.TabStop = false;
+            this.dgvEmails.AllowUserToAddRows = false;
+            this.dgvEmails.AllowUserToDeleteRows = false;
+            this.dgvEmails.AllowUserToResizeColumns = false;
+            this.dgvEmails.AllowUserToResizeRows = false;
+            this.dgvEmails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvEmails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvEmails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmails.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEmails.EnableHeadersVisualStyles = false;
+            this.dgvEmails.Location = new System.Drawing.Point(0, 0);
+            this.dgvEmails.MultiSelect = false;
+            this.dgvEmails.Name = "dgvEmails";
+            this.dgvEmails.ReadOnly = true;
+            this.dgvEmails.RowHeadersVisible = false;
+            this.dgvEmails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmails.Size = new System.Drawing.Size(709, 271);
+            this.dgvEmails.TabIndex = 22;
             // 
             // frmMenu
             // 
@@ -504,14 +509,6 @@
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmails)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEncomendas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
-            this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -523,6 +520,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEncomendas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
+            this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -544,10 +547,7 @@
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.PictureBox pctLogo;
-        private System.Windows.Forms.DataGridView dgvEmails;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dgvEncomendas;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.DataGridView dgvFuncionarios;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -564,5 +564,6 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.DataGridView dgvEmails;
     }
 }
