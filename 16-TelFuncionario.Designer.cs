@@ -33,11 +33,11 @@
             this.pnlTelFuncionario = new System.Windows.Forms.Panel();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.cmbEmpresa = new System.Windows.Forms.ComboBox();
+            this.cmbFuncionarios = new System.Windows.Forms.ComboBox();
             this.mkdTel = new System.Windows.Forms.MaskedTextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblNomeEmpresa = new System.Windows.Forms.Label();
+            this.lblNomeFuncionario = new System.Windows.Forms.Label();
             this.lblDescrição = new System.Windows.Forms.Label();
             this.lblNumeroTelefone = new System.Windows.Forms.Label();
             this.cmbOperadora = new System.Windows.Forms.ComboBox();
@@ -112,11 +112,11 @@
             // 
             this.pnlTelFuncionario.Controls.Add(this.btnLimpar);
             this.pnlTelFuncionario.Controls.Add(this.btnSalvar);
-            this.pnlTelFuncionario.Controls.Add(this.cmbEmpresa);
+            this.pnlTelFuncionario.Controls.Add(this.cmbFuncionarios);
             this.pnlTelFuncionario.Controls.Add(this.mkdTel);
             this.pnlTelFuncionario.Controls.Add(this.lblCodigo);
             this.pnlTelFuncionario.Controls.Add(this.txtDescricao);
-            this.pnlTelFuncionario.Controls.Add(this.lblNomeEmpresa);
+            this.pnlTelFuncionario.Controls.Add(this.lblNomeFuncionario);
             this.pnlTelFuncionario.Controls.Add(this.lblDescrição);
             this.pnlTelFuncionario.Controls.Add(this.lblNumeroTelefone);
             this.pnlTelFuncionario.Controls.Add(this.cmbOperadora);
@@ -140,6 +140,7 @@
             this.btnLimpar.TabIndex = 58;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSalvar
             // 
@@ -154,16 +155,17 @@
             this.btnSalvar.TabIndex = 57;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // cmbEmpresa
+            // cmbFuncionarios
             // 
-            this.cmbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmpresa.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.cmbEmpresa.FormattingEnabled = true;
-            this.cmbEmpresa.Location = new System.Drawing.Point(326, 146);
-            this.cmbEmpresa.Name = "cmbEmpresa";
-            this.cmbEmpresa.Size = new System.Drawing.Size(288, 25);
-            this.cmbEmpresa.TabIndex = 56;
+            this.cmbFuncionarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFuncionarios.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.cmbFuncionarios.FormattingEnabled = true;
+            this.cmbFuncionarios.Location = new System.Drawing.Point(326, 146);
+            this.cmbFuncionarios.Name = "cmbFuncionarios";
+            this.cmbFuncionarios.Size = new System.Drawing.Size(288, 25);
+            this.cmbFuncionarios.TabIndex = 56;
             // 
             // mkdTel
             // 
@@ -195,17 +197,17 @@
             this.txtDescricao.Size = new System.Drawing.Size(288, 26);
             this.txtDescricao.TabIndex = 4;
             // 
-            // lblNomeEmpresa
+            // lblNomeFuncionario
             // 
-            this.lblNomeEmpresa.AutoSize = true;
-            this.lblNomeEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.lblNomeEmpresa.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblNomeEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblNomeEmpresa.Location = new System.Drawing.Point(321, 115);
-            this.lblNomeEmpresa.Name = "lblNomeEmpresa";
-            this.lblNomeEmpresa.Size = new System.Drawing.Size(145, 28);
-            this.lblNomeEmpresa.TabIndex = 30;
-            this.lblNomeEmpresa.Text = "Nome do cliente:";
+            this.lblNomeFuncionario.AutoSize = true;
+            this.lblNomeFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeFuncionario.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblNomeFuncionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblNomeFuncionario.Location = new System.Drawing.Point(321, 115);
+            this.lblNomeFuncionario.Name = "lblNomeFuncionario";
+            this.lblNomeFuncionario.Size = new System.Drawing.Size(181, 28);
+            this.lblNomeFuncionario.TabIndex = 30;
+            this.lblNomeFuncionario.Text = "Nome do funcionario:";
             // 
             // lblDescrição
             // 
@@ -586,6 +588,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Telefone Funcionario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmTelFuncionario_Load);
             this.pnlTelFuncionario.ResumeLayout(false);
             this.pnlTelFuncionario.PerformLayout();
             this.pnlSideMenu.ResumeLayout(false);
@@ -614,11 +617,11 @@
         private System.Windows.Forms.Panel pnlTelFuncionario;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.ComboBox cmbEmpresa;
+        private System.Windows.Forms.ComboBox cmbFuncionarios;
         private System.Windows.Forms.MaskedTextBox mkdTel;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Label lblNomeEmpresa;
+        private System.Windows.Forms.Label lblNomeFuncionario;
         private System.Windows.Forms.Label lblDescrição;
         private System.Windows.Forms.Label lblNumeroTelefone;
         private System.Windows.Forms.ComboBox cmbOperadora;
