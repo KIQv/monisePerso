@@ -338,6 +338,7 @@
             this.lblEmail.Size = new System.Drawing.Size(69, 26);
             this.lblEmail.TabIndex = 19;
             this.lblEmail.Text = "E-mails";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // pictureBox9
             // 
@@ -454,6 +455,7 @@
             this.lblAplicativo.Size = new System.Drawing.Size(86, 26);
             this.lblAplicativo.TabIndex = 18;
             this.lblAplicativo.Text = "Aplicativo";
+            this.lblAplicativo.Click += new System.EventHandler(this.lblAplicativo_Click);
             // 
             // lblSobre
             // 
@@ -465,6 +467,7 @@
             this.lblSobre.Size = new System.Drawing.Size(56, 26);
             this.lblSobre.TabIndex = 17;
             this.lblSobre.Text = "Sobre";
+            this.lblSobre.Click += new System.EventHandler(this.lblSobre_Click);
             // 
             // lblProdutos
             // 
@@ -476,6 +479,7 @@
             this.lblProdutos.Size = new System.Drawing.Size(80, 26);
             this.lblProdutos.TabIndex = 16;
             this.lblProdutos.Text = "Produtos";
+            this.lblProdutos.Click += new System.EventHandler(this.lblProdutos_Click);
             // 
             // lblEmpresa
             // 
@@ -487,6 +491,7 @@
             this.lblEmpresa.Size = new System.Drawing.Size(78, 26);
             this.lblEmpresa.TabIndex = 15;
             this.lblEmpresa.Text = "Empresa";
+            this.lblEmpresa.Click += new System.EventHandler(this.lblEmpresa_Click);
             // 
             // lblFuncionarios
             // 
@@ -498,6 +503,7 @@
             this.lblFuncionarios.Size = new System.Drawing.Size(111, 26);
             this.lblFuncionarios.TabIndex = 14;
             this.lblFuncionarios.Text = "Funcionarios";
+            this.lblFuncionarios.Click += new System.EventHandler(this.lblFuncionarios_Click);
             // 
             // lblClientes
             // 
@@ -509,6 +515,7 @@
             this.lblClientes.Size = new System.Drawing.Size(73, 26);
             this.lblClientes.TabIndex = 13;
             this.lblClientes.Text = "Clientes";
+            this.lblClientes.Click += new System.EventHandler(this.lblClientes_Click);
             // 
             // lblEncomendas
             // 
@@ -520,6 +527,7 @@
             this.lblEncomendas.Size = new System.Drawing.Size(111, 26);
             this.lblEncomendas.TabIndex = 12;
             this.lblEncomendas.Text = "Encomendas";
+            this.lblEncomendas.Click += new System.EventHandler(this.lblEncomendas_Click);
             // 
             // lblMenu
             // 
@@ -532,6 +540,7 @@
             this.lblMenu.Size = new System.Drawing.Size(54, 26);
             this.lblMenu.TabIndex = 11;
             this.lblMenu.Text = "Menu";
+            this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
             // 
             // lblUsuario
             // 

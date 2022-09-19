@@ -519,6 +519,8 @@
             this.dgvTelCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTelCliente.Size = new System.Drawing.Size(692, 166);
             this.dgvTelCliente.TabIndex = 15;
+            this.dgvTelCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTelCliente_CellClick);
+            this.dgvTelCliente.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTelCliente_ColumnHeaderMouseClick);
             // 
             // btnExcluir
             // 

@@ -536,7 +536,7 @@ namespace monisePerso
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            /*if (Variaveis.linhaFoneSelecionada >= 0)
+            if (Variaveis.linhaFoneSelecionada >= 0)
             {
                 Variaveis.funcao = "ALTERAR FONE";
                 new frmTelCliente().Show();
@@ -545,14 +545,14 @@ namespace monisePerso
             else
             {
                 MessageBox.Show("Para alterar selecione uma linha.");
-            }*/
+            }
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            /*Variaveis.funcao = "CADASTRAR FONE";
+            Variaveis.funcao = "CADASTRAR FONE";
             new frmTelCliente().Show();
-            Hide();*/
+            Hide();
         }
 
         private void pctFechar_Click(object sender, EventArgs e)
@@ -568,6 +568,21 @@ namespace monisePerso
                 new frmLogin().Show();
                 Close();
             }
+        }
+
+        private void dgvTelCliente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variaveis.linhaFoneSelecionada = int.Parse(e.RowIndex.ToString());
+            if (Variaveis.linhaFoneSelecionada >= 0)
+            {
+                Variaveis.codFoneCliente = Convert.ToInt32(dgvTelCliente[0, Variaveis.linhaFoneSelecionada].Value);
+            }
+        }
+
+        private void dgvTelCliente_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvTelCliente.Sort(dgvTelCliente.Columns[1], ListSortDirection.Ascending);
+            dgvTelCliente.ClearSelection();
         }
     }
 }

@@ -402,6 +402,58 @@ namespace monisePerso
                 Close();
             }
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Variaveis.funcao = "CADASTRAR FONE";
+            new frmTelFuncionario().Show();
+            Hide();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaFoneSelecionada >= 0)
+            {
+                Variaveis.funcao = "ALTERAR FONE";
+                new frmTelFuncionario().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Para alterar selecione uma linha.");
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaFoneSelecionada >= 0)
+            {
+                var resultado = MessageBox.Show("Deseja realmente excluir?", "EXCLUIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    ExcluirFoneFuncionario();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Para excluir selecione uma linha.");
+            }
+        }
+
+        private void dgvTelFuncionario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variaveis.linhaFoneSelecionada = int.Parse(e.RowIndex.ToString());
+            if (Variaveis.linhaFoneSelecionada >= 0)
+            {
+                Variaveis.codFoneFuncionario = Convert.ToInt32(dgvTelFuncionario[0, Variaveis.linhaFoneSelecionada].Value);
+            }
+        }
+
+        private void dgvTelFuncionario_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvTelFuncionario.Sort(dgvTelFuncionario.Columns[1], ListSortDirection.Ascending);
+            dgvTelFuncionario.ClearSelection();
+        }
     }
 }
 

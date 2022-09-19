@@ -30,7 +30,7 @@ namespace monisePerso
                 cmd.Parameters.AddWithValue("@descricao", Variaveis.descFoneCliente);
                 cmd.Parameters.AddWithValue("@codEmpresa", Variaveis.codCliente);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Telefone da empresa cadastrada com sucesso!", "CADASTRO DO TELEFONE DA EMPRESA");
+                MessageBox.Show("Telefone do cliente alterado com sucesso!", "CADASTRO DO TELEFONE DA EMPRESA");
                 banco.Desconectar();
             }
             catch (Exception ex)
@@ -51,7 +51,7 @@ namespace monisePerso
                 cmd.Parameters.AddWithValue("@descricao", Variaveis.descFoneCliente);
                 cmd.Parameters.AddWithValue("@codFone", Variaveis.codFoneCliente);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Telefone da empresa alterada com sucesso!", "ALTERAÇÃO DO TELEFONE DO CLIENTE");
+                MessageBox.Show("Telefone do cliente alterado com sucesso!", "ALTERAÇÃO DO TELEFONE DO CLIENTE");
                 banco.Desconectar();
             }
             catch (Exception ex)
