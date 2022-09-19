@@ -23,7 +23,7 @@ namespace monisePerso
             try
             {
                 banco.Conectar();
-                string selecionar = "SELECT * FROM `empresaCompleta`";
+                string selecionar = "SELECT * FROM `empresacompleta`";
                 MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -46,7 +46,7 @@ namespace monisePerso
             try
             {
                 banco.Conectar();
-                string selecionar = "SELECT * FROM `empresaAtiva`";
+                string selecionar = "SELECT * FROM `empresaativa`";
                 MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
