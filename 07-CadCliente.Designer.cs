@@ -631,7 +631,7 @@
             "INATIVO"});
             this.cmbStatus.Location = new System.Drawing.Point(504, 227);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(188, 26);
+            this.cmbStatus.Size = new System.Drawing.Size(188, 25);
             this.cmbStatus.TabIndex = 4;
             this.cmbStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbStatus_KeyPress);
             // 
@@ -753,6 +753,7 @@
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctFechar.TabIndex = 25;
             this.pctFechar.TabStop = false;
+            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
             // frmCadCliente
             // 

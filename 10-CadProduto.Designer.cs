@@ -166,6 +166,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox8
             // 
@@ -258,6 +259,7 @@
             this.lblSair.Size = new System.Drawing.Size(41, 26);
             this.lblSair.TabIndex = 8;
             this.lblSair.Text = "Sair";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // lblAplicativo
             // 
@@ -451,7 +453,7 @@
             "INATIVO"});
             this.cmbStatus.Location = new System.Drawing.Point(504, 167);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(210, 26);
+            this.cmbStatus.Size = new System.Drawing.Size(210, 25);
             this.cmbStatus.TabIndex = 5;
             this.cmbStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbStatus_KeyPress);
             // 
@@ -654,7 +656,7 @@
             "INATIVO"});
             this.cmbDestaque.Location = new System.Drawing.Point(746, 30);
             this.cmbDestaque.Name = "cmbDestaque";
-            this.cmbDestaque.Size = new System.Drawing.Size(188, 26);
+            this.cmbDestaque.Size = new System.Drawing.Size(188, 25);
             this.cmbDestaque.TabIndex = 6;
             this.cmbDestaque.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDestaque_KeyPress);
             // 
@@ -780,6 +782,7 @@
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctFechar.TabIndex = 31;
             this.pctFechar.TabStop = false;
+            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
             // frmCadProduto
             // 

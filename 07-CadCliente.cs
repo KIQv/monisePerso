@@ -554,5 +554,20 @@ namespace monisePerso
             new frmTelCliente().Show();
             Hide();*/
         }
+
+        private void pctFechar_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Deseja encerrar?", "Encerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                new frmLogin().Show();
+                Close();
+            }
+        }
     }
 }

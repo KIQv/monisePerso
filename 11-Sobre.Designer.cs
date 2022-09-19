@@ -182,6 +182,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox8
             // 
@@ -274,6 +275,7 @@
             this.lblSair.Size = new System.Drawing.Size(41, 26);
             this.lblSair.TabIndex = 8;
             this.lblSair.Text = "Sair";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // lblAplicativo
             // 
@@ -486,7 +488,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.label1.Location = new System.Drawing.Point(343, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 33);
+            this.label1.Size = new System.Drawing.Size(248, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kaique Oliveira de Paula";
             // 
@@ -501,6 +503,7 @@
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctFechar.TabIndex = 25;
             this.pctFechar.TabStop = false;
+            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
             // frmSobre
             // 

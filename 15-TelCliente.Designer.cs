@@ -162,7 +162,7 @@
             this.cmbEmpresa.FormattingEnabled = true;
             this.cmbEmpresa.Location = new System.Drawing.Point(326, 146);
             this.cmbEmpresa.Name = "cmbEmpresa";
-            this.cmbEmpresa.Size = new System.Drawing.Size(288, 26);
+            this.cmbEmpresa.Size = new System.Drawing.Size(288, 25);
             this.cmbEmpresa.TabIndex = 56;
             // 
             // mkdTel
@@ -244,7 +244,7 @@
             "NEXTEL"});
             this.cmbOperadora.Location = new System.Drawing.Point(326, 292);
             this.cmbOperadora.Name = "cmbOperadora";
-            this.cmbOperadora.Size = new System.Drawing.Size(288, 26);
+            this.cmbOperadora.Size = new System.Drawing.Size(288, 25);
             this.cmbOperadora.TabIndex = 3;
             // 
             // txtCodigo
@@ -280,6 +280,7 @@
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctFechar.TabIndex = 49;
             this.pctFechar.TabStop = false;
+            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
             // lblTitulo
             // 
@@ -359,6 +360,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox8
             // 
@@ -451,6 +453,7 @@
             this.lblSair.Size = new System.Drawing.Size(41, 26);
             this.lblSair.TabIndex = 8;
             this.lblSair.Text = "Sair";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // lblAplicativo
             // 

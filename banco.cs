@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace monisePerso
     {
         // String de conexão com o banco de dados
         // public static string db = "SERVER=ipservidor;USER=nome_usuario;PASSWORD=senha;DATABASE=persomonise;SSL MODE=none";
-        public static string db = "SERVER=localhost;USER=root;DATABASE=persomonise;";
+        public static string db = "SERVER= 45.152.46.154;PORT=3306;DATABASE=u700303309_persomonise;UID=u700303309_moniseperso;PASSWORD=Kfsar@25790";
 
         // Reconhecer a biblioteca MySql
         public static MySqlConnection conexao;

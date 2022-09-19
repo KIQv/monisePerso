@@ -21,23 +21,23 @@ namespace monisePerso
         private void CarregarProduto()
         {
             try
-            { 
+            {
                 banco.Conectar();
-                string selecionar = "SELECT * FROM `produtocompleto`"; 
+                string selecionar = "SELECT * FROM `produtocompleto`";
                 MySqlCommand cmd = new MySqlCommand(selecionar, banco.conexao);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                dgvProdutos.DataSource = dt;
-                dgvProdutos.Columns[0].Visible = false;
-                dgvProdutos.ClearSelection();
+                dgvProduto.DataSource = dt;
+
+                dgvProduto.ClearSelection();
 
                 banco.Conectar();
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao selecionar o produto. \n\n" + erro.Message);
+                MessageBox.Show("Erro ao selecionar o Cliente. \n\n" + erro.Message);
             }
         }
 
@@ -52,9 +52,9 @@ namespace monisePerso
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                dgvProdutos.DataSource = dt;
+                dgvProduto.DataSource = dt;
 
-                dgvProdutos.ClearSelection();
+                dgvProduto.ClearSelection();
 
                 banco.Conectar();
             }
@@ -75,9 +75,9 @@ namespace monisePerso
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                dgvProdutos.DataSource = dt;
+                dgvProduto.DataSource = dt;
 
-                dgvProdutos.ClearSelection();
+                dgvProduto.ClearSelection();
 
                 banco.Conectar();
             }
@@ -98,9 +98,9 @@ namespace monisePerso
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                dgvProdutos.DataSource = dt;
+                dgvProduto.DataSource = dt;
 
-                dgvProdutos.ClearSelection();
+                dgvProduto.ClearSelection();
 
                 banco.Desconectar();
             }
@@ -122,9 +122,9 @@ namespace monisePerso
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                dgvProdutos.DataSource = dt;
+                dgvProduto.DataSource = dt;
 
-                dgvProdutos.ClearSelection();
+                dgvProduto.ClearSelection();
 
                 banco.Desconectar();
             }
@@ -317,19 +317,35 @@ namespace monisePerso
             }
         }
 
-        private void dgvProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProduto_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Variaveis.linhaSelecionada = int.Parse(e.RowIndex.ToString());
             if (Variaveis.linhaSelecionada >= 0)
             {
-                Variaveis.codProduto = Convert.ToInt32(dgvProdutos[0, Variaveis.linhaSelecionada].Value);
+                Variaveis.codProduto = Convert.ToInt32(dgvProduto[0, Variaveis.linhaSelecionada].Value);
             }
         }
 
-        private void dgvProdutos_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvProduto_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            dgvProdutos.Sort(dgvProdutos.Columns[1], ListSortDirection.Ascending);
-            dgvProdutos.ClearSelection();
+            dgvProduto.Sort(dgvProduto.Columns[1], ListSortDirection.Ascending);
+            dgvProduto.ClearSelection();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                var resultado = MessageBox.Show("Deseja realmente excluir?", "EXCLUIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    ExcluirProduto();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Para excluir selecione uma linha");
+            }
         }
     }
 }

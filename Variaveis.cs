@@ -52,8 +52,8 @@ namespace monisePerso
         public static double valorProduto;
 
         //FOTOS FTP
-        public static string enderecoServidorFtp = "ftp://127.0.0.1/admin/";
-        public static string usuarioFtp = "persomonise";
-        public static string senhaFtp = "123";
+        public static string enderecoServidorFtp = "ftp://45.152.46.178/";
+        public static string usuarioFtp = "u700303309.moniseperso";
+        public static string senhaFtp = "Kfsar@25790";
     }
 }

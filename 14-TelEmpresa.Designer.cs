@@ -29,11 +29,33 @@
         private void InitializeComponent()
         {
             this.pnlTelEmpresa = new System.Windows.Forms.Panel();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.cmbEmpresa = new System.Windows.Forms.ComboBox();
+            this.mkdTel = new System.Windows.Forms.MaskedTextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lblNomeEmpresa = new System.Windows.Forms.Label();
+            this.lblDescrição = new System.Windows.Forms.Label();
+            this.lblNumeroTelefone = new System.Windows.Forms.Label();
+            this.cmbOperadora = new System.Windows.Forms.ComboBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblOperadora = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSair = new System.Windows.Forms.Label();
             this.lblAplicativo = new System.Windows.Forms.Label();
             this.lblSobre = new System.Windows.Forms.Label();
@@ -44,33 +66,10 @@
             this.lblEncomendas = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.cmbEmpresa = new System.Windows.Forms.ComboBox();
-            this.mkdTel = new System.Windows.Forms.MaskedTextBox();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblDescrição = new System.Windows.Forms.Label();
-            this.cmbOperadora = new System.Windows.Forms.ComboBox();
-            this.lblOperadora = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblNumeroTelefone = new System.Windows.Forms.Label();
-            this.lblNomeEmpresa = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.pctFechar = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.pctFechar = new System.Windows.Forms.PictureBox();
             this.pnlTelEmpresa.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -82,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTelEmpresa
@@ -102,6 +102,150 @@
             this.pnlTelEmpresa.Name = "pnlTelEmpresa";
             this.pnlTelEmpresa.Size = new System.Drawing.Size(935, 546);
             this.pnlTelEmpresa.TabIndex = 47;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.btnLimpar.Location = new System.Drawing.Point(480, 456);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(211, 51);
+            this.btnLimpar.TabIndex = 58;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click_1);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.btnSalvar.Location = new System.Drawing.Point(243, 456);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(211, 51);
+            this.btnSalvar.TabIndex = 57;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // cmbEmpresa
+            // 
+            this.cmbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmpresa.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.cmbEmpresa.FormattingEnabled = true;
+            this.cmbEmpresa.Location = new System.Drawing.Point(326, 146);
+            this.cmbEmpresa.Name = "cmbEmpresa";
+            this.cmbEmpresa.Size = new System.Drawing.Size(288, 25);
+            this.cmbEmpresa.TabIndex = 56;
+            // 
+            // mkdTel
+            // 
+            this.mkdTel.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.mkdTel.Location = new System.Drawing.Point(326, 221);
+            this.mkdTel.Mask = "(00) 00000-0000";
+            this.mkdTel.Name = "mkdTel";
+            this.mkdTel.Size = new System.Drawing.Size(288, 23);
+            this.mkdTel.TabIndex = 2;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.lblCodigo.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblCodigo.Location = new System.Drawing.Point(321, 41);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(73, 28);
+            this.lblCodigo.TabIndex = 29;
+            this.lblCodigo.Text = "Código:";
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.txtDescricao.Location = new System.Drawing.Point(326, 366);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(288, 26);
+            this.txtDescricao.TabIndex = 4;
+            // 
+            // lblNomeEmpresa
+            // 
+            this.lblNomeEmpresa.AutoSize = true;
+            this.lblNomeEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeEmpresa.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblNomeEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblNomeEmpresa.Location = new System.Drawing.Point(321, 115);
+            this.lblNomeEmpresa.Name = "lblNomeEmpresa";
+            this.lblNomeEmpresa.Size = new System.Drawing.Size(136, 28);
+            this.lblNomeEmpresa.TabIndex = 30;
+            this.lblNomeEmpresa.Text = "Nome Empresa:";
+            // 
+            // lblDescrição
+            // 
+            this.lblDescrição.AutoSize = true;
+            this.lblDescrição.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescrição.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblDescrição.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblDescrição.Location = new System.Drawing.Point(321, 335);
+            this.lblDescrição.Name = "lblDescrição";
+            this.lblDescrição.Size = new System.Drawing.Size(92, 28);
+            this.lblDescrição.TabIndex = 55;
+            this.lblDescrição.Text = "Descrição";
+            // 
+            // lblNumeroTelefone
+            // 
+            this.lblNumeroTelefone.AutoSize = true;
+            this.lblNumeroTelefone.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumeroTelefone.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblNumeroTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblNumeroTelefone.Location = new System.Drawing.Point(321, 190);
+            this.lblNumeroTelefone.Name = "lblNumeroTelefone";
+            this.lblNumeroTelefone.Size = new System.Drawing.Size(175, 28);
+            this.lblNumeroTelefone.TabIndex = 33;
+            this.lblNumeroTelefone.Text = "Número de Telefone:";
+            // 
+            // cmbOperadora
+            // 
+            this.cmbOperadora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOperadora.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.cmbOperadora.FormattingEnabled = true;
+            this.cmbOperadora.Items.AddRange(new object[] {
+            "VIVO",
+            "CLARO",
+            "TIM",
+            "OI",
+            "NEXTEL"});
+            this.cmbOperadora.Location = new System.Drawing.Point(326, 292);
+            this.cmbOperadora.Name = "cmbOperadora";
+            this.cmbOperadora.Size = new System.Drawing.Size(288, 25);
+            this.cmbOperadora.TabIndex = 3;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Font = new System.Drawing.Font("Poppins", 7.75F);
+            this.txtCodigo.Location = new System.Drawing.Point(326, 72);
+            this.txtCodigo.Multiline = true;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(288, 26);
+            this.txtCodigo.TabIndex = 39;
+            // 
+            // lblOperadora
+            // 
+            this.lblOperadora.AutoSize = true;
+            this.lblOperadora.BackColor = System.Drawing.Color.Transparent;
+            this.lblOperadora.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblOperadora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblOperadora.Location = new System.Drawing.Point(321, 261);
+            this.lblOperadora.Name = "lblOperadora";
+            this.lblOperadora.Size = new System.Drawing.Size(104, 28);
+            this.lblOperadora.TabIndex = 52;
+            this.lblOperadora.Text = "Operadora:";
             // 
             // lblTitulo
             // 
@@ -174,6 +318,16 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(200, 650);
             this.pnlSideMenu.TabIndex = 44;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::monisePerso.Properties.Resources.iconEmail;
+            this.pictureBox10.Location = new System.Drawing.Point(16, 525);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox10.TabIndex = 23;
+            this.pictureBox10.TabStop = false;
+            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
@@ -186,6 +340,98 @@
             this.lblEmail.Text = "E-mails";
             this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox9.Image = global::monisePerso.Properties.Resources.iconSair;
+            this.pictureBox9.Location = new System.Drawing.Point(166, 584);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox9.TabIndex = 21;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::monisePerso.Properties.Resources.iconAplicativo;
+            this.pictureBox8.Location = new System.Drawing.Point(16, 486);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox8.TabIndex = 20;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconContato;
+            this.pictureBox7.Location = new System.Drawing.Point(16, 446);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 19;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconProdutos;
+            this.pictureBox6.Location = new System.Drawing.Point(16, 406);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 18;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconEmpresa;
+            this.pictureBox5.Location = new System.Drawing.Point(16, 366);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::monisePerso.Properties.Resources.iconFuncionario;
+            this.pictureBox4.Location = new System.Drawing.Point(16, 326);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::monisePerso.Properties.Resources.iconCliente;
+            this.pictureBox3.Location = new System.Drawing.Point(16, 286);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::monisePerso.Properties.Resources.iconEncomenda;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 246);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::monisePerso.Properties.Resources.iconMenu;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 206);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // lblSair
             // 
             this.lblSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -197,6 +443,7 @@
             this.lblSair.Size = new System.Drawing.Size(41, 26);
             this.lblSair.TabIndex = 8;
             this.lblSair.Text = "Sair";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // lblAplicativo
             // 
@@ -308,149 +555,17 @@
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Seja bem-vindo Uusario";
             // 
-            // cmbEmpresa
+            // pctLogo
             // 
-            this.cmbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmpresa.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.cmbEmpresa.FormattingEnabled = true;
-            this.cmbEmpresa.Location = new System.Drawing.Point(326, 146);
-            this.cmbEmpresa.Name = "cmbEmpresa";
-            this.cmbEmpresa.Size = new System.Drawing.Size(288, 26);
-            this.cmbEmpresa.TabIndex = 56;
-            // 
-            // mkdTel
-            // 
-            this.mkdTel.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.mkdTel.Location = new System.Drawing.Point(326, 221);
-            this.mkdTel.Mask = "(00) 00000-0000";
-            this.mkdTel.Name = "mkdTel";
-            this.mkdTel.Size = new System.Drawing.Size(288, 23);
-            this.mkdTel.TabIndex = 2;
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.txtDescricao.Location = new System.Drawing.Point(326, 366);
-            this.txtDescricao.Multiline = true;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(288, 26);
-            this.txtDescricao.TabIndex = 4;
-            // 
-            // lblDescrição
-            // 
-            this.lblDescrição.AutoSize = true;
-            this.lblDescrição.BackColor = System.Drawing.Color.Transparent;
-            this.lblDescrição.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblDescrição.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblDescrição.Location = new System.Drawing.Point(321, 335);
-            this.lblDescrição.Name = "lblDescrição";
-            this.lblDescrição.Size = new System.Drawing.Size(92, 28);
-            this.lblDescrição.TabIndex = 55;
-            this.lblDescrição.Text = "Descrição";
-            // 
-            // cmbOperadora
-            // 
-            this.cmbOperadora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbOperadora.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.cmbOperadora.FormattingEnabled = true;
-            this.cmbOperadora.Items.AddRange(new object[] {
-            "VIVO",
-            "CLARO",
-            "TIM",
-            "OI",
-            "NEXTEL"});
-            this.cmbOperadora.Location = new System.Drawing.Point(326, 292);
-            this.cmbOperadora.Name = "cmbOperadora";
-            this.cmbOperadora.Size = new System.Drawing.Size(288, 26);
-            this.cmbOperadora.TabIndex = 3;
-            // 
-            // lblOperadora
-            // 
-            this.lblOperadora.AutoSize = true;
-            this.lblOperadora.BackColor = System.Drawing.Color.Transparent;
-            this.lblOperadora.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblOperadora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblOperadora.Location = new System.Drawing.Point(321, 261);
-            this.lblOperadora.Name = "lblOperadora";
-            this.lblOperadora.Size = new System.Drawing.Size(104, 28);
-            this.lblOperadora.TabIndex = 52;
-            this.lblOperadora.Text = "Operadora:";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Font = new System.Drawing.Font("Poppins", 7.75F);
-            this.txtCodigo.Location = new System.Drawing.Point(326, 72);
-            this.txtCodigo.Multiline = true;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(288, 26);
-            this.txtCodigo.TabIndex = 39;
-            // 
-            // lblNumeroTelefone
-            // 
-            this.lblNumeroTelefone.AutoSize = true;
-            this.lblNumeroTelefone.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumeroTelefone.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblNumeroTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblNumeroTelefone.Location = new System.Drawing.Point(321, 190);
-            this.lblNumeroTelefone.Name = "lblNumeroTelefone";
-            this.lblNumeroTelefone.Size = new System.Drawing.Size(175, 28);
-            this.lblNumeroTelefone.TabIndex = 33;
-            this.lblNumeroTelefone.Text = "Número de Telefone:";
-            // 
-            // lblNomeEmpresa
-            // 
-            this.lblNomeEmpresa.AutoSize = true;
-            this.lblNomeEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.lblNomeEmpresa.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblNomeEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblNomeEmpresa.Location = new System.Drawing.Point(321, 115);
-            this.lblNomeEmpresa.Name = "lblNomeEmpresa";
-            this.lblNomeEmpresa.Size = new System.Drawing.Size(136, 28);
-            this.lblNomeEmpresa.TabIndex = 30;
-            this.lblNomeEmpresa.Text = "Nome Empresa:";
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
-            this.lblCodigo.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.lblCodigo.Location = new System.Drawing.Point(321, 41);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(73, 28);
-            this.lblCodigo.TabIndex = 29;
-            this.lblCodigo.Text = "Código:";
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.btnLimpar.Location = new System.Drawing.Point(480, 456);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(211, 51);
-            this.btnLimpar.TabIndex = 58;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click_1);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.btnSalvar.Location = new System.Drawing.Point(243, 456);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(211, 51);
-            this.btnSalvar.TabIndex = 57;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctLogo.Image = global::monisePerso.Properties.Resources.logoMenu;
+            this.pctLogo.Location = new System.Drawing.Point(50, 50);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(100, 100);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctLogo.TabIndex = 3;
+            this.pctLogo.TabStop = false;
             // 
             // pctFechar
             // 
@@ -463,119 +578,7 @@
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctFechar.TabIndex = 43;
             this.pctFechar.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::monisePerso.Properties.Resources.iconEmail;
-            this.pictureBox10.Location = new System.Drawing.Point(16, 525);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox10.TabIndex = 23;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.Image = global::monisePerso.Properties.Resources.iconSair;
-            this.pictureBox9.Location = new System.Drawing.Point(166, 584);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox9.TabIndex = 21;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::monisePerso.Properties.Resources.iconAplicativo;
-            this.pictureBox8.Location = new System.Drawing.Point(16, 486);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox8.TabIndex = 20;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::monisePerso.Properties.Resources.iconContato;
-            this.pictureBox7.Location = new System.Drawing.Point(16, 446);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::monisePerso.Properties.Resources.iconProdutos;
-            this.pictureBox6.Location = new System.Drawing.Point(16, 406);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 18;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::monisePerso.Properties.Resources.iconEmpresa;
-            this.pictureBox5.Location = new System.Drawing.Point(16, 366);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::monisePerso.Properties.Resources.iconFuncionario;
-            this.pictureBox4.Location = new System.Drawing.Point(16, 326);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::monisePerso.Properties.Resources.iconCliente;
-            this.pictureBox3.Location = new System.Drawing.Point(16, 286);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::monisePerso.Properties.Resources.iconEncomenda;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 246);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::monisePerso.Properties.Resources.iconMenu;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 206);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pctLogo
-            // 
-            this.pctLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctLogo.Image = global::monisePerso.Properties.Resources.logoMenu;
-            this.pctLogo.Location = new System.Drawing.Point(50, 50);
-            this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(100, 100);
-            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctLogo.TabIndex = 3;
-            this.pctLogo.TabStop = false;
+            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
             // frmTelEmpresa
             // 
@@ -599,7 +602,6 @@
             this.pnlTelEmpresa.PerformLayout();
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -611,6 +613,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

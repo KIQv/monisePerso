@@ -16,5 +16,42 @@ namespace monisePerso
         {
             InitializeComponent();
         }
+
+        private void pctFechar_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Deseja encerrar?", "Encerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                new frmLogin().Show();
+                Close();
+            }
+        }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                new frmLogin().Show();
+                Close();
+            }
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                new frmLogin().Show();
+                Close();
+            }
+        }
     }
 }
