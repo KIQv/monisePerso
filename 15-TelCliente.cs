@@ -23,14 +23,14 @@ namespace monisePerso
             try
             {
                 banco.Conectar();
-                string inserir = "INSERT INTO fonecliente(idFoneCliente,numeroFoneCliente,operFoneCliente,descFoneCliente,idCliente)VALUES(DEFAULT,@numero,@operadora,@descricao,@codEmpresa)";
+                string inserir = "INSERT INTO fonecliente(idFoneCliente,numeroFoneCliente,operFoneCliente,descFoneCliente,idCliente)VALUES(DEFAULT,@numero,@operadora,@descricao,@codCliente)";
                 MySqlCommand cmd = new MySqlCommand(inserir, banco.conexao);
                 cmd.Parameters.AddWithValue("@numero", Variaveis.numeroCliente);
                 cmd.Parameters.AddWithValue("@operadora", Variaveis.operFoneCliente);
                 cmd.Parameters.AddWithValue("@descricao", Variaveis.descFoneCliente);
-                cmd.Parameters.AddWithValue("@codEmpresa", Variaveis.codCliente);
+                cmd.Parameters.AddWithValue("@codCliente", Variaveis.codCliente);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Telefone do cliente alterado com sucesso!", "CADASTRO DO TELEFONE DA EMPRESA");
+                MessageBox.Show("Telefone do cliente alterado com sucesso!", "CADASTRO DO TELEFONE DO CLIENTE");
                 banco.Desconectar();
             }
             catch (Exception ex)
@@ -44,19 +44,20 @@ namespace monisePerso
             try
             {
                 banco.Conectar();
-                string alterar = "UPDATE fonecliente SET idFoneCliente=@codFone,numeroFoneCliente=@numero,operFoneCliente=@operadora,descFoneCliente=@descricao";
+                string alterar = "UPDATE fonecliente SET idFoneCliente=@codFone,numeroFoneCliente=@numero,operFoneCliente=@operadora,descFoneCliente=@descricao WHERE idCliente=@codigo";
                 MySqlCommand cmd = new MySqlCommand(alterar, banco.conexao);
+                cmd.Parameters.AddWithValue("@codFone", Variaveis.codFoneCliente);
                 cmd.Parameters.AddWithValue("@numero", Variaveis.numeroCliente);
                 cmd.Parameters.AddWithValue("@operadora", Variaveis.operFoneCliente);
                 cmd.Parameters.AddWithValue("@descricao", Variaveis.descFoneCliente);
-                cmd.Parameters.AddWithValue("@codFone", Variaveis.codFoneCliente);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codCliente);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Telefone do cliente alterado com sucesso!", "ALTERAÇÃO DO TELEFONE DO CLIENTE");
                 banco.Desconectar();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar telefone do  cliente!\n\n" + ex.Message, "Erro.");
+                MessageBox.Show("Erro ao alterar o telefone do cliente!\n\n" + ex, "Erro.");
             }
         }
 
@@ -159,6 +160,7 @@ namespace monisePerso
 
             if (Variaveis.funcao == "ALTERAR FONE")
             {
+                lblTitulo.Text = "ALTERANDO MERDA";
                 CarregarDadosFoneCliente();
             }
 

@@ -44,19 +44,20 @@ namespace monisePerso
             try
             {
                 banco.Conectar();
-                string alterar = "UPDATE fonefuncionario SET idFoneFuncionario=@codFone,numeroFuncionario=@numero,operFoneFuncionario=@operadora,descFoneFuncionario=@descricao";
+                string alterar = "UPDATE fonefuncionario SET idFoneFuncionario=@codFone,numeroFuncionario=@numero,operFoneFuncionario=@operadora,descFoneFuncionario=@descricao WHERE idFuncionario=@codigo";
                 MySqlCommand cmd = new MySqlCommand(alterar, banco.conexao);
+                cmd.Parameters.AddWithValue("@codFone", Variaveis.codFoneFuncionario);
                 cmd.Parameters.AddWithValue("@numero", Variaveis.numeroFuncionario);
                 cmd.Parameters.AddWithValue("@operadora", Variaveis.operFoneFuncionario);
                 cmd.Parameters.AddWithValue("@descricao", Variaveis.descFoneFuncionario);
-                cmd.Parameters.AddWithValue("@codFone", Variaveis.codFoneFuncionario);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codFuncionario);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Telefone do funcionario alterado com sucesso!", "ALTERAÇÃO DO TELEFONE DO FUNCIONARIO");
                 banco.Desconectar();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar telefone do  funcionario!\n\n" + ex.Message, "Erro.");
+                MessageBox.Show("Erro ao alterar o telefone do funcionario!\n\n" + ex, "Erro.");
             }
         }
 

@@ -237,19 +237,23 @@ namespace monisePerso
             try
             {
                 banco.Conectar();
-                string excluir = "DELETE FROM 'Fonecliente` WHERE `idFoneCliente =@codFone";
+                string excluir = "DELETE FROM `fonecliente` WHERE `idFoneCliente`=@codFone";
                 MySqlCommand cmd = new MySqlCommand(excluir, banco.conexao);
                 cmd.Parameters.AddWithValue("@codFone", Variaveis.codFoneCliente);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
+
                 da.Fill(dt);
+
                 dgvTelCliente.DataSource = dt;
+
                 dgvTelCliente.ClearSelection();
+
                 banco.Desconectar();
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao excluir o Telefone do Cliente. \n\n" + erro.Message);
+                MessageBox.Show("Erro ao excluir o telefone do cliente\n\n" + erro.Message);
             }
         }
 
